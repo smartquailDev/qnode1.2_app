@@ -57,9 +57,10 @@ a:focus {
 
 .navbar {
     margin-bottom: 0;
-    border-bottom: 1px solid rgba(255,255,255,.3);
+    border-bottom: 1px solid rgba(255, 255, 255, 0);
     text-transform: uppercase;
     font-family: 'Open Sans', sans-serif;
+    font-size: 12px;
     background-color: #000;
 }
 
@@ -105,6 +106,7 @@ a:focus {
         border-bottom: 0;
         letter-spacing: 1px;
         background: 0 0;
+        background-color: 0 0;
         -webkit-transition: background .5s ease-in-out,padding .5s ease-in-out;
         -moz-transition: background .5s ease-in-out,padding .5s ease-in-out;
         transition: background .5s ease-in-out,padding .5s ease-in-out;
@@ -141,6 +143,7 @@ a:focus {
 
 .brand-heading {
     font-size: 10px;
+    margin-top: 338px;
 }
 
 .intro-text {
@@ -158,6 +161,7 @@ a:focus {
 
     .brand-heading {
         font-size: 64px;
+        margin-top: 300px;
     }
 
     .intro-text {
@@ -210,14 +214,15 @@ a:focus {
 
 .btn-circle {
     width: 70px;
-    height: 70px;
-    margin-top: 15px;
-    padding: 7px 16px;
-    border: 2px solid #fff;
-    border-radius: 35px;
-    font-size: 40px;
-    color: #fff;
-    background: 0 0;
+height: 70px;
+margin-top: 300px;
+margin-bottom: 10px;
+padding: 7px 16px;
+border: 10px solid #ff9b30;
+border-radius: 35px;
+font-size: 33px;
+color: #ff9b30;
+background: 0 0;
     -webkit-transition: background .3s ease-in-out;
     -moz-transition: background .3s ease-in-out;
     transition: background .3s ease-in-out;
