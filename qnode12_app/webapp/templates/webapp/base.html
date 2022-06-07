@@ -28,8 +28,27 @@
 </head>
 {% for item in page.galleria.all %}
 {% image item.image scale-100 as s1 %}
+{% image item.image_2 scale-100 as s2 %}
+{% image item.image_3 scale-100 as s3 %}
+{% image item.image_4 scale-100 as s4 %}
+{% image item.image_5 scale-100 as s5 %}
+{% image item.image_6 scale-100 as s6 %}
+{% image item.image_7 scale-100 as s7 %}
+{% image item.image_8 scale-100 as s8 %}
+{% image item.image_9 scale-100 as s9 %}
+{% image item.image_10 scale-100 as s10 %}
+{% image item.image_11 scale-100 as s11 %}
+{% image item.image_12 scale-100 as s12 %}
+{% image item.image_13 scale-100 as s13 %}
+{% image item.image_14 scale-100 as s14 %}
+{% image item.image_15 scale-100 as s15 %}
 <style>
      
+    .home {
+        background: url('{{s1.url}}')  ;
+        background-repeat: no-repeat;
+        background-size: 100%;
+    }
     .intro {
         background: url('{{s1.url}}')  ;
         background-repeat: no-repeat;
@@ -40,62 +59,63 @@
         background-repeat: no-repeat;
         background-size: 100%;
     }
-    .explore {
+    .gallery-1 {
         background: url('{{s1.url}}')  ;
         background-repeat: no-repeat;
         background-size: 100%;
     }
-    .explore {
+    .gallery-2  {
         background: url('{{s1.url}}')  ;
         background-repeat: no-repeat;
         background-size: 100%;
     }
-    .explore {
+    .gallery-3  {
         background: url('{{s1.url}}')  ;
         background-repeat: no-repeat;
         background-size: 100%;
     }
-    .explore {
+    .magic {
         background: url('{{s1.url}}')  ;
         background-repeat: no-repeat;
         background-size: 100%;
     }
-    .explore {
+    .testimonials-intro {
         background: url('{{s1.url}}')  ;
         background-repeat: no-repeat;
         background-size: 100%;
     }
-    .explore {
+    .testimonials-explore {
         background: url('{{s1.url}}')  ;
         background-repeat: no-repeat;
         background-size: 100%;
     }
-    .explore {
+    .meet {
         background: url('{{s1.url}}')  ;
         background-repeat: no-repeat;
         background-size: 100%;
     }
-    .explore {
+    .people {
         background: url('{{s1.url}}')  ;
         background-repeat: no-repeat;
         background-size: 100%;
     }
-    .explore {
+
+    .products {
         background: url('{{s1.url}}')  ;
         background-repeat: no-repeat;
         background-size: 100%;
     }
-    .explore {
+    .plan {
         background: url('{{s1.url}}')  ;
         background-repeat: no-repeat;
         background-size: 100%;
     }
-    .explore {
+    .lets {
         background: url('{{s1.url}}')  ;
         background-repeat: no-repeat;
         background-size: 100%;
     }
-    .explore {
+    .contact {
         background: url('{{s1.url}}')  ;
         background-repeat: no-repeat;
         background-size: 100%;
