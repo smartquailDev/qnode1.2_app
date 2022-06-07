@@ -203,14 +203,7 @@ class GaleriadeImagenes(Orderable):
     image = models.ForeignKey('wagtailimages.Image',null=True,blank=True,on_delete=models.SET_NULL,related_name='+',verbose_name='Imagen Slide Banner 1')
     image_2 = models.ForeignKey('wagtailimages.Image',null=True,blank=True,on_delete=models.SET_NULL,related_name='+',verbose_name='Imagen Slide Banner 2')
     image_3 = models.ForeignKey('wagtailimages.Image',null=True,blank=True,on_delete=models.SET_NULL,related_name='+',verbose_name='Imagen Slide Banner 3')
-    image_4_2 = models.ForeignKey('wagtailimages.Image',null=True,blank=True,on_delete=models.SET_NULL,related_name='+',verbose_name='Imagen Slide Banner 1')
-    image_5_2 = models.ForeignKey('wagtailimages.Image',null=True,blank=True,on_delete=models.SET_NULL,related_name='+',verbose_name='Imagen Slide Banner 2')
-    image_6_2 = models.ForeignKey('wagtailimages.Image',null=True,blank=True,on_delete=models.SET_NULL,related_name='+',verbose_name='Imagen Slide Banner 3')
-    image_7_2 = models.ForeignKey('wagtailimages.Image',null=True,blank=True,on_delete=models.SET_NULL,related_name='+',verbose_name='Imagen Slide Banner 1')
-    image_8_2 = models.ForeignKey('wagtailimages.Image',null=True,blank=True,on_delete=models.SET_NULL,related_name='+',verbose_name='Imagen Slide Banner 2')
-    image_9_2 = models.ForeignKey('wagtailimages.Image',null=True,blank=True,on_delete=models.SET_NULL,related_name='+',verbose_name='Imagen Slide Banner 3')
-    image_10_2 = models.ForeignKey('wagtailimages.Image',null=True,blank=True,on_delete=models.SET_NULL,related_name='+',verbose_name='Imagen Slide Banner 3')
-    
+
     # Imagenes Thumb Portfolio
     
     image_4 = models.ForeignKey('wagtailimages.Image',null=True,blank=True,on_delete=models.SET_NULL,related_name='+',verbose_name='Imagen Advertising Thumb-Galeria')
@@ -247,13 +240,6 @@ class GaleriadeImagenes(Orderable):
         ImageChooserPanel('image'),
         ImageChooserPanel('image_2'),
         ImageChooserPanel('image_3'),
-        ImageChooserPanel('image_4_2'),
-        ImageChooserPanel('image_5_2'),
-        ImageChooserPanel('image_6_2'),
-        ImageChooserPanel('image_7_2'),
-        ImageChooserPanel('image_8_2'),
-        ImageChooserPanel('image_9_2'),
-        ImageChooserPanel('image_10_2'),
         ImageChooserPanel('image_4'),
         ImageChooserPanel('image_5'),
         ImageChooserPanel('image_6'),
