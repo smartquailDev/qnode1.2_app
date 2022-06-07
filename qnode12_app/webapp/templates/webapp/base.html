@@ -26,6 +26,17 @@
     <link href="{% static 'css/grayscale.css' %}" rel="stylesheet">
 
 </head>
+{% for item in page.galleria.all %}
+{% image item.image scale-100 as s1 %}
+<style>
+     
+    .intro {
+        background: url('{{s1.url}}')  ;
+        background-repeat: no-repeat;
+        background-size: 100%;
+    }
+</style>
+{% endfor %}
 
 <body id="page-top" data-spy="scroll" data-target=".navbar-custom">
 
@@ -62,6 +73,7 @@
         </div>
         <!-- /.container -->
     </nav>
+
 
     {% block content %}
     {% endblock %}
