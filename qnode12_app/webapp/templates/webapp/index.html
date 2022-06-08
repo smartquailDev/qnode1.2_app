@@ -128,40 +128,70 @@
 <section id="gallery-1" class="gallery-1">
     <div class="gallery-1-body">
         <div class="container">
-            <div class="top">
             <div class="row">
-                <div class="col-md-8 col-md-offset-2">
-                   
-        <ul>
-            <li><a href="#img_1"><img src="https://image.freepik.com/free-photo/road-curve-landscape_426-19324358.jpg"></a></li>
-              <li><a href="#img_2"><img src="https://image.freepik.com/free-photo/road-curve-landscape_426-19324358.jpg"></a></li>
-              <li><a href="#img_3"><img src="https://image.freepik.com/free-photo/road-curve-landscape_426-19324358.jpg"></a></li>
-              <li><a href="#img_4"><img src="https://image.freepik.com/free-photo/road-curve-landscape_426-19324358.jpg"></a></li>
-              <li><a href="#img_5"><img src="https://image.freepik.com/free-photo/road-curve-landscape_426-19324358.jpg"></a></li>
-              <li><a href="#img_6"><img src="https://image.freepik.com/free-photo/road-curve-landscape_426-19324358.jpg"></a></li>
-          </ul>
-          <a href="#_1" class="lightbox trans" id="img_1"><img src="https://farm8.staticflickr.com/7564/16097104758_e60521f7fa_b.jpg"></a>
-          <a href="#_2" class="lightbox trans" id="img_2"><img src="https://picjumbo.imgix.net/HNCK4011.jpg?q=40&w=1650&sharp=30"></a>
-          <a href="#_3" class="lightbox trans" id="img_3"><img src="https://images.unsplash.com/32/Mc8kW4x9Q3aRR3RkP5Im_IMG_4417.jpg?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&w=1080&fit=max&s=46a85a1451e47aea5152ade8299f2894"></a>
-          <a href="#_4" class="lightbox trans" id="img_4"><img src="https://picjumbo.imgix.net/HNCK3991.jpg?q=40&w=1650&sharp=30"></a>
-          <a href="#_5" class="lightbox trans" id="img_5"><img src="https://image.freepik.com/free-photo/sunlight-in-the-forest_1004-9.jpg"></a>
-          <a href="#_6" class="lightbox trans" id="img_6"><img src="https://image.freepik.com/free-photo/road-curve-landscape_426-19324358.jpg"></a>
-        </div>
-      </div>
-  </div>
+                <div class="portfolio-item row">
+                    <div class="item gts col-lg-3 col-md-4 col-6 col-sm">
+                        {% for item in page.galleria.all %}
+                         {% image item.image width-300 as s1 %}
+                        <a href="https://image.freepik.com/free-photo/stylish-young-woman-with-bags-taking-selfie_23-2147962203.jpg" class="fancylight popup-btn" data-fancybox-group="light"> 
+                        <img class="img-fluid" src="{{s1.url}}" style=" border-radius: 100% ; width:300px; height: 300px; margin-left:0px; padding:0px;" alt="">
+                        {% endfor %}
+                        </a>
+                     </div>               
 
-                    
-                    <div class="page-scroll">
-                        <a href="#gallery-2" class="btn btn-circle">
-                            <i class="fa fa-solid fa-angle-down"></i>
-                         </a>
-                        
-                    </div>
-                    
+                     <div class="item gts col-lg-3 col-md-4 col-6 col-sm">
+                        {% for item in page.galleria.all %}
+                         {% image item.image width-300 as s1 %}
+                        <a href="https://image.freepik.com/free-photo/stylish-young-woman-with-bags-taking-selfie_23-2147962203.jpg" class="fancylight popup-btn" data-fancybox-group="light"> 
+                        <img class="img-fluid" src="{{s1.url}}" style=" border-radius: 100% ; width:300px; height: 300px; margin-left:135px; padding:0px;" alt="">
+                        {% endfor %}
+                        </a>
+                     </div> 
+
+                     <div class="item gts col-lg-3 col-md-4 col-6 col-sm">
+                        {% for item in page.galleria.all %}
+                         {% image item.image width-300 as s1 %}
+                        <a href="https://image.freepik.com/free-photo/stylish-young-woman-with-bags-taking-selfie_23-2147962203.jpg" class="fancylight popup-btn" data-fancybox-group="light"> 
+                        <img class="img-fluid" src="{{s1.url}}" style=" border-radius: 100% ; width:300px; height: 300px; margin-left:250px; padding:0px;" alt="">
+                        {% endfor %}
+                        </a>
+                     </div> 
+
                 </div>
+
+                <div class="portfolio-item row">
+                    <div class="item selfie col-lg-1 col-md-1 col-1 col-sm-1">
+                        {% for item in page.galleria.all %}
+                        {% image item.image width-300 as s1 %}
+                       <a href="https://image.freepik.com/free-photo/stylish-young-woman-with-bags-taking-selfie_23-2147962203.jpg" class="fancylight popup-btn" data-fancybox-group="light"> 
+                       <img class="img-fluid" src="{{s1.url}}" style=" border-radius: 100% ; width:300px; height: 300px; margin-left:0px; padding:0px;" alt="">
+                       {% endfor %}
+                       </a>
+                     </div>
+
+                     <div class="item gts col-lg-3 col-md-4 col-6 col-sm">
+                        {% for item in page.galleria.all %}
+                        {% image item.image width-300 as s1 %}
+                       <a href="https://image.freepik.com/free-photo/stylish-young-woman-with-bags-taking-selfie_23-2147962203.jpg" class="fancylight popup-btn" data-fancybox-group="light"> 
+                       <img class="img-fluid" src="{{s1.url}}" style=" border-radius: 100% ; width:300px; height: 300px; margin-left:135px; padding:0px;" alt="">
+                       {% endfor %}
+                       </a>
+                     </div>
+
+                     <div class="item gts col-lg-3 col-md-4 col-6 col-sm">
+                        {% for item in page.galleria.all %}
+                        {% image item.image width-300 as s1 %}
+                       <a href="https://image.freepik.com/free-photo/stylish-young-woman-with-bags-taking-selfie_23-2147962203.jpg" class="fancylight popup-btn" data-fancybox-group="light"> 
+                       <img class="img-fluid" src="{{s1.url}}" style=" border-radius: 100% ; width:300px; height: 300px; margin-left:250px; padding:0px;" alt="">
+                       {% endfor %}
+                       </a>
+                     </div>
+
+                </div>
+                
             </div>
         </div>
-    </div>
+    </div>              
 </section>
 
 <section id="gallery-2" class="gallery-2">
