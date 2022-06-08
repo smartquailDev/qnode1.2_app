@@ -12,8 +12,8 @@
                 <i class="fa fa-bars"></i>
             </button>
             <a class="navbar-brand" href="#page-top">
-                {% image item.logo width-110 format-jpeg as logo %}
-                <img src="{{logo.url}}" alt="">
+                {% image item.logo width-110 format-png as logo %}
+                <img src="{{logo.url}}"  alt="">
             </a>
         </div>
 
@@ -72,10 +72,9 @@
                     <h1 class="brand-heading">Be part of the magic</h1>
                     
                     <div class="page-scroll">
-                        <a href="#intro" class="btn btn-circle">
-                            <i class="fa fa-solid fa-angle-down"></i>
+                        <a href="#intro" class="btn">
+                            <img src="{% static '/img/angle-down.png' %}" style="width:80px; margin-top:265px;"  alt="">
                          </a>
-                        
                     </div>
                     
                 </div>
@@ -89,15 +88,20 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2">
-                    <h2>About Grayscale</h2>
-                    <p>Grayscale is a premium quality, free Bootstrap 3 theme created by Start Bootstrap. It can be yours right now, all you need to do is download the template on the preview page. You can use this template for any purpose, personal or commercial.</p>
-                    <p>This striking, black and white theme features stock photographs by <a href="http://gratisography.com/">Gratisography</a> along with a custom Google Map skin courtesy of <a href="http://snazzymaps.com/">Snazzy Maps</a>.</p>
-                    <p>With this template, just the slightest splash of color can make a huge impact on the overall presentation and design.</p>
+                    <h2>INTRO </h2>
+                    <p>The community of Floreana is</p>
+                    <p>one of the most isolated and smallest in</p> 
+                    <p> the world, with no more than 150 </p>
+                     <p>inhabitants; this leads us to have an</p> 
+                     <p>experience of what it means to live in</p> 
+                     <p> such a small group.</p>
+                      <p> Learn from its people and places of the</p>
+                      <p>first settlers as well as shared adventures</p> <p>and stories.</p> 
                 </div>
                 </div>
                 <div class="page-scroll">
-                    <a href="#explore" class="btn btn-circle">
-                        <i class="fa fa-solid fa-angle-down"></i>
+                    <a href="#explore" class="btn">
+                        <img src="{% static '/img/circle-angle.png' %}" style="width:100px;"  alt="">
                      </a>
                 </div>
             </div>
@@ -113,10 +117,9 @@
                     <h1 class="brand-heading">Explore Unique Wonders</h1>
                     
                     <div class="page-scroll">
-                        <a href="#gallery-1" class="btn btn-circle">
-                            <i class="fa fa-solid fa-angle-down"></i>
+                        <a href="#explore" class="btn">
+                            <img src="{% static '/img/circle-angle.png' %}" style="width:100px;"  alt="">
                          </a>
-                        
                     </div>
                     
                 </div>
@@ -132,9 +135,15 @@
                 <div class="portfolio-item row">
                     <div class="item gts col-lg-3 col-md-4 col-6 col-sm">
                         {% for item in page.galleria.all %}
-                         {% image item.image width-300 as s1 %}
-                        <a href="https://image.freepik.com/free-photo/stylish-young-woman-with-bags-taking-selfie_23-2147962203.jpg" class="fancylight popup-btn" data-fancybox-group="light"> 
+                         {% image item.image width-2000 as s1_1 %}
+                        <a href="{{s1_1.url}}" class="fancylight popup-btn" data-fancybox-group="light"> 
+                            <figure>  
+                        {% image item.image width-300 as s1 %}
                         <img class="img-fluid" src="{{s1.url}}" style=" border-radius: 100% ; width:300px; height: 300px; margin-left:0px; padding:0px;" alt="">
+                        
+
+                        <figcaption style="margin-top: 20px;">Caption goes here</figcaption>
+                            </figure> 
                         {% endfor %}
                         </a>
                      </div>               
@@ -142,8 +151,11 @@
                      <div class="item gts col-lg-3 col-md-4 col-6 col-sm">
                         {% for item in page.galleria.all %}
                          {% image item.image width-300 as s1 %}
-                        <a href="https://image.freepik.com/free-photo/stylish-young-woman-with-bags-taking-selfie_23-2147962203.jpg" class="fancylight popup-btn" data-fancybox-group="light"> 
+                        <a href="{{s1.url}}" class="fancylight popup-btn" data-fancybox-group="light"> 
+                        <figure>      
                         <img class="img-fluid" src="{{s1.url}}" style=" border-radius: 100% ; width:300px; height: 300px; margin-left:135px; padding:0px;" alt="">
+                        <figcaption style="margin-left:210px; width:150px ;margin-top: 20px;">Caption goes here</figcaption>
+                        </figure> 
                         {% endfor %}
                         </a>
                      </div> 
@@ -151,8 +163,11 @@
                      <div class="item gts col-lg-3 col-md-4 col-6 col-sm">
                         {% for item in page.galleria.all %}
                          {% image item.image width-300 as s1 %}
-                        <a href="https://image.freepik.com/free-photo/stylish-young-woman-with-bags-taking-selfie_23-2147962203.jpg" class="fancylight popup-btn" data-fancybox-group="light"> 
+                        <a href="{{s1.url}}" class="fancylight popup-btn" data-fancybox-group="light"> 
+                        <figure> 
                         <img class="img-fluid" src="{{s1.url}}" style=" border-radius: 100% ; width:300px; height: 300px; margin-left:250px; padding:0px;" alt="">
+                        <figcaption style="margin-left:330px; width:150px; margin-top: 20px;">Caption goes here</figcaption>
+                        </figure> 
                         {% endfor %}
                         </a>
                      </div> 
@@ -160,35 +175,49 @@
                 </div>
 
                 <div class="portfolio-item row">
-                    <div class="item selfie col-lg-1 col-md-1 col-1 col-sm-1">
+                    <div class="item gts col-lg-3 col-md-4 col-6 col-sm">
                         {% for item in page.galleria.all %}
-                        {% image item.image width-300 as s1 %}
-                       <a href="https://image.freepik.com/free-photo/stylish-young-woman-with-bags-taking-selfie_23-2147962203.jpg" class="fancylight popup-btn" data-fancybox-group="light"> 
-                       <img class="img-fluid" src="{{s1.url}}" style=" border-radius: 100% ; width:300px; height: 300px; margin-left:0px; padding:0px;" alt="">
-                       {% endfor %}
-                       </a>
-                     </div>
+                         {% image item.image width-300 as s1 %}
+                        <a href="{{s1.url}}"class="fancylight popup-btn" data-fancybox-group="light"> 
+                            <figure>  
+                        <img class="img-fluid" src="{{s1.url}}" style=" border-radius: 100% ; width:300px; height: 300px; margin-left:0px; padding:0px;" alt="">
+                        <figcaption style="margin-top: 20px;">Caption goes here</figcaption>
+                            </figure> 
+                        {% endfor %}
+                        </a>
+                     </div>               
 
                      <div class="item gts col-lg-3 col-md-4 col-6 col-sm">
                         {% for item in page.galleria.all %}
-                        {% image item.image width-300 as s1 %}
-                       <a href="https://image.freepik.com/free-photo/stylish-young-woman-with-bags-taking-selfie_23-2147962203.jpg" class="fancylight popup-btn" data-fancybox-group="light"> 
-                       <img class="img-fluid" src="{{s1.url}}" style=" border-radius: 100% ; width:300px; height: 300px; margin-left:135px; padding:0px;" alt="">
-                       {% endfor %}
-                       </a>
-                     </div>
+                         {% image item.image width-300 as s1 %}
+                        <a href="{{s1.url}}" class="fancylight popup-btn" data-fancybox-group="light"> 
+                        <figure>      
+                        <img class="img-fluid" src="{{s1.url}}" style=" border-radius: 100% ; width:300px; height: 300px; margin-left:135px; padding:0px;" alt="">
+                        <figcaption style="margin-left:210px; width:150px ;margin-top: 20px;">Caption goes here</figcaption>
+                        </figure> 
+                        {% endfor %}
+                        </a>
+                     </div> 
 
                      <div class="item gts col-lg-3 col-md-4 col-6 col-sm">
                         {% for item in page.galleria.all %}
-                        {% image item.image width-300 as s1 %}
-                       <a href="https://image.freepik.com/free-photo/stylish-young-woman-with-bags-taking-selfie_23-2147962203.jpg" class="fancylight popup-btn" data-fancybox-group="light"> 
-                       <img class="img-fluid" src="{{s1.url}}" style=" border-radius: 100% ; width:300px; height: 300px; margin-left:250px; padding:0px;" alt="">
-                       {% endfor %}
-                       </a>
-                     </div>
+                         {% image item.image width-300 as s1 %}
+                        <a href="{{s1.url}}" class="fancylight popup-btn" data-fancybox-group="light"> 
+                        <figure> 
+                        <img class="img-fluid" src="{{s1.url}}" style=" border-radius: 100% ; width:300px; height: 300px; margin-left:250px; padding:0px;" alt="">
+                        <figcaption style="margin-left:330px; width:150px; margin-top: 20px;">Caption goes here</figcaption>
+                        </figure> 
+                        {% endfor %}
+                        </a>
+                     </div> 
 
                 </div>
                 
+            </div>
+            <div class="page-scroll">
+                <a href="#explore" class="btn">
+                    <img src="{% static '/img/circle-angle.png' %}" style="width:100px;"  alt="">
+                 </a>
             </div>
         </div>
     </div>              
@@ -198,40 +227,190 @@
     <div class="gallery-2-body">
         <div class="container">
             <div class="row">
-                <div class="col-md-8 col-md-offset-2">
-                    <h1 class="brand-heading">Be part of the magic</h1>
-                    
-                    <div class="page-scroll">
-                        <a href="#gallery-3" class="btn btn-circle">
-                            <i class="fa fa-solid fa-angle-down"></i>
-                         </a>
+                <div class="portfolio-item row">
+                    <div class="item gts col-lg-3 col-md-4 col-6 col-sm">
+                        {% for item in page.galleria.all %}
+                         {% image item.image width-2000 as s1_1 %}
+                        <a href="{{s1_1.url}}" class="fancylight popup-btn" data-fancybox-group="light"> 
+                            <figure>  
+                        {% image item.image width-300 as s1 %}
+                        <img class="img-fluid" src="{{s1.url}}" style=" border-radius: 100% ; width:300px; height: 300px; margin-left:0px; padding:0px;" alt="">
                         
-                    </div>
-                    
+
+                        <figcaption style="margin-top: 20px;">Caption goes here</figcaption>
+                            </figure> 
+                        {% endfor %}
+                        </a>
+                     </div>               
+
+                     <div class="item gts col-lg-3 col-md-4 col-6 col-sm">
+                        {% for item in page.galleria.all %}
+                         {% image item.image width-300 as s1 %}
+                        <a href="{{s1.url}}" class="fancylight popup-btn" data-fancybox-group="light"> 
+                        <figure>      
+                        <img class="img-fluid" src="{{s1.url}}" style=" border-radius: 100% ; width:300px; height: 300px; margin-left:135px; padding:0px;" alt="">
+                        <figcaption style="margin-left:210px; width:150px ;margin-top: 20px;">Caption goes here</figcaption>
+                        </figure> 
+                        {% endfor %}
+                        </a>
+                     </div> 
+
+                     <div class="item gts col-lg-3 col-md-4 col-6 col-sm">
+                        {% for item in page.galleria.all %}
+                         {% image item.image width-300 as s1 %}
+                        <a href="{{s1.url}}" class="fancylight popup-btn" data-fancybox-group="light"> 
+                        <figure> 
+                        <img class="img-fluid" src="{{s1.url}}" style=" border-radius: 100% ; width:300px; height: 300px; margin-left:250px; padding:0px;" alt="">
+                        <figcaption style="margin-left:330px; width:150px; margin-top: 20px;">Caption goes here</figcaption>
+                        </figure> 
+                        {% endfor %}
+                        </a>
+                     </div> 
+
                 </div>
+
+                <div class="portfolio-item row">
+                    <div class="item gts col-lg-3 col-md-4 col-6 col-sm">
+                        {% for item in page.galleria.all %}
+                         {% image item.image width-300 as s1 %}
+                        <a href="{{s1.url}}"class="fancylight popup-btn" data-fancybox-group="light"> 
+                            <figure>  
+                        <img class="img-fluid" src="{{s1.url}}" style=" border-radius: 100% ; width:300px; height: 300px; margin-left:0px; padding:0px;" alt="">
+                        <figcaption style="margin-top: 20px;">Caption goes here</figcaption>
+                            </figure> 
+                        {% endfor %}
+                        </a>
+                     </div>               
+
+                     <div class="item gts col-lg-3 col-md-4 col-6 col-sm">
+                        {% for item in page.galleria.all %}
+                         {% image item.image width-300 as s1 %}
+                        <a href="{{s1.url}}" class="fancylight popup-btn" data-fancybox-group="light"> 
+                        <figure>      
+                        <img class="img-fluid" src="{{s1.url}}" style=" border-radius: 100% ; width:300px; height: 300px; margin-left:135px; padding:0px;" alt="">
+                        <figcaption style="margin-left:210px; width:150px ;margin-top: 20px;">Caption goes here</figcaption>
+                        </figure> 
+                        {% endfor %}
+                        </a>
+                     </div> 
+
+                     <div class="item gts col-lg-3 col-md-4 col-6 col-sm">
+                        {% for item in page.galleria.all %}
+                         {% image item.image width-300 as s1 %}
+                        <a href="{{s1.url}}" class="fancylight popup-btn" data-fancybox-group="light"> 
+                        <figure> 
+                        <img class="img-fluid" src="{{s1.url}}" style=" border-radius: 100% ; width:300px; height: 300px; margin-left:250px; padding:0px;" alt="">
+                        <figcaption style="margin-left:330px; width:150px; margin-top: 20px;">Caption goes here</figcaption>
+                        </figure> 
+                        {% endfor %}
+                        </a>
+                     </div> 
+
+                </div>
+                
+            </div>
+            <div class="page-scroll">
+                <a href="#explore" class="btn">
+                    <img src="{% static '/img/circle-angle.png' %}" style="width:100px;"  alt="">
+                 </a>
             </div>
         </div>
-    </div>
+    </div>              
 </section>
 
 <section id="gallery-3" class="gallery-3">
     <div class="gallery-3-body">
         <div class="container">
             <div class="row">
-                <div class="col-md-8 col-md-offset-2">
-                    <h1 class="brand-heading">Be part of the magic</h1>
-                    
-                    <div class="page-scroll">
-                        <a href="#magic" class="btn btn-circle">
-                            <i class="fa fa-solid fa-angle-down"></i>
-                         </a>
+                <div class="portfolio-item row">
+                    <div class="item gts col-lg-3 col-md-4 col-6 col-sm">
+                        {% for item in page.galleria.all %}
+                         {% image item.image width-2000 as s1_1 %}
+                        <a href="{{s1_1.url}}" class="fancylight popup-btn" data-fancybox-group="light"> 
+                            <figure>  
+                        {% image item.image width-300 as s1 %}
+                        <img class="img-fluid" src="{{s1.url}}" style=" border-radius: 100% ; width:300px; height: 300px; margin-left:0px; padding:0px;" alt="">
                         
-                    </div>
-                    
+
+                        <figcaption style="margin-top: 20px;">Caption goes here</figcaption>
+                            </figure> 
+                        {% endfor %}
+                        </a>
+                     </div>               
+
+                     <div class="item gts col-lg-3 col-md-4 col-6 col-sm">
+                        {% for item in page.galleria.all %}
+                         {% image item.image width-300 as s1 %}
+                        <a href="{{s1.url}}" class="fancylight popup-btn" data-fancybox-group="light"> 
+                        <figure>      
+                        <img class="img-fluid" src="{{s1.url}}" style=" border-radius: 100% ; width:300px; height: 300px; margin-left:135px; padding:0px;" alt="">
+                        <figcaption style="margin-left:210px; width:150px ;margin-top: 20px;">Caption goes here</figcaption>
+                        </figure> 
+                        {% endfor %}
+                        </a>
+                     </div> 
+
+                     <div class="item gts col-lg-3 col-md-4 col-6 col-sm">
+                        {% for item in page.galleria.all %}
+                         {% image item.image width-300 as s1 %}
+                        <a href="{{s1.url}}" class="fancylight popup-btn" data-fancybox-group="light"> 
+                        <figure> 
+                        <img class="img-fluid" src="{{s1.url}}" style=" border-radius: 100% ; width:300px; height: 300px; margin-left:250px; padding:0px;" alt="">
+                        <figcaption style="margin-left:330px; width:150px; margin-top: 20px;">Caption goes here</figcaption>
+                        </figure> 
+                        {% endfor %}
+                        </a>
+                     </div> 
+
                 </div>
+
+                <div class="portfolio-item row">
+                    <div class="item gts col-lg-3 col-md-4 col-6 col-sm">
+                        {% for item in page.galleria.all %}
+                         {% image item.image width-300 as s1 %}
+                        <a href="{{s1.url}}"class="fancylight popup-btn" data-fancybox-group="light"> 
+                            <figure>  
+                        <img class="img-fluid" src="{{s1.url}}" style=" border-radius: 100% ; width:300px; height: 300px; margin-left:0px; padding:0px;" alt="">
+                        <figcaption style="margin-top: 20px;">Caption goes here</figcaption>
+                            </figure> 
+                        {% endfor %}
+                        </a>
+                     </div>               
+
+                     <div class="item gts col-lg-3 col-md-4 col-6 col-sm">
+                        {% for item in page.galleria.all %}
+                         {% image item.image width-300 as s1 %}
+                        <a href="{{s1.url}}" class="fancylight popup-btn" data-fancybox-group="light"> 
+                        <figure>      
+                        <img class="img-fluid" src="{{s1.url}}" style=" border-radius: 100% ; width:300px; height: 300px; margin-left:135px; padding:0px;" alt="">
+                        <figcaption style="margin-left:210px; width:150px ;margin-top: 20px;">Caption goes here</figcaption>
+                        </figure> 
+                        {% endfor %}
+                        </a>
+                     </div> 
+
+                     <div class="item gts col-lg-3 col-md-4 col-6 col-sm">
+                        {% for item in page.galleria.all %}
+                         {% image item.image width-300 as s1 %}
+                        <a href="{{s1.url}}" class="fancylight popup-btn" data-fancybox-group="light"> 
+                        <figure> 
+                        <img class="img-fluid" src="{{s1.url}}" style=" border-radius: 100% ; width:300px; height: 300px; margin-left:250px; padding:0px;" alt="">
+                        <figcaption style="margin-left:330px; width:150px; margin-top: 20px;">Caption goes here</figcaption>
+                        </figure> 
+                        {% endfor %}
+                        </a>
+                     </div> 
+
+                </div>
+                
+            </div>
+            <div class="page-scroll">
+                <a href="#explore" class="btn">
+                    <img src="{% static '/img/circle-angle.png' %}" style="width:100px;"  alt="">
+                 </a>
             </div>
         </div>
-    </div>
+    </div>              
 </section>
 
 <section id="magic" class="magic">
@@ -242,10 +421,9 @@
                     <h1 class="brand-heading">MAKE THE MAGIC HAPPEN</h1>
                     
                     <div class="page-scroll">
-                        <a href="#testimonials-intro" class="btn btn-circle">
-                            <i class="fa fa-solid fa-angle-down"></i>
+                        <a href="#explore" class="btn">
+                            <img src="{% static '/img/circle-angle.png' %}" style="width:100px;"  alt="">
                          </a>
-                        
                     </div>
                     
                 </div>
