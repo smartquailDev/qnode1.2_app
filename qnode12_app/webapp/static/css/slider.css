@@ -20,7 +20,7 @@
 
 /* Hide the images by default */
 .mySlides {
-  display: flex;
+  display: none;
 }
 
 /* Next & previous buttons */

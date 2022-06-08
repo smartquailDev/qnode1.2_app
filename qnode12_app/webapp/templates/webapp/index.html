@@ -424,30 +424,67 @@
     <div class="people-body">
         <div class="container">
             <div class="row">
+                <div class="col-md-2 col-md-1">
+                    <div class="grid-container">
+                        <div>
+                            {% for item in page.galleria.all %}
+                            {% image item.image_16 height-500 as l1 %}
+                            <figure> 
+                          <img class='grid-item grid-item-3'style="border-radius:25px; width:270px;" src='{{l1.url}}' alt=''>
+                          <figcaption style="margin-left: 50px;width: 150px;margin-top: -29px; font-size: 23px;">Claudio Cruz</figcaption>
+                            </figure>
+                         
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-2 col-md-offset-2">
+                    <div class="grid-container">
+                        <div>
+                            {% for item in page.galleria.all %}
+                            {% image item.image_17 width-300 as l2 %}
+                            <figure> 
+                          <img class='grid-item grid-item-2'style="border-radius:25px; width:270px;" src='{{l2.url}}' alt=''>
+                          <figcaption style="margin-left: -2px;width: 280px;margin-top: -29px; font-size: 23px;">Floreana Wittmer</figcaption>
+                            </figure>
+                            {% endfor %}
+                          
+                        </div>
+                    </div>
+                </div>
                 <div class="col-md-2 col-md-offset-1">
                     <div class="grid-container">
                         <div>
-                          <img class='grid-item grid-item-3'style="border-radius:25px; width:270px;" src='https://images.unsplash.com/photo-1510771463146-e89e6e86560e?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=400&fit=max&ixid=eyJhcHBfaWQiOjE0NTg5fQ' alt=''>
-                          <p>"I love you so much!"</p>
+                            {% for item in page.galleria.all %}
+                            {% image item.image_18 width-300 as l3 %}
+                            <figure> 
+                          <img class='grid-item grid-item-3'style="border-radius:25px; width:270px;" src='{{l3.url}}' alt=''>
+                          <figcaption style="margin-left: 50px;width: 150px;margin-top: -29px; font-size: 23px;">Leida Cruz</figcaption>
+                        </figure>
+                          {% endfor %}
                         </div>
-                      </div>
-                      <div>
-                        <img class='grid-item grid-item-4'style="border-radius:25px; width:270px;" src='https://images.unsplash.com/photo-1510771463146-e89e6e86560e?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=400&fit=max&ixid=eyJhcHBfaWQiOjE0NTg5fQ' alt=''>
-                        <p>"I love you so much!"</p>
-                      </div>
                     </div>
-                    <div>
-                          <img class='grid-item grid-item-5'style="border-radius:25px; width:270px;" src='https://images.unsplash.com/photo-1510771463146-e89e6e86560e?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=400&fit=max&ixid=eyJhcHBfaWQiOjE0NTg5fQ' alt=''>
-                          <p>"I love you so much!"</p>
+                </div>
+                <div class="col-md-2 col-md-offset-1">
+                    <div class="grid-container">
+                        <div>
+                            {% for item in page.galleria.all %}
+                            {% image item.image_19 width-300 as l4 %}
+                            <figure> 
+                          <img class='grid-item grid-item-4'style="border-radius:25px; width:270px;" src='{{l4.url}}' alt=''>
+                          <figcaption style="margin-left: 50px;width: 150px;margin-top: -29px; font-size: 23px;">Máximo Freire</figcaption>
+                        </figure>
+                         
+                          {% endfor %}
                         </div>
-                      </div>
-                    
-                      <div class="page-scroll">
-                        <a href="#explore" class="btn">
-                            <img src="{% static '/img/circle-angle.png' %}" style="width:100px;"  alt="">
-                         </a>
                     </div>
-                    
+                </div>
+                             
+                </div>
+                <div class="page-scroll">
+                    <a href="#explore" class="btn">
+                        <img src="{% static '/img/circle-angle.png' %}" style="width:100px;"  alt="">
+                     </a>
                 </div>
             </div>
         </div>
