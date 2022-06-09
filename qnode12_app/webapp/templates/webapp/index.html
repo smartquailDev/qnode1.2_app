@@ -655,7 +655,11 @@
 
                 <div class="col-md-3 col-md-offset-2">
                  
+                    {% for item in page.galleria.all %}
+                    {% image item.image_2 width-500 as s2 %}
                     
+                  <img class='grid-item grid-item-4'style="border-radius:25px; width:270px;" src='{{s2.url}}' alt=''>
+                  {% endfor %}
                   
                     
                 </div>
