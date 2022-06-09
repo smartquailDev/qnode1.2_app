@@ -3,7 +3,7 @@ body {
     height: 100%;
     font-family: 'Open Sans', sans-serif;
     color: #fff;
-    background-color: #000;
+    background-color:#fff;
 }
 
 html {
@@ -686,7 +686,7 @@ a:focus {
     height: auto;
     padding: 100px 0;
     text-align: center;
-    color: #fff;
+    color: #555;
     background-color: #000;
     -webkit-background-size: cover;
     -moz-background-size: cover;
