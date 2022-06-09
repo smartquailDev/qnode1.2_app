@@ -6,11 +6,10 @@
   position: relative;
   margin: auto;
   display: table;
-  width: 100%;
+  width: 265%;
   height: 100%;
   text-align: center;
   color: #fff;
-
   -webkit-background-size: cover;
   -moz-background-size: cover;
   background-size: cover;
@@ -37,7 +36,6 @@
   color: #ddd;
   font-weight: bold;
   font-size: 76px;
- 
   border-radius: 0 3px 3px 0;
   user-select: none;
 }
