@@ -16,13 +16,65 @@
   -o-background-size: cover;
 }
 
+.slider {
+  display: table;
+  max-width: 100%;
+  position: relative;
+  margin: auto;
+  display: table;
+  width: 265%;
+  height: 100%;
+  text-align: center;
+  color: #fff;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+
+}
+
+.slide1 {
+  display: table;
+  max-width: 100%;
+  position: relative;
+  margin: auto;
+  display: table;
+  width: 265%;
+  height: 100%;
+  text-align: center;
+  color: #fff;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+
+}
+
+.slide2 {
+  max-width: 100%;
+  position: relative;
+  margin: auto;
+  display: table;
+  width: 265%;
+  height: 100%;
+  text-align: center;
+  color: #fff;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+
+}
 
 
 
 /* Hide the images by default */
 .mySlides {
   display: none;
+  
 }
+
+
 
 /* Next & previous buttons */
 .prev, .next {
