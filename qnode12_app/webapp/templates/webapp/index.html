@@ -88,22 +88,18 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2">
-                    <h2>INTRO </h2>
-                    <p style="font-family: hoefler_textregular; margin-top: 23px;">The community of Floreana is</p>
-                    <p style="font-family: hoefler_textregular;">one of the most isolated and smallest in</p> 
-                    <p style="font-family: hoefler_textregular;"> the world, with no more than 150 </p>
-                     <p style="font-family: hoefler_textregular;">inhabitants; this leads us to have an</p> 
-                     <p style="font-family: hoefler_textregular;">experience of what it means to live in</p> 
-                     <p style="font-family: hoefler_textregular;"> such a small group.</p>
-                        <p style="font-family: hoefler_textregular;"> Learn from its people and places of the</p>
-                            <p style="font-family: hoefler_textregular;">first settlers as well as shared adventures</p> <p>and stories.</p> 
+                 
+                    <p class="brand-heading-intro">The community of Floreana is
+                    one of the most isolated and smallest in
+                   the world, with no more than 150 
+                    inhabitants; this leads us to have an
+                    experience of what it means to live in
+                      such a small group.</p>
+                        <p class="brand-heading-intro" >Learn from its people and places of the
+                            first settlers as well as shared adventures and stories.</p> 
                 </div>
                 </div>
-                <div class="page-scroll">
-                    <a href="#explore" class="btn">
-                        <img src="{% static '/img/circle-angle.png' %}" style="width:100px;"  alt="">
-                     </a>
-                </div>
+               
             </div>
         </div>
     </div>
@@ -113,14 +109,8 @@
     <div class="explore-body">
         <div class="container">
             <div class="row">
-                <div class="col-md-8 col-md-offset-2">
-                    <h1 class="brand-heading">Explore Unique Wonders</h1>
-                    
-                    <div class="page-scroll">
-                        <a href="#explore" class="btn">
-                            <img src="{% static '/img/circle-angle.png' %}" style="width:100px;"  alt="">
-                         </a>
-                    </div>
+                <div class="col-md-10 col-md-offset-2">
+                    <h1 class="explore-brand-heading">Explore Unique Wonders</h1>
                     
                 </div>
             </div>
@@ -406,11 +396,11 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-8 col-md-offset-2">
-                    <h1 class="brand-heading">MEET THE PEOPLE AND MAKE FRIENDS</h1>
+                    <h1 class="brand-heading"></h1>
                     
                     <div class="page-scroll">
                         <a href="#explore" class="btn">
-                            <img src="{% static '/img/circle-angle.png' %}" style="width:100px;"  alt="">
+                            <img src="{}" style="width:80px; margin-top:265px;" alt="">
                          </a>
                     </div>
                     
@@ -428,9 +418,9 @@
                     <div class="grid-container">
                         <div>
                             {% for item in page.galleria.all %}
-                            {% image item.image_16 height-500 as l1 %}
+                            {% image item.image_20 height-500 as p1 %}
                             <figure> 
-                          <img class='grid-item grid-item-3'style="border-radius:25px; width:270px;" src='{{l1.url}}' alt=''>
+                          <img class='grid-item grid-item-3'style="border-radius:25px; width:270px;" src='{{p1.url}}' alt=''>
                           <figcaption style="margin-left: 50px;width: 150px;margin-top: -29px; font-size: 23px;">Claudio Cruz</figcaption>
                             </figure>
                          
@@ -442,9 +432,9 @@
                     <div class="grid-container">
                         <div>
                             {% for item in page.galleria.all %}
-                            {% image item.image_17 width-300 as l2 %}
+                            {% image item.image_21 width-300 as p2 %}
                             <figure> 
-                          <img class='grid-item grid-item-2'style="border-radius:25px; width:270px;" src='{{l2.url}}' alt=''>
+                          <img class='grid-item grid-item-2'style="border-radius:25px; width:270px;" src='{{p2.url}}' alt=''>
                           <figcaption style="margin-left: -2px;width: 280px;margin-top: -29px; font-size: 23px;">Floreana Wittmer</figcaption>
                             </figure>
                             {% endfor %}
@@ -456,9 +446,9 @@
                     <div class="grid-container">
                         <div>
                             {% for item in page.galleria.all %}
-                            {% image item.image_18 width-300 as l3 %}
+                            {% image item.image_22 width-300 as p3 %}
                             <figure> 
-                          <img class='grid-item grid-item-3'style="border-radius:25px; width:270px;" src='{{l3.url}}' alt=''>
+                          <img class='grid-item grid-item-3'style="border-radius:25px; width:270px;" src='{{p3.url}}' alt=''>
                           <figcaption style="margin-left: 50px;width: 150px;margin-top: -29px; font-size: 23px;">Leida Cruz</figcaption>
                         </figure>
                           {% endfor %}
@@ -469,9 +459,9 @@
                     <div class="grid-container">
                         <div>
                             {% for item in page.galleria.all %}
-                            {% image item.image_19 width-300 as l4 %}
+                            {% image item.image_23 width-300 as p4 %}
                             <figure> 
-                          <img class='grid-item grid-item-4'style="border-radius:25px; width:270px;" src='{{l4.url}}' alt=''>
+                          <img class='grid-item grid-item-4'style="border-radius:25px; width:270px;" src='{{p4.url}}' alt=''>
                           <figcaption style="margin-left: 50px;width: 150px;margin-top: -29px; font-size: 23px;">Máximo Freire</figcaption>
                         </figure>
                          
@@ -483,33 +473,13 @@
                 </div>
                 <div class="page-scroll">
                     <a href="#explore" class="btn">
-                        <img src="{% static '/img/circle-angle.png' %}" style="width:100px;"  alt="">
+                        <img src="{% static '/img/circle-angle.png' %}" style="width:80px; margin-top:265px;"  alt="">
                      </a>
                 </div>
             </div>
         </div>
     </div>
 </section>
-
-<section id="magic" class="magic">
-    <div class="magic-body">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-8 col-md-offset-2">
-                    <h1 class="brand-heading">MAKE THE MAGIC HAPPEN</h1>
-                    
-                    <div class="page-scroll">
-                        <a href="#explore" class="btn">
-                            <img src="{% static '/img/circle-angle.png' %}" style="width:100px;"  alt="">
-                         </a>
-                    </div>
-                    
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
 
 
 <section>
@@ -523,9 +493,10 @@
                 <div class="row">
                    <div class="col-md-8 col-md-offset-2">
                     <h1 class="brand-heading">MAKE THE MAGIC HAPPEN</h1>
+                    
                     <div class="page-scroll">
                         <a href="#explore" class="btn">
-                            <img src="{% static '/img/circle-angle.png' %}" style="width:100px;"  alt="">
+                            <img src="{% static '/img/circle-angle.png' %}" style="width:80px; margin-top:265px;"  alt="">
                          </a>
                     </div>
                 </div>
@@ -540,17 +511,76 @@
             <div class="slide2">
             <div class="container">          
             <div class="row">
-               <div class="col-md-8 col-md-offset-2">
-                <h1 class="brand-heading">MAKE TH</h1>
-                <div class="page-scroll">
-                    <a href="#explore" class="btn">
-                        <img src="{% static '/img/circle-angle.png' %}" style="width:100px;"  alt="">
-                     </a>
-                </div>
+               <div class="col-md-8 col-md-offset-5">
+           
+                <p class="brand-parraph">
+                   
+                    Explore the natural wonders of Darwins enchanted isles while having a chat with the local guides.
+Explore the natural wonders of Darwins enchanted isles while having a chat with the local guides. Explore the natural wonders of Darwinsenchanted isles while having a chat with the local guides.
+Darwins encchanted isles while having a chat with the local guides.
+                </p>
+                <hr>
             </div>
          </div>
       </div>
     </div>
+</div>
+
+<div class="mySlides fade" style="display: grid; height: 800px;">   
+    <div class="slide3">
+    <div class="container">          
+    <div class="row">
+       <div class="col-md-8 col-md-offset-5">
+        <p class="brand-parraph-2">
+                   
+            Be amazed by the umpresendented scenery, in one of the most uique and remote places on planet earth.
+            Be amazed by the umpresendented scenery, in one of the most uique and remote places on planet earth.
+            Be amazed by the umpresendented scenery, in one of the most uique and remote places on planet earth
+        </p>
+        <hr>
+        
+    </div>
+ </div>
+</div>
+</div>
+</div>
+
+
+<div class="mySlides fade" style="display: grid; height: 800px;">   
+    <div class="slide4">
+    <div class="container">          
+    <div class="row">
+       <div class="col-md-8 col-md-offset-5">
+        <p class="brand-parraph">
+                   
+            Share a taste of the local produce, farmed organically by the member of the community and take the adventure into action.
+Share a taste of the local produce, farmed organically by the member of the community and take the adventure into action.
+Share a taste of the local community and take the adventure into action.
+        </p>
+        <hr>
+    </div>
+ </div>
+</div>
+</div>
+</div>
+
+
+<div class="mySlides fade" style="display: grid; height: 800px;">   
+    <div class="slide5">
+    <div class="container">          
+    <div class="row">
+       <div class="col-md-8 col-md-offset-5">
+        <p class="brand-parraph">
+                   
+            Share a taste of the local produce, farmed organically by the member of the community and take the adventure into action.
+Share a taste of the local produce, farmed organically by the member of the community and take the adventure into action.
+Share a taste of the local community and take the adventure into action.
+        </p>
+        <hr>
+    </div>
+ </div>
+</div>
+</div>
 </div>
 
 
