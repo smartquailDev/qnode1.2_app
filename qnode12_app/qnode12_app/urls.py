@@ -9,8 +9,9 @@ from wagtail.core import urls as wagtail_urls
 from wagtail.documents import urls as wagtaildocs_urls
 
 from django.conf.urls.static import static
+from django.conf.urls.i18n import i18n_patterns
 
-urlpatterns = [
+urlpatterns = i18n_patterns(
     path('admin/', admin.site.urls),
     path('baton/', include('baton.urls')),
     path('coupons/', include('coupons.urls', namespace='coupons')),
@@ -24,4 +25,6 @@ urlpatterns = [
     re_path(r'^documents/', include(wagtaildocs_urls)),
     re_path(r'', include(wagtail_urls)),
 
- ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+ ) + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+
+

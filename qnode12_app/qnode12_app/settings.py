@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 import os
 from pathlib import Path
+from re import LOCALE
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -56,6 +57,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     #Wagtail Inicials
     'core',
+    'wagtail.locales',
     'wagtail.contrib.forms',
     'wagtail.contrib.redirects',
     'wagtail.embeds',
@@ -77,6 +79,7 @@ INSTALLED_APPS = [
     'django_social_share',
     'taggit',
     'webapp',
+    'webapp_v10',
     'streams',
     'widget_tweaks',
     'shop',
@@ -98,10 +101,12 @@ MIDDLEWARE = [
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
+    'django.middleware.locale.LocaleMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'wagtail.contrib.redirects.middleware.RedirectMiddleware',
+    
 ]
 
 ROOT_URLCONF = 'qnode12_app.urls'
@@ -252,6 +257,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'django.template.context_processors.i18n',
             ],
         },
     },
@@ -303,6 +309,23 @@ WAGTAILIMAGES_FORMAT_CONVERSIONS = {
     'jpg': 'jpeg',
 }
 
+#Internacionalitation
+USE_I18N = True
+WAGTAIL_I18N_ENABLED = True
+USE_L10N = True
+WAGTAIL_CONTENT_LANGUAGES = LANGUAGES = [
+    ('en', "English"),
+    ('es', "Spanish"),
+]
+
+LANGUAGE = (
+    ('en', 'English'),
+    ('es','Spanish'), 
+)
+LANGUAGE_CODE = 'en'
+LOCALE_PATHS = (
+    os.path.join(BASE_DIR, 'locale/'),
+)
 
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators

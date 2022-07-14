@@ -1,7 +1,19 @@
+{% load i18n %}
 {% load wagtailcore_tags %}
 {% load wagtailimages_tags %}
 {% load widget_tweaks %}
 {% load static  %}
+
+{% for language_code, language_name in LANGUAGES %}
+    {% get_language_info for language_code as lang %}
+
+    {% language language_code %}
+        <a href="{% pageurl page.localized %}" rel="alternate" hreflang="{{ language_code }}">
+            {{ lang.name_local }}
+        </a>
+    {% endlanguage %}
+{% endfor %}
+
 
 <!DOCTYPE html>
 <html lang="en">
