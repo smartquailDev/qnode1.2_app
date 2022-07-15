@@ -60,6 +60,12 @@ class Home(AbstractEmailForm):
     banner_title5 = RichTextField(blank=True,verbose_name='Titulo de galeria-2  ')
     banner_title6 = RichTextField(blank=True,verbose_name='Titulo de galeria-3  ')
     banner_title7 = RichTextField(blank=True,verbose_name='Titulo de galeria-4  ')
+    banner_title8 = RichTextField(blank=True,verbose_name='Titulo de galeria-4  ')
+    banner_title9 = RichTextField(blank=True,verbose_name='Titulo de galeria-4  ')
+    banner_title10 = RichTextField(blank=True,verbose_name='Titulo de galeria-4  ')
+    banner_title11 = RichTextField(blank=True,verbose_name='Titulo de galeria-4  ')
+
+
 
     # Empieza Banner de Tearsheet
     TS_info1 = models.CharField(max_length=150, null=True, blank=True,verbose_name='Tearsheet-1 info')
@@ -131,6 +137,10 @@ class Home(AbstractEmailForm):
         FieldPanel('banner_title5', classname="full"),
         FieldPanel('banner_title6', classname="full"),
         FieldPanel('banner_title7', classname="full"),
+        FieldPanel('banner_title8', classname="full"),
+        FieldPanel('banner_title9', classname="full"),
+        FieldPanel('banner_title10', classname="full"),
+        FieldPanel('banner_title11', classname="full"),
     #Tearsheet Info
         FieldPanel('TS_info1', classname="full"),
         FieldPanel('TS_date1', classname="full"),

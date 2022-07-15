@@ -35,13 +35,15 @@
         </div>
         <header class="main-header">
             <!-- logo   -->
-            {% image item.logo width-110 format-png as logo %}
-            <a href="index.html" class="logo-holder"><img src="{{logo.url}}" alt=""></a>  
+            {% for item in page.galleria.all %}
+            {% image item.logo width-900 format-png as logo %}
+            <a href="index.html" class="logo-holder"><img src="{{logo.url}}" alt="" width="{{ logo.width }}"></a>  
+            {% endfor %}
             <!-- logo end  -->		
             <!-- search -->				
             
             <!-- search end  -->
-            <div class="sb-button"></div>
+          
             
            
             <div class="share-btn showshare"><i class="fal fa-share"></i><span>Share</span></div>
@@ -56,52 +58,22 @@
                 <nav>
                     <ul>
                         <li>
-                            <a href="#" class="act-link">Home </a>
-                            <!--second level -->
-                            <ul>
-                                <li><a href="index.html">Carousel</a></li>
-                                <li><a href="index2.html">Slider Details</a></li>
-                                <li><a href="index3.html">Multi Slideshow</a></li>
-                                <li><a href="index4.html">Slideshow</a></li>
-                                <li><a href="index5.html">Image</a></li>
-                                <li><a href="index6.html">Slider Classic</a></li>
-                                <li><a href="index7.html">Video</a></li>
-                            </ul>
-                            <!--second level end-->
-                        </li>
-                       
-                        <li>
-                            <a href="#">Portfolio </a>
-                            <!--second level -->
-                            <ul>
-                                <li><a href="portfolio.html">Horizontal 2 Columns</a></li>
-                                <li><a href="portfolio2.html">Horizontal 3 Columns</a></li>
-                                <li><a href="portfolio3.html">Horizontal 1 Columns</a></li>
-                                <li><a href="portfolio4.html">Masonry</a></li>
-                                <li><a href="portfolio5.html">Masonry 2</a></li>
-                                <li><a href="portfolio6.html">Column Grid</a></li>
-                                <li>
-                                    <a href="#">Single </a>
-                                    <!--third  level -->
-                                    <ul>
-                                        <li><a href="portfolio-single.html">Carousel</a></li>
-                                        <li><a href="portfolio-single2.html">Fullscreen Slider </a></li>
-                                        <li><a href="portfolio-single3.html">Column Grid</a></li>
-                                        <li><a href="portfolio-single4.html">Column Fullwidth</a></li>
-                                    </ul>
-                                    <!--third level end-->
-                                </li>
-                            </ul>
-                            <!--second level end-->
+                            <a href="#" class="act-link">{% trans "The Island" %} </a>
                         </li>
                         <li>
-                            <a href="about.html">About</a>
+                            <a href="about.html">{% trans "Charms"%}</a>
                         </li>
                         <li>
-                            <a href="blog.html">News</a>
+                            <a href="blog.html">{% trans "Worlds" %}</a>
                         </li>
                         <li>
-                            <a href="contacts.html">Contacts</a>
+                            <a href="contacts.html">{% trans "Hosts" %}</a>
+                        </li>
+                        <li>
+                            <a href="contacts.html">{% trans "Expeditions" %}</a>
+                        </li>
+                        <li>
+                            <a href="contacts.html">{% trans "Contacts" %}</a>
                         </li>
                         <li>
                             <a href="#" class="act-link">Lenguage </a>

@@ -243,7 +243,7 @@ blockquote p {
 	z-index:11;
 }
 .logo-holder img {
-	height:22px;
+	height:38px;
 	width:auto;
 }
 .search-button {
@@ -308,7 +308,7 @@ blockquote p {
 	margin-right:10px;
 	font-size:19px;
 	top:28px;
-	color:#292929;
+	color:#fff;
 	font-weight:800;
 }
 .share-btn span {
@@ -1406,7 +1406,7 @@ blockquote p {
 	padding-left:180px;
 }
 .follow-wrap {
-	top:90px;
+	top:265px;
 	cursor:pointer;
 }
 .follow-wrap ul {
@@ -1519,11 +1519,11 @@ blockquote p {
 .btn {
 	padding: 15px 35px;
     cursor: pointer;
-    background: #292929;
+    background: #b9b3b34f;
     -webkit-appearance: none;
     position: relative;
     color: #fff;
-    font-size: 10px;
+    font-size: 15px;
 	letter-spacing:1px;
 	text-transform:uppercase;
     font-weight: 700;
@@ -2679,7 +2679,7 @@ section.single-content-section {
 	font-size:10px;
 	line-height:36px;
 	z-index:20;
-    background: rgba(0,0,0,0.71);
+    background: rgba(249, 249, 249, 0.38);
 	border-radius:100%;
 }
 .ss-slider-prev ,   .ss-slider-cont-prev {

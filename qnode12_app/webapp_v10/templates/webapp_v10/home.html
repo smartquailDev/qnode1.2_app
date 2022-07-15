@@ -1,4 +1,6 @@
+
 {% extends "webapp_v10/base.html" %}
+{% load i18n %}
 {% load wagtailcore_tags wagtailimages_tags %}
 {% load widget_tweaks %}
 {% load static %}
@@ -14,7 +16,7 @@
             <!--follow-wrap-->
             <div class="follow-wrap">
                 <div class="follow-wrap_title">
-                    <span>Follow</span> <i class="fal fa-arrow-right"></i>
+                    <span>{% trans "Follow" %}</span> <i class="fal fa-arrow-right"></i>
                 </div>
                 <div class="clearfix"></div>
                 <ul>
@@ -40,59 +42,103 @@
                                         {% endfor %}
                                         <div class="overlay"></div>
                                         <div class="fs-slider_align_title">
-                                            <h2><a href="portfolio-single.html">VIVE ESTE MUNDO MAJESTUOSO</a></h2>
+                                            <h2><a href="portfolio-single.html">{{page.banner_title4| richtext}}</a></h2>
                                            <p></p>
-                                           
                                         </div>
-                                       
                                     </div>
                                 </div>
-                                <!-- swiper-slide-->
-                                <!-- swiper-slide-->
-                                <div class="swiper-slide hov_zoom" >
+                                <div class="swiper-slide hov_zoom">
                                     <div class="fs-slider-item fl-wrap">
-                                        <div class="bg"  data-bg="images/bg/1.jpg"></div>
+                                        {% for item in page.galleria.all %}
+                                        {% image item.image_2 width-1200 as s2 %}
+                                        <div class="bg"  data-bg="{{s2.url}}"></div>
+                                        {% endfor %}
                                         <div class="overlay"></div>
                                         <div class="fs-slider_align_title">
-                                            <h2><a href="portfolio-single.html">Discover Norway</a></h2>
-                                            <p> </p>
-                                            <div class="clearfix"></div>
-                                            <a href="portfolio-single.html" class="btn fl-btn">Details</a>
+                                            <h2><a href="portfolio-single.html">{{page.banner_title5| richtext}}</a></h2>
+                                           <p></p>
+                                           <div class="clearfix"></div>
+                                            <a href="portfolio-single.html" class="btn fl-btn">{% trans "Explore "%}</a>
                                         </div>
-                                       
                                     </div>
                                 </div>
-                                <!-- swiper-slide-->
-                                <!-- swiper-slide-->
-                                <div class="swiper-slide hov_zoom" >
+                                <div class="swiper-slide hov_zoom">
                                     <div class="fs-slider-item fl-wrap">
-                                        <div class="bg"  data-bg="images/bg/1.jpg"></div>
+                                        {% for item in page.galleria.all %}
+                                        {% image item.image_3 width-1200 as s3 %}
+                                        <div class="bg"  data-bg="{{s3.url}}"></div>
+                                        {% endfor %}
                                         <div class="overlay"></div>
                                         <div class="fs-slider_align_title">
-                                            <h2><a href="portfolio-single.html">Greeen Flowers</a></h2>
-                                            <p> </p>
-                                            <div class="clearfix"></div>
-                                            <a href="portfolio-single.html" class="btn fl-btn">Details</a>
+                                            <h2><a href="portfolio-single.html">{{page.banner_title6| richtext}}</a></h2>
+                                           <p></p>
+                                           <div class="clearfix"></div>
+                                            <a href="portfolio-single.html" class="btn fl-btn">{% trans "Explore "%}</a>
                                         </div>
-                    
                                     </div>
                                 </div>
-                                <!-- swiper-slide-->
-                                <!-- swiper-slide-->
-                                <div class="swiper-slide full-height hov_zoom" >
-                                    <div class="fs-slider-item  fl-wrap">
-                                        <div class="bg"  data-bg="images/bg/1.jpg"></div>
+                                <div class="swiper-slide hov_zoom">
+                                    <div class="fs-slider-item fl-wrap">
+                                        {% for item in page.galleria.all %}
+                                        {% image item.image_4 width-1200 as s4 %}
+                                        <div class="bg"  data-bg="{{s4.url}}"></div>
+                                        {% endfor %}
                                         <div class="overlay"></div>
                                         <div class="fs-slider_align_title">
-                                            <h2><a href="portfolio-single.html">Alone on Nature</a></h2>
-                                            <p> </p>
-                                            <div class="clearfix"></div>
-                                            <a href="portfolio-single.html" class="btn fl-btn">Details</a>
+                                            <h2><a href="portfolio-single.html">{{page.banner_title7| richtext}}</a></h2>
+                                           <p></p>
+                                           <div class="clearfix"></div>
+                                            <a href="portfolio-single.html" class="btn fl-btn">{% trans "Explore "%}</a>
                                         </div>
-                                      
                                     </div>
                                 </div>
-                                <!-- swiper-slide-->
+                                <div class="swiper-slide hov_zoom">
+                                    <div class="fs-slider-item fl-wrap">
+                                        {% for item in page.galleria.all %}
+                                        {% image item.image_5 width-1200 as s5 %}
+                                        <div class="bg"  data-bg="{{s5.url}}"></div>
+                                        {% endfor %}
+                                        <div class="overlay"></div>
+                                        <div class="fs-slider_align_title">
+                                            <h2><a href="portfolio-single.html">{{page.banner_title8| richtext}}</a></h2>
+                                           <p></p>
+                                           <div class="clearfix"></div>
+                                            <a href="portfolio-single.html" class="btn fl-btn">{% trans "Explore "%}</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide hov_zoom">
+                                    <div class="fs-slider-item fl-wrap">
+                                        {% for item in page.galleria.all %}
+                                        {% image item.image_6 width-1200 as s6 %}
+                                        <div class="bg"  data-bg="{{s6.url}}"></div>
+                                        {% endfor %}
+                                        <div class="overlay"></div>
+                                        <div class="fs-slider_align_title">
+                                            <h2><a href="portfolio-single.html">{{page.banner_title9| richtext}}</a></h2>
+                                           <p></p>
+                                           <div class="clearfix"></div>
+                                            <a href="portfolio-single.html" class="btn fl-btn">{% trans "Explore "%}</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide hov_zoom">
+                                    <div class="fs-slider-item fl-wrap">
+                                        {% for item in page.galleria.all %}
+                                        {% image item.image_7 width-1200 as s7 %}
+                                        <div class="bg"  data-bg="{{s7.url}}"></div>
+                                        {% endfor %}
+                                        <div class="overlay"></div>
+                                        <div class="fs-slider_align_title">
+                                            <h2><a href="portfolio-single.html">{{page.banner_title10| richtext}}</a></h2>
+                                           <p></p>
+                                           <div class="clearfix"></div>
+                                            <a href="portfolio-single.html" class="btn fl-btn">{% trans "Explore "%}</a>
+                                        </div>
+                                    </div>
+                                </div>
+                              
+                               
                             </div>
                         </div>
                     </div>
@@ -117,48 +163,8 @@
 </div>
 <!-- wrapper end -->
 <!-- sidebar -->
-<div class="sb-overlay"></div>
-<div class="hiiden-sidebar-wrap outsb">
-    <!-- sb-widget-wrap-->
-    <div class="sb-widget-wrap fl-wrap">
-        <h3>SUBSCRIBE TO OUR NEWSLETTER</h3>
-        <div class="sb-widget  fl-wrap">
-            <p>Lorem ipsum dosectetur adipisicing elit, sed do.Lorem ipsum dolor sit amet,  </p>
-            <div class="subcribe-form fl-wrap">
-                <form id="subscribe">
-                    <input class="enteremail" name="email" id="subscribe-email" placeholder="Your Email" spellcheck="false" type="text">
-                    <button type="submit" id="subscribe-button" class="subscribe-button">Submit</button>
-                    <label for="subscribe-email" class="subscribe-message"></label>
-                </form>
-            </div>
-        </div>
-    </div>
-    <!-- sb-widget-wrap end--> 
-    <!-- sb-widget-wrap-->
-    <div class="sb-widget-wrap fl-wrap">
-        <h3>We're Are Social</h3>
-        <div class="sb-widget    fl-wrap">
-            <div class="sidebar-social fl-wrap">
-                <ul>
-                    <li><a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
-                    <li><a href="#" target="_blank"><i class="fab fa-instagram"></i></a></li>
-                    <li><a href="#" target="_blank"><i class="fab fa-twitter"></i></a></li>
-                    <li><a href="#" target="_blank"><i class="fab fa-vk"></i></a></li>
-                </ul>
-            </div>
-        </div>
-    </div>
-    <!-- sb-widget-wrap end-->                                   
-    <!-- sb-widget-wrap-->
-    <div class="sb-widget-wrap fl-wrap">
-        <h3>Our Last Twitts</h3>
-        <div class="sb-widget  fl-wrap">
-            <div id="footer-twiit"></div>
-            <a href="#" target="_blank" class="twitt_btn fl-wrap">Follow Us</a>
-        </div>
-    </div>
-    <!-- sb-widget-wrap end-->    
-</div>
+
+
 <!-- sidebar end -->
 <!-- cursor-->
 
