@@ -58,25 +58,25 @@
                 <nav>
                     <ul>
                         <li>
-                            <a href="#" class="act-link">{% trans "The Island" %} </a>
+                            <a href="{% slugurl 'history' %}" class="act-link">{% trans "The Island" %} </a>
                         </li>
                         <li>
-                            <a href="about.html">{% trans "Charms"%}</a>
+                            <a href="{% slugurl 'charms' %}">{% trans "Charms"%}</a>
                         </li>
                         <li>
-                            <a href="blog.html">{% trans "Worlds" %}</a>
+                            <a href="{% slugurl 'worlds' %}">{% trans "Worlds" %}</a>
                         </li>
                         <li>
-                            <a href="contacts.html">{% trans "Hosts" %}</a>
+                            <a href="{% slugurl 'hosts' %}">{% trans "Hosts" %}</a>
                         </li>
                         <li>
-                            <a href="contacts.html">{% trans "Expeditions" %}</a>
+                            <a href="{% slugurl 'expeditions' %}">{% trans "Expeditions" %}</a>
                         </li>
                         <li>
-                            <a href="contacts.html">{% trans "Contacts" %}</a>
+                            <a hhref="{% slugurl 'contacs' %}">{% trans "Contacts" %}</a>
                         </li>
                         <li>
-                            <a href="#" class="act-link">Lenguage </a>
+                            <a href="#" class="act-link">{% trans "Lenguage" %} </a>
                             <ul>
                             <!--second level -->
                             {% for language_code, language_name in LANGUAGES %} 
