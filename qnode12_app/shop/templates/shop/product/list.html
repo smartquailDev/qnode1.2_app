@@ -21,79 +21,64 @@
           <div class="bg"  data-bg="images/bg/1.jpg"></div>
           <div class="overlay"></div>
           <div class="column-title">
-              <h2>About Me</h2>
+              <h2>{% trans "Expeditions" %}</h2>
               <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas in pulvinar neque. Nulla finibus lobortis pulvinar.</h3>
           </div>
-          <div class="column-notifer">
-              <div class="scroll-down-wrap transparent_sdw">
-                  <div class="mousey">
-                      <div class="scroller"></div>
-                  </div>
-                  <span>Scroll down  to Discover</span>
-                 
-              </div>
-          </div>
+      
           <div class="fixed-column-dec"></div>
       </div>
       <!-- column-image end  -->	
       <!-- column-wrapper -->	
-      <div class="column-wrapper">
-          <!--section end  -->								
-       
-          <!--section   -->	
-          <section id="sec3">
+      <div class="column-wrapper  single-content-section">
+          <!-- fixed-bottom-content-->	
+          <div class="fixed-bottom-content">
+              <!-- pagination   -->
+              <div class="pagination-container fl-wrap">
+                  <a href="#" class="prevposts-link"><i class="fal fa-chevron-left"></i></a>
+                  <a href="#">1</a>
+                  <a href="#" class="current-page">2</a>
+                  <a href="#">3</a>
+                  <a href="#">4</a>
+                  <a href="#" class="nextposts-link"><i class="fal fa-chevron-right"></i></a>
+              </div>
+              <!-- pagination  end -->
+          </div>
+          <!-- fixed-bottom-content end -->	
+          <!--section  -->	
+          <section class="single-content-section">
               <div class="container small-container">
-                  <div class="section-title fl-wrap">
-                      <h3>Tours and prices</h3>
-                      <h4> </h4>
-                      <div class="section-number"></div>
-                  </div>
-                  <div class="column-wrapper_item fl-wrap">
-                      <div class="column-wrapper_text fl-wrap">
-                          <!-- serv-wrap--> 
-                          <div class="serv-wrap fl-wrap">
-                              <!-- serv-item --> 
-                              <div class="serv-item">
-                                  <div class="serv-media">
-                                    {% for product in products %}
-                                    <a href="{{ product.get_absolute_url }}">
-                                      <img src="{% if product.image %}{{ product.image.url }}{% else %}{% static "img/no_image.png" %}{% endif %}">
-                                    </a>
-                                    {% endfor %}
-                                  </div>
-                                  <div class="serv-text">
-                                    {% for c in categories %}
-                                      <h4 {% if category.slug == c.slug %}class="selected"{% endif %}><a href="{{ c.get_absolute_url }}">
-                                        {{ c.name }}
-                                      </a></h4>
-                                      {% endfor %}
-                                      
-                                      {% for product in products %}
-                                      <a href="{{ product.get_absolute_url }}"><h4> {{ product.name }}</h4></a>
-                                      <p>{{product.description}}</p>
-                                      <ul>
-                                          <li><a href="#">{{product.item1}}</a></li>
-                                          <li><a href="#">{{product.item2}}</a></li>
-                                          <li><a href="#">{{product.item3}}</a></li>
-                                      </ul>
-                                      <div class="serv-price">Price :<span>${{ product.price }}</span></div>
-                                    {% endfor %}
-                                  </div>
-                              </div>
-                              <!-- serv-item end --> 
-                              <!-- serv-item --> 
-                             
-                              <!-- serv-item end -->                                                  
+                  <!-- post -->
+                  <div class="post fl-wrap fw-post">
+                      <h2><span>Blog post title</span></h2>
+                      <ul class="blog-title-opt">
+                          <li><a href="#">12 may 2017</a></li>
+                          <li> - </li>
+                          <li><a href="#">Interviews </a></li>
+                          <li><a href="#">Design</a></li>
+                      </ul>
+                      <!-- blog media -->
+                      <div class="blog-media fl-wrap">
+                          <img src="images/folio/1.jpg" class="respimg" alt="">
+                      </div>
+                      <!-- blog media end -->
+                      <div class="blog-text fl-wrap">
+                          <div class="pr-tags fl-wrap">
+                              <span>Tags : </span>
+                              <ul>
+                                  <li><a href="#">Design</a></li>
+                                  <li><a href="#">Photography</a></li>
+                                  <li><a href="#">Fasion</a></li>
+                              </ul>
                           </div>
-                          <!-- serv-wrap end --> 
-                          <p>Praesent nec leo venenatis elit semper aliquet id ac enim. Maecenas nec mi leo. Etiam venenatis ut dui non hendrerit. Integer dictum, diam vitae blandit accumsan, dolor odio tempus arcu, vel ultrices nisi nibh vitae ligula. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi varius lacinia vestibulum. Aliquam lobortis facilisis tellus, in facilisis ex vehicula ac. In malesuada quis turpis vel viverra.</p>
+                          <p>
+                              Vestibulum orci felis, ullamcorper non condimentum non, ultrices ac nunc. Mauris non ligula suscipit, vulputate mi accumsan, dapibus felis. Nullam sed sapien dui. Nulla auctor sit amet sem non porta. Praesent eu massa vel diam laoreet elementum ac sed felis. Donec suscipit ultricies risus sed mollis. Donec volutpat porta risus posuere imperdiet. Sed viverra dolor sed dolor placerat ornare ut . Integer iaculis tellus nulla, quis imperdiet magna venenatis vitae..
+                          </p>
+                          <a href="blog-single.html" class="btn float-btn flat-btn">Read more </a>
                       </div>
                   </div>
+
               </div>
           </section>
-          <!--section end  -->								
-          <div class="sec-dec"></div>
-         
           <!--section end  -->	
           <!--footer -->			
           <footer class="min-footer fl-wrap content-animvisible">
@@ -119,81 +104,4 @@
   </div>
   <!--share-wrapper end-->
 </div>
-<!-- wrapper end -->
-<!-- sidebar -->
-<div class="sb-overlay"></div>
-<div class="hiiden-sidebar-wrap outsb">
-  <!-- sb-widget-wrap-->
-  <div class="sb-widget-wrap fl-wrap">
-      <h3>SUBSCRIBE TO OUR NEWSLETTER</h3>
-      <div class="sb-widget  fl-wrap">
-          <p>Lorem ipsum dosectetur adipisicing elit, sed do.Lorem ipsum dolor sit amet,  </p>
-          <div class="subcribe-form fl-wrap">
-              <form id="subscribe">
-                  <input class="enteremail" name="email" id="subscribe-email" placeholder="Your Email" spellcheck="false" type="text">
-                  <button type="submit" id="subscribe-button" class="subscribe-button">Submit</button>
-                  <label for="subscribe-email" class="subscribe-message"></label>
-              </form>
-          </div>
-      </div>
-  </div>
-  <!-- sb-widget-wrap end-->  
-  <!-- sb-widget-wrap-->
-  <div class="sb-widget-wrap fl-wrap">
-      <h3>We're Are Social</h3>
-      <div class="sb-widget    fl-wrap">
-          <div class="sidebar-social fl-wrap">
-              <ul>
-                  <li><a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
-                  <li><a href="#" target="_blank"><i class="fab fa-instagram"></i></a></li>
-                  <li><a href="#" target="_blank"><i class="fab fa-twitter"></i></a></li>
-                  <li><a href="#" target="_blank"><i class="fab fa-vk"></i></a></li>
-              </ul>
-          </div>
-      </div>
-  </div>
-  <!-- sb-widget-wrap end-->                                   
-  <!-- sb-widget-wrap-->
-  <div class="sb-widget-wrap fl-wrap">
-      <h3>Our Last Twitts</h3>
-      <div class="sb-widget  fl-wrap">
-          <div id="footer-twiit"></div>
-          <a href="#" target="_blank" class="twitt_btn fl-wrap">Follow Us</a>
-      </div>
-  </div>
-  <!-- sb-widget-wrap end-->    
-</div>
-<!-- sidebar end -->
-<!-- cursor-->
-<div class="element">
-  <div class="element-item"></div>
-</div>
-<!-- cursor end-->          
-</div>
-
-  <div id="sidebar">
-    <h3>Categories</h3>
-    <ul>
-      <li {% if not category %}class="selected"{% endif %}>
-        <a href="{% url "shop:product_list" %}">All</a>
-      </li>
-      {% for c in categories %}
-        <li {% if category.slug == c.slug %}class="selected"{% endif %}>
-          <a href="{{ c.get_absolute_url }}">{{ c.name }}</a>
-        </li>
-      {% endfor %}
-    </ul>
-  </div>
-  <div id="main" class="product-list">
-    <h1>{% if category %}{{ category.name }}{% else %}Products{% endif %}</h1>
-    {% for product in products %}
-      <div class="item">
-        <a href="{{ product.get_absolute_url }}">
-          <img src="{% if product.image %}{{ product.image.url }}{% else %}{% static "img/no_image.png" %}{% endif %}">
-        </a>
-        <a href="{{ product.get_absolute_url }}">{{ product.name }}</a><br>
-        ${{ product.price }}
-      </div>
-    {% endfor %}
-  </div>
 {% endblock %}

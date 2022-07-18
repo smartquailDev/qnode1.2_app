@@ -11,20 +11,16 @@
     <div class="content">
         <!-- column-image  -->	
         <div class="column-image">
-            <div class="bg"  data-bg="images/bg/1.jpg"></div>
+            {% for item in page.galleria_5.all %}
+            {% image item.image width-1200 as s1 %}
+            <div class="bg"  data-bg="{{s1.url}}"></div>
+            {% endfor %}
             <div class="overlay"></div>
             <div class="column-title">
-                <h2>Contact Info</h2>
-                <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas in pulvinar neque. Nulla finibus lobortis pulvinar.</h3>
+                <h2>CENTRO COMUNITARIO</h2>
+                <h2>ISLA FLOREANA</h2>
             </div>
-            <div class="column-notifer">
-                <div class="scroll-down-wrap transparent_sdw">
-                    <div class="mousey">
-                        <div class="scroller"></div>
-                    </div>
-                    <span>Scroll down  to Discover</span>
-                </div>
-            </div>
+           
             <div class="fixed-column-dec"></div>
         </div>
         <!-- column-image end  -->	
@@ -34,9 +30,9 @@
             <div class="scroll-nav-wrap">
                 <nav class="scroll-nav scroll-init">
                     <ul>
-                        <li><a class="act-scrlink" href="#sec1">Details</a></li>
-                        <li><a href="#sec2">Location</a></li>
-                        <li><a href="#sec3">Say Hello</a></li>
+                        <li><a class="act-scrlink" href="#sec1">{% trans "Details" %}</a></li>
+                        <li><a href="#sec2">{% trans "Location" %}</a></li>
+                        <li><a href="#sec3">{% trans "Commments" %}</a></li>
                     </ul>
                 </nav>
             </div>
@@ -46,12 +42,9 @@
                 <div class="container small-container">
                     <div class="section-title fl-wrap">
                         <h3>Contact Information</h3>
-                        <h4>Sed tempor iaculis massa faucibus feugiat. In fermentum facilisis massa</h4>
-                        <div class="section-number">01.</div>
                     </div>
                     <div class="column-wrapper_item fl-wrap">
                         <div class="column-wrapper_text fl-wrap">
-                            <p>If you’d like to talk about a project, our work or anything else then get in touch.</p>
                             <div class="contact-details fl-wrap">
                                 <ul>
                                     <li><span>Mail :</span><a href="#" target="_blank">yourmail@domain.com</a></li>
@@ -59,7 +52,7 @@
                                     <li><span>Phone :</span><a href="#">+7(111)123456789</a> , <a href="#">+8(222)987654321</a></li>
                                 </ul>
                             </div>
-                            <a href="#sec3" class="custom-scroll-link btn fl-btn">Say Hello</a>
+                            <a href="#sec3" class="custom-scroll-link btn fl-btn">{% trans " Make your comments "%}</a>
                         </div>
                     </div>
                 </div>
@@ -70,9 +63,7 @@
             <section id="sec2">
                 <div class="container small-container">
                     <div class="section-title fl-wrap">
-                        <h3>Studio Location</h3>
-                        <h4>Sed tempor iaculis massa faucibus feugiat. In fermentum facilisis massa</h4>
-                        <div class="section-number">02.</div>
+                        <h3>{% trans "Location" %}</h3>
                     </div>
                     <div class="column-wrapper_item fl-wrap">
                         <div class="column-wrapper_text fl-wrap">
@@ -90,21 +81,55 @@
             <section id="sec3">
                 <div class="container small-container">
                     <div class="section-title fl-wrap">
-                        <h3>Get In Touch</h3>
-                        <h4>Sed tempor iaculis massa faucibus feugiat. In fermentum facilisis massa</h4>
-                        <div class="section-number">03.</div>
+                        <h3>{% trans "Make your comments" %}</h3>
                     </div>
                     <div class="column-wrapper_item fl-wrap">
                         <div class="column-wrapper_text fl-wrap">
                             <div id="contact-form" class="fl-wrap">
                                 <div id="message"></div>
-                                <form  class="custom-form" action="php/contact.php" name="contactform" id="contactform">
+                                <form action="{% pageurl page %}" method="POST" novalidate class="custom-form" action="php/contact.php" name="contactform" >
                                     <fieldset>
-                                        <input type="text" name="name" id="name" placeholder="Your Name *" value=""/>
-                                        <input type="text"  name="email" id="email" placeholder="Email Address *" value=""/>
-                                        <textarea name="comments"  id="comments" cols="40" rows="3" placeholder="Your Message:"></textarea>
-                                        <button class="btn float-btn flat-btn color-bg" id="submit">Send Message </button>
+                                      
+                                            {% csrf_token %}
+                                            {% for hidden_field in form.hidden_fields %}
+                                              {{ hidden_field }}
+                                            {% endfor %}
+                                          
+                                            {% if form.non_field_errors %}
+                                              <div class="alert alert-danger" role="alert">
+                                                {% for error in form.non_field_errors %}
+                                                  {{ error }}
+                                                {% endfor %}
+                                              </div>
+                                            {% endif %}
+                                          
+                                            {% for field in form.visible_fields %}
+                                              <div class="form-group">
+                                                {{ field.label_tag }}
+                                          
+                                                {% if form.is_bound %}
+                                                  {% if field.errors %}
+                                                    {% render_field field class="form-control is-invalid" %}
+                                                    {% for error in field.errors %}
+                                                      <div class="invalid-feedback">
+                                                        {{ error }}
+                                                      </div>
+                                                    {% endfor %}
+                                                  {% else %}
+                                                    {% render_field field class="form-control is-valid" %}
+                                                  {% endif %}
+                                                {% else %}
+                                                  {% render_field field class="form-control" %}
+                                                {% endif %}
+                                          
+                                                {% if field.help_text %}
+                                                  <small class="form-text text-muted" placeholder="Your Email">{{ field.help_text }}</small>
+                                                {% endif %}
+                                              </div>
+                                              
+                                            {% endfor %}  
                                     </fieldset>
+                                    <button type="submit" id="subscribe-button" class="subscribe-button">Submit</button>
                                 </form>
                             </div>
                         </div>

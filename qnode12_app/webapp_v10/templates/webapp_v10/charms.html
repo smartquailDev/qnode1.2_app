@@ -14,26 +14,7 @@
         <!-- content -->	
         <div class="content">
             <!--bottom-filter-wrap-->	
-            <div class="bottom-filter-wrap hor-filter-wrap">
-                <div class="scroll-down-wrap">
-                    <div class="mousey">
-                        <div class="scroller"></div>
-                    </div>
-                    <span>Scroll down to discover</span>
-                </div>
-                <div class="filter-title">Filters <i class="fal fa-long-arrow-right"></i></div>
-                <div class="gallery-filters">
-                    <a href="#" class="gallery-filter  gallery-filter-active" data-filter="*">All</a>
-                    <a href="#" class="gallery-filter" data-filter=".nature">Nature</a>
-                    <a href="#" class="gallery-filter" data-filter=".models">Models</a>
-                    <a href="#" class="gallery-filter" data-filter=".couples">Couples</a>
-                    <a href="#" class="gallery-filter" data-filter=".outdoor">Outdoor</a>
-                </div>
-                <div class="count-folio round-counter">
-                    <div class="num-album"></div>
-                    <div class="all-album"></div>
-                </div>
-            </div>
+          
             <!--bottom-filter-wrap end-->	
             <div class="ff_panel-conainer fl-wrap">
                 <!-- portfolio start -->
@@ -44,11 +25,10 @@
                             {% for item in page.galleria_2.all %}
                             {% image item.image width-1200 as s1 %}
                             <img  src="{{s1.url}}"    alt="">
-                            {% endfor %}
-                            <a href="images/folio/1.jpg" class="box-media-zoom   popup-image"><i class="fal fa-search"></i></a>                                    
+                            <a href="{{s1.url}}" class="box-media-zoom   popup-image"><i class="fal fa-search"></i></a> 
+                            {% endfor %}                                   
                             <div class="thumb-info">
                                 <h3><a href="portfolio-single.html">{{page.banner_title4| richtext}}</a></h3>
-                                <p>Here you can place an optional description of your  Project</p>
                             </div>
                         </div>
                     </div>
@@ -59,11 +39,10 @@
                             {% for item in page.galleria_2.all %}
                             {% image item.image_2 width-1200 as s2 %}
                             <img  src="{{s2.url}}"    alt="">
-                            {% endfor %}
-                            <a href="images/folio/1.jpg" class="box-media-zoom   popup-image"><i class="fal fa-search"></i></a>                                    
+                            <a href="{{s2.url}}"  class="box-media-zoom   popup-image"><i class="fal fa-search"></i></a>  
+                            {% endfor %}                                  
                             <div class="thumb-info">
                                 <h3><a href="portfolio-single.html">{{page.banner_title5| richtext}}</a></h3>
-                                <p>Here you can place an optional description of your  Project</p>
                             </div>
                         </div>
                     </div>
@@ -73,171 +52,133 @@
                         <div class="grid-item-holder hov_zoom">
                             {% for item in page.galleria_2.all %}
                             {% image item.image_3 width-1200 as s3 %}
-                            <img  src="{{s3.url}}"    alt="">
-                            {% endfor %}
-                            <a href="images/folio/1.jpg" class="box-media-zoom   popup-image"><i class="fal fa-search"></i></a>                                    
+                            <img  src="{{s3.url}}" width="{{s3.width}}"   alt="">
+                            <a href="{{s3.url}}" class="box-media-zoom   popup-image"><i class="fal fa-search"></i></a>   
+                            {% endfor %}                                 
                             <div class="thumb-info">
                                 <h3><a href="portfolio-single.html">{{page.banner_title6| richtext}}</a></h3>
-                                <p>Here you can place an optional description of your  Project</p>
                             </div>
                         </div>
                     </div>
                     <!-- gallery-item end-->                           
                     <!-- gallery-item-->
-                    <div class="gallery-item nature">
+                    <div class="gallery-item couples">
                         <div class="grid-item-holder hov_zoom">
                             {% for item in page.galleria_2.all %}
                             {% image item.image_4 width-1200 as s4 %}
                             <img  src="{{s4.url}}"    alt="">
-                            {% endfor %}
-                            <a href="images/folio/1.jpg" class="box-media-zoom   popup-image"><i class="fal fa-search"></i></a>                                    
+                            <a href="{{s4.url}}"  class="box-media-zoom   popup-image"><i class="fal fa-search"></i></a>  
+                            {% endfor %}                                  
                             <div class="thumb-info">
                                 <h3><a href="portfolio-single.html">{{page.banner_title5| richtext}}</a></h3>
-                                <p>Here you can place an optional description of your  Project</p>
                             </div>
                         </div>
                     </div>
-                    <!-- gallery-item end-->                            
+                    <div class="gallery-item nature">
+                        <div class="grid-item-holder hov_zoom">
+                            {% for item in page.galleria_2.all %}
+                            {% image item.image_5 width-1200 as s5 %}
+                            <img  src="{{s5.url}}"    alt="">
+                            <a href="{{s5.url}}" class="box-media-zoom   popup-image"><i class="fal fa-search"></i></a> 
+                            {% endfor %}                                   
+                            <div class="thumb-info">
+                                <h3><a href="portfolio-single.html">{{page.banner_title5| richtext}}</a></h3>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- gallery-item end-->
                     <!-- gallery-item-->
                     <div class="gallery-item couples">
                         <div class="grid-item-holder hov_zoom">
-                            <img  src="images/folio/1.jpg"    alt="">
-                            <a href="images/folio/1.jpg" class="box-media-zoom   popup-image"><i class="fal fa-search"></i></a>                                    
+                            {% for item in page.galleria_2.all %}
+                            {% image item.image_6 width-1200 as s6 %}
+                            <img  src="{{s6.url}}"    alt="">
+                            <a href="{{s6.url}}"  class="box-media-zoom   popup-image"><i class="fal fa-search"></i></a>  
+                            {% endfor %}                                  
                             <div class="thumb-info">
-                                <h3><a href="portfolio-single.html">The other side of me</a></h3>
-                                <p>Here you can place an optional description of your  Project</p>
+                                <h3><a href="portfolio-single.html">{{page.banner_title6| richtext}}</a></h3>
                             </div>
                         </div>
                     </div>
-                    <!-- gallery-item end-->    
+                    <!-- gallery-item end-->
                     <!-- gallery-item-->
                     <div class="gallery-item models">
                         <div class="grid-item-holder hov_zoom">
-                            <img  src="images/folio/2.jpg"    alt="">
-                            <a href="images/folio/2.jpg" class="box-media-zoom   popup-image"><i class="fal fa-search"></i></a>                                    
+                            {% for item in page.galleria_2.all %}
+                            {% image item.image_7 width-1200 as s7 %}
+                            <img  src="{{s7.url}}" width="{{s3.width}}"   alt="">
+                            <a href="{{s7.url}}" class="box-media-zoom   popup-image"><i class="fal fa-search"></i></a>   
+                            {% endfor %}                                 
                             <div class="thumb-info">
-                                <h3><a href="portfolio-single.html">A Wonderful Life</a></h3>
-                                <p>Here you can place an optional description of your  Project</p>
+                                <h3><a href="portfolio-single.html">{{page.banner_title7| richtext}}</a></h3>
                             </div>
                         </div>
                     </div>
                     <!-- gallery-item end-->                           
                     <!-- gallery-item-->
-                    <div class="gallery-item nature">
+                    <div class="gallery-item couples">
                         <div class="grid-item-holder hov_zoom">
-                            <img  src="images/folio/1.jpg"    alt="">
-                            <a href="images/folio/1.jpg" class="box-media-zoom   popup-image"><i class="fal fa-search"></i></a>
+                            {% for item in page.galleria_2.all %}
+                            {% image item.image_8 width-1200 as s8 %}
+                            <img  src="{{s8.url}}"    alt="">
+                            <a href="{{s8.url}}"  class="box-media-zoom   popup-image"><i class="fal fa-search"></i></a>  
+                            {% endfor %}                                  
                             <div class="thumb-info">
-                                <h3><a href="portfolio-single.html">My Blooming Backyard</a></h3>
-                                <p>Here you can place an optional description of your  Project</p>
+                                <h3><a href="portfolio-single.html">{{page.banner_title8| richtext}}</a></h3>
                             </div>
                         </div>
                     </div>
-                    <!-- gallery-item end-->                            
+                    <div class="gallery-item nature">
+                        <div class="grid-item-holder hov_zoom">
+                            {% for item in page.galleria_2.all %}
+                            {% image item.image_9 width-1200 as s9 %}
+                            <img  src="{{s9.url}}"    alt="">
+                            <a href="{{s9.url}}" class="box-media-zoom   popup-image"><i class="fal fa-search"></i></a> 
+                            {% endfor %}                                   
+                            <div class="thumb-info">
+                                <h3><a href="portfolio-single.html">{{page.banner_title9| richtext}}</a></h3>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- gallery-item end-->
+                    <!-- gallery-item-->
+                    <div class="gallery-item couples">
+                        <div class="grid-item-holder hov_zoom">
+                            {% for item in page.galleria_2.all %}
+                            {% image item.image_10 width-1200 as s10 %}
+                            <img  src="{{s10.url}}"    alt="">
+                            <a href="{{s10.url}}"  class="box-media-zoom   popup-image"><i class="fal fa-search"></i></a>  
+                            {% endfor %}                                  
+                            <div class="thumb-info">
+                                <h3><a href="portfolio-single.html">{{page.banner_title10| richtext}}</a></h3>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- gallery-item end-->
                     <!-- gallery-item-->
                     <div class="gallery-item models">
                         <div class="grid-item-holder hov_zoom">
-                            <img  src="images/folio/1.jpg"    alt="">
-                            <a href="images/folio/1.jpg" class="box-media-zoom   popup-image"><i class="fal fa-search"></i></a>
+                            {% for item in page.galleria_11.all %}
+                            {% image item.image_11 width-1200 as s11 %}
+                            <img  src="{{s11.url}}" width="{{s3.width}}"   alt="">
+                            <a href="{{s11.url}}" class="box-media-zoom   popup-image"><i class="fal fa-search"></i></a>   
+                            {% endfor %}                                 
                             <div class="thumb-info">
-                                <h3><a href="portfolio-single.html">Life, here I come</a></h3>
-                                <p>Here you can place an optional description of your  Project</p>
+                                <h3><a href="portfolio-single.html">{{page.banner_title11| richtext}}</a></h3>
                             </div>
                         </div>
                     </div>
-                    <!-- gallery-item end-->  
+                    <!-- gallery-item end-->                           
                     <!-- gallery-item-->
-                    <div class="gallery-item outdoor">
+                    <div class="gallery-item couples">
                         <div class="grid-item-holder hov_zoom">
-                            <img  src="images/folio/2.jpg"    alt="">
-                            <a href="images/folio/2.jpg" class="box-media-zoom   popup-image"><i class="fal fa-search"></i></a>
+                            {% for item in page.galleria_2.all %}
+                            {% image item.image_12 width-1200 as s12 %}
+                            <img  src="{{s12.url}}"    alt="">
+                            <a href="{{s12.url}}"  class="box-media-zoom   popup-image"><i class="fal fa-search"></i></a>  
+                            {% endfor %}                                  
                             <div class="thumb-info">
-                                <h3><a href="portfolio-single.html">Travelling is Fun</a></h3>
-                                <p>Here you can place an optional description of your  Project</p>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- gallery-item end--> 
-                    <!-- gallery-item-->
-                    <div class="gallery-item outdoor nature">
-                        <div class="grid-item-holder hov_zoom">
-                            <img  src="images/folio/1.jpg"    alt="">
-                            <a href="images/folio/1.jpg" class="box-media-zoom   popup-image"><i class="fal fa-search"></i></a>
-                            <div class="thumb-info">
-                                <h3><a href="portfolio-single.html">Just Happy</a></h3>
-                                <p>Here you can place an optional description of your  Project</p>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- gallery-item end-->							
-                    <!-- gallery-item-->
-                    <div class="gallery-item nature models">
-                        <div class="grid-item-holder hov_zoom">
-                            <img  src="images/folio/1.jpg"    alt="">
-                            <a href="images/folio/1.jpg" class="box-media-zoom   popup-image"><i class="fal fa-search"></i></a>
-                            <div class="thumb-info">
-                                <h3><a href="portfolio-single.html">Go green</a></h3>
-                                <p>Here you can place an optional description of your  Project</p>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- gallery-item end-->                                                           
-                    <!-- gallery-item-->
-                    <div class="gallery-item couples outdoor">
-                        <div class="grid-item-holder hov_zoom">
-                            <img  src="images/folio/2.jpg"    alt="">
-                            <a href="images/folio/2.jpg" class="box-media-zoom   popup-image"><i class="fal fa-search"></i></a>
-                            <div class="thumb-info">
-                                <h3><a href="portfolio-single.html">Crazy, cute couple</a></h3>
-                                <p>Here you can place an optional description of your  Project</p>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- gallery-item end-->  
-                    <!-- gallery-item-->
-                    <div class="gallery-item nature">
-                        <div class="grid-item-holder hov_zoom">
-                            <img  src="images/folio/1.jpg"    alt="">
-                            <a href="images/folio/1.jpg" class="box-media-zoom   popup-image"><i class="fal fa-search"></i></a>
-                            <div class="thumb-info">
-                                <h3><a href="portfolio-single.html">Go green</a></h3>
-                                <p>Here you can place an optional description of your  Project</p>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- gallery-item end-->                                                           
-                    <!-- gallery-item-->
-                    <div class="gallery-item couples models">
-                        <div class="grid-item-holder hov_zoom">
-                            <img  src="images/folio/1.jpg"    alt="">
-                            <a href="images/folio/1.jpg" class="box-media-zoom   popup-image"><i class="fal fa-search"></i></a>
-                            <div class="thumb-info">
-                                <h3><a href="portfolio-single.html">Crazy, cute couple</a></h3>
-                                <p>Here you can place an optional description of your  Project</p>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- gallery-item end--> 
-                    <!-- gallery-item-->
-                    <div class="gallery-item  outdoor">
-                        <div class="grid-item-holder hov_zoom">
-                            <img  src="images/folio/1.jpg"    alt="">
-                            <a href="images/folio/1.jpg" class="box-media-zoom   popup-image"><i class="fal fa-search"></i></a>
-                            <div class="thumb-info">
-                                <h3><a href="portfolio-single.html">Crazy, cute couple</a></h3>
-                                <p>Here you can place an optional description of your  Project</p>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- gallery-item end-->  
-                    <!-- gallery-item-->
-                    <div class="gallery-item models">
-                        <div class="grid-item-holder hov_zoom">
-                            <img  src="images/folio/1.jpg"    alt="">
-                            <a href="images/folio/1.jpg" class="box-media-zoom   popup-image"><i class="fal fa-search"></i></a>
-                            <div class="thumb-info">
-                                <h3><a href="portfolio-single.html">Go green</a></h3>
-                                <p>Here you can place an optional description of your  Project</p>
+                                <h3><a href="portfolio-single.html">{{page.banner_title12| richtext}}</a></h3>
                             </div>
                         </div>
                     </div>

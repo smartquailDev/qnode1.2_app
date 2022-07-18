@@ -1,5 +1,5 @@
 
-{% extends "webapp_v10/base_2.html" %}
+{% extends "webapp_v10/base.html" %}
 {% load i18n %}
 {% load wagtailcore_tags wagtailimages_tags %}
 {% load widget_tweaks %}
@@ -7,313 +7,116 @@
 
 {% block content %}
 
-<div id="main">
-    <!-- header start  -->
-    <header class="main-header">
-        <!-- logo   -->
-        <a href="index.html" class="logo-holder"><img src="images/logo.png" alt=""></a>  
-        <!-- logo end  -->		
-        <!-- search -->				
-        <div class="search-button"><i class="far fa-search"></i></div>
-        <div class="search-input"><input name="se" id="se" type="text" class="search" placeholder="Search.." /></div>
-        <!-- search end  -->
-        <div class="sb-button"></div>
-        <div class="share-btn showshare"><i class="fal fa-megaphone"></i><span>Share</span></div>
-        <!-- mobile nav -->
-        <div class="nav-button-wrap">
-            <div class="nav-button"><span></span><span></span><span></span></div>
-        </div>
-        <!-- mobile nav end-->				
-        <!--  navigation -->
-        <div class="nav-holder main-menu">
-            <nav>
-                <ul>
-                    <li>
-                        <a href="#">Home </a>
-                        <!--second level -->
-                        <ul>
-                            <li><a href="index.html">Carousel</a></li>
-                            <li><a href="index2.html">Slider Details</a></li>
-                            <li><a href="index3.html">Multi Slideshow</a></li>
-                            <li><a href="index4.html">Slideshow</a></li>
-                            <li><a href="index5.html">Image</a></li>
-                            <li><a href="index6.html">Slider Classic</a></li>
-                            <li><a href="index7.html">Video</a></li>
-                        </ul>
-                        <!--second level end-->
-                    </li>
-                    <li>
-                        <a href="#" class="act-link">Portfolio </a>
-                        <!--second level -->
-                        <ul>
-                            <li><a href="portfolio.html">Horizontal 2 Columns</a></li>
-                            <li><a href="portfolio2.html">Horizontal 3 Columns</a></li>
-                            <li><a href="portfolio3.html">Horizontal 1 Columns</a></li>
-                            <li><a href="portfolio4.html">Masonry</a></li>
-                            <li><a href="portfolio5.html">Masonry 2</a></li>
-                            <li><a href="portfolio6.html">Column Grid</a></li>
-                            <li>
-                                <a href="#">Single </a>
-                                <!--third  level -->
-                                <ul>
-                                    <li><a href="portfolio-single.html">Carousel</a></li>
-                                    <li><a href="portfolio-single2.html">Fullscreen Slider </a></li>
-                                    <li><a href="portfolio-single3.html">Column Grid</a></li>
-                                    <li><a href="portfolio-single4.html">Column Fullwidth</a></li>
-                                </ul>
-                                <!--third level end-->
-                            </li>
-                        </ul>
-                        <!--second level end-->
-                    </li>
-                    <li>
-                        <a href="about.html">About</a>
-                    </li>
-                    <li>
-                        <a href="blog.html">News</a>
-                    </li>
-                    <li>
-                        <a href="contacts.html">Contacts</a>
-                    </li>
-                </ul>
-            </nav>
-        </div>
-        <!-- navigation  end -->               
-    </header>
-    <!-- header end -->
-    <!-- wrapper  -->	
-    <div id="wrapper">
-        <!-- content -->	
-        <div class="content">
-            <!--bottom-filter-wrap-->	
-            <div class="bottom-filter-wrap hor-filter-wrap">
-                <div class="scroll-down-wrap">
-                    <div class="mousey">
-                        <div class="scroller"></div>
+
+<div id="wrapper">
+    <!--content -->	
+    <div class="content full-height">
+        <!--home-main_container-->	
+        <div class="home-main_container">
+            <!--follow-wrap-->
+      
+            <!--follow-wrap end-->
+            <div class="full-height fl-wrap hidden-item">
+                <!--fs-slider-wrap-->	
+                <div class="fs-slider-wrap full-height fl-wrap">
+                    <div class="fs-slider lightgallery full-height fl-wrap" data-mousecontrol2="true">
+                        <div class="swiper-container">
+                            <div class="swiper-wrapper" >
+                                <!-- swiper-slide-->
+                                <div class="swiper-slide hov_zoom">
+                                    <div class="fs-slider-item fl-wrap">
+                                        {% for item in page.galleria_3.all %}
+                                        {% image item.image width-1200 as s1 %}
+                                        <div class="bg"  data-bg="{{s1.url}}"></div>
+                                        {% endfor %}
+                                        <div class="overlay"></div>
+                                        <div class="fs-slider_align_title">
+                                            <h2><a href="portfolio-single.html">{{page.banner_title4| richtext}}</a></h2>
+                                           <p></p>
+                                           <div class="clearfix"></div>
+                                            <a href="portfolio-single.html" class="btn fl-btn">{% trans "Meet my history "%}</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide hov_zoom">
+                                    <div class="fs-slider-item fl-wrap">
+                                        {% for item in page.galleria_3.all %}
+                                        {% image item.image_2 width-1200 as s2 %}
+                                        <div class="bg"  data-bg="{{s2.url}}"></div>
+                                        {% endfor %}
+                                        <div class="overlay"></div>
+                                        <div class="fs-slider_align_title">
+                                            <h2><a href="portfolio-single.html">{{page.banner_title5| richtext}}</a></h2>
+                                           <p></p>
+                                           <div class="clearfix"></div>
+                                           <a href="portfolio-single.html" class="btn fl-btn">{% trans "Meet my history "%}</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide hov_zoom">
+                                    <div class="fs-slider-item fl-wrap">
+                                        {% for item in page.galleria_3.all %}
+                                        {% image item.image_3 width-1200 as s3 %}
+                                        <div class="bg"  data-bg="{{s3.url}}"></div>
+                                        {% endfor %}
+                                        <div class="overlay"></div>
+                                        <div class="fs-slider_align_title">
+                                            <h2><a href="portfolio-single.html">{{page.banner_title6| richtext}}</a></h2>
+                                           <p></p>
+                                           <div class="clearfix"></div>
+                                           <a href="portfolio-single.html" class="btn fl-btn">{% trans "Meet my history "%}</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide hov_zoom">
+                                    <div class="fs-slider-item fl-wrap">
+                                        {% for item in page.galleria_3.all %}
+                                        {% image item.image_4 width-1200 as s4 %}
+                                        <div class="bg"  data-bg="{{s4.url}}"></div>
+                                        {% endfor %}
+                                        <div class="overlay"></div>
+                                        <div class="fs-slider_align_title">
+                                            <h2><a href="portfolio-single.html">{{page.banner_title7| richtext}}</a></h2>
+                                           <p></p>
+                                           <div class="clearfix"></div>
+                                           <a href="portfolio-single.html" class="btn fl-btn">{% trans "Meet my history "%}</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            
+                           
+                              
+                               
+                            </div>
+                        </div>
                     </div>
-                    <span>Scroll down to discover</span>
                 </div>
-                <div class="filter-title">Filters <i class="fal fa-long-arrow-right"></i></div>
-                <div class="gallery-filters">
-                    <a href="#" class="gallery-filter  gallery-filter-active" data-filter="*">All</a>
-                    <a href="#" class="gallery-filter" data-filter=".nature">Nature</a>
-                    <a href="#" class="gallery-filter" data-filter=".models">Models</a>
-                    <a href="#" class="gallery-filter" data-filter=".couples">Couples</a>
-                    <a href="#" class="gallery-filter" data-filter=".outdoor">Outdoor</a>
-                </div>
-                <div class="count-folio round-counter">
-                    <div class="num-album"></div>
-                    <div class="all-album"></div>
-                </div>
-            </div>
-            <!--bottom-filter-wrap end-->	
-            <div class="ff_panel-conainer fl-wrap">
-                <!-- portfolio start -->
-                <div class="gallery-items min-pad   four-column fl-wrap lightgallery">
-                    <!-- gallery-item-->
-                    <div class="gallery-item nature">
-                        <div class="grid-item-holder hov_zoom">
-                            <img  src="images/folio/1.jpg"    alt="">
-                            <a href="images/folio/1.jpg" class="box-media-zoom   popup-image"><i class="fal fa-search"></i></a>                                    
-                            <div class="thumb-info">
-                                <h3><a href="portfolio-single.html">Alone on Nature</a></h3>
-                                <p>Here you can place an optional description of your  Project</p>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- gallery-item end-->
-                    <!-- gallery-item-->
-                    <div class="gallery-item couples">
-                        <div class="grid-item-holder hov_zoom">
-                            <img  src="images/folio/1.jpg"    alt="">
-                            <a href="images/folio/1.jpg" class="box-media-zoom   popup-image"><i class="fal fa-search"></i></a>                                    
-                            <div class="thumb-info">
-                                <h3><a href="portfolio-single.html">Living my dream</a></h3>
-                                <p>Here you can place an optional description of your  Project</p>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- gallery-item end-->
-                    <!-- gallery-item-->
-                    <div class="gallery-item models">
-                        <div class="grid-item-holder hov_zoom">
-                            <img  src="images/folio/1.jpg"    alt="">
-                            <a href="images/folio/1.jpg" class="box-media-zoom   popup-image"><i class="fal fa-search"></i></a>                                    
-                            <div class="thumb-info">
-                                <h3><a href="portfolio-single.html">Forever Young</a></h3>
-                                <p>Here you can place an optional description of your  Project</p>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- gallery-item end-->                           
-                    <!-- gallery-item-->
-                    <div class="gallery-item nature">
-                        <div class="grid-item-holder hov_zoom">
-                            <img  src="images/folio/2.jpg"    alt="">
-                            <a href="images/folio/2.jpg" class="box-media-zoom   popup-image"><i class="fal fa-search"></i></a>                                    
-                            <div class="thumb-info">
-                                <h3><a href="portfolio-single.html">Sunny side up</a></h3>
-                                <p>Here you can place an optional description of your  Project</p>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- gallery-item end-->                            
-                    <!-- gallery-item-->
-                    <div class="gallery-item couples">
-                        <div class="grid-item-holder hov_zoom">
-                            <img  src="images/folio/1.jpg"    alt="">
-                            <a href="images/folio/1.jpg" class="box-media-zoom   popup-image"><i class="fal fa-search"></i></a>                                    
-                            <div class="thumb-info">
-                                <h3><a href="portfolio-single.html">The other side of me</a></h3>
-                                <p>Here you can place an optional description of your  Project</p>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- gallery-item end-->    
-                    <!-- gallery-item-->
-                    <div class="gallery-item models">
-                        <div class="grid-item-holder hov_zoom">
-                            <img  src="images/folio/2.jpg"    alt="">
-                            <a href="images/folio/2.jpg" class="box-media-zoom   popup-image"><i class="fal fa-search"></i></a>                                    
-                            <div class="thumb-info">
-                                <h3><a href="portfolio-single.html">A Wonderful Life</a></h3>
-                                <p>Here you can place an optional description of your  Project</p>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- gallery-item end-->                           
-                    <!-- gallery-item-->
-                    <div class="gallery-item nature">
-                        <div class="grid-item-holder hov_zoom">
-                            <img  src="images/folio/1.jpg"    alt="">
-                            <a href="images/folio/1.jpg" class="box-media-zoom   popup-image"><i class="fal fa-search"></i></a>
-                            <div class="thumb-info">
-                                <h3><a href="portfolio-single.html">My Blooming Backyard</a></h3>
-                                <p>Here you can place an optional description of your  Project</p>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- gallery-item end-->                            
-                    <!-- gallery-item-->
-                    <div class="gallery-item models">
-                        <div class="grid-item-holder hov_zoom">
-                            <img  src="images/folio/1.jpg"    alt="">
-                            <a href="images/folio/1.jpg" class="box-media-zoom   popup-image"><i class="fal fa-search"></i></a>
-                            <div class="thumb-info">
-                                <h3><a href="portfolio-single.html">Life, here I come</a></h3>
-                                <p>Here you can place an optional description of your  Project</p>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- gallery-item end-->  
-                    <!-- gallery-item-->
-                    <div class="gallery-item outdoor">
-                        <div class="grid-item-holder hov_zoom">
-                            <img  src="images/folio/2.jpg"    alt="">
-                            <a href="images/folio/2.jpg" class="box-media-zoom   popup-image"><i class="fal fa-search"></i></a>
-                            <div class="thumb-info">
-                                <h3><a href="portfolio-single.html">Travelling is Fun</a></h3>
-                                <p>Here you can place an optional description of your  Project</p>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- gallery-item end--> 
-                    <!-- gallery-item-->
-                    <div class="gallery-item outdoor nature">
-                        <div class="grid-item-holder hov_zoom">
-                            <img  src="images/folio/1.jpg"    alt="">
-                            <a href="images/folio/1.jpg" class="box-media-zoom   popup-image"><i class="fal fa-search"></i></a>
-                            <div class="thumb-info">
-                                <h3><a href="portfolio-single.html">Just Happy</a></h3>
-                                <p>Here you can place an optional description of your  Project</p>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- gallery-item end-->							
-                    <!-- gallery-item-->
-                    <div class="gallery-item nature models">
-                        <div class="grid-item-holder hov_zoom">
-                            <img  src="images/folio/1.jpg"    alt="">
-                            <a href="images/folio/1.jpg" class="box-media-zoom   popup-image"><i class="fal fa-search"></i></a>
-                            <div class="thumb-info">
-                                <h3><a href="portfolio-single.html">Go green</a></h3>
-                                <p>Here you can place an optional description of your  Project</p>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- gallery-item end-->                                                           
-                    <!-- gallery-item-->
-                    <div class="gallery-item couples outdoor">
-                        <div class="grid-item-holder hov_zoom">
-                            <img  src="images/folio/2.jpg"    alt="">
-                            <a href="images/folio/2.jpg" class="box-media-zoom   popup-image"><i class="fal fa-search"></i></a>
-                            <div class="thumb-info">
-                                <h3><a href="portfolio-single.html">Crazy, cute couple</a></h3>
-                                <p>Here you can place an optional description of your  Project</p>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- gallery-item end-->  
-                    <!-- gallery-item-->
-                    <div class="gallery-item nature">
-                        <div class="grid-item-holder hov_zoom">
-                            <img  src="images/folio/1.jpg"    alt="">
-                            <a href="images/folio/1.jpg" class="box-media-zoom   popup-image"><i class="fal fa-search"></i></a>
-                            <div class="thumb-info">
-                                <h3><a href="portfolio-single.html">Go green</a></h3>
-                                <p>Here you can place an optional description of your  Project</p>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- gallery-item end-->                                                           
-                    <!-- gallery-item-->
-                    <div class="gallery-item couples models">
-                        <div class="grid-item-holder hov_zoom">
-                            <img  src="images/folio/1.jpg"    alt="">
-                            <a href="images/folio/1.jpg" class="box-media-zoom   popup-image"><i class="fal fa-search"></i></a>
-                            <div class="thumb-info">
-                                <h3><a href="portfolio-single.html">Crazy, cute couple</a></h3>
-                                <p>Here you can place an optional description of your  Project</p>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- gallery-item end--> 
-                    <!-- gallery-item-->
-                    <div class="gallery-item  outdoor">
-                        <div class="grid-item-holder hov_zoom">
-                            <img  src="images/folio/1.jpg"    alt="">
-                            <a href="images/folio/1.jpg" class="box-media-zoom   popup-image"><i class="fal fa-search"></i></a>
-                            <div class="thumb-info">
-                                <h3><a href="portfolio-single.html">Crazy, cute couple</a></h3>
-                                <p>Here you can place an optional description of your  Project</p>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- gallery-item end-->  
-                    <!-- gallery-item-->
-                    <div class="gallery-item models">
-                        <div class="grid-item-holder hov_zoom">
-                            <img  src="images/folio/1.jpg"    alt="">
-                            <a href="images/folio/1.jpg" class="box-media-zoom   popup-image"><i class="fal fa-search"></i></a>
-                            <div class="thumb-info">
-                                <h3><a href="portfolio-single.html">Go green</a></h3>
-                                <p>Here you can place an optional description of your  Project</p>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- gallery-item end-->                                                            							
-                </div>
-                <!-- portfolio end -->
+                <!-- fs-slider-wrap end-->
+                <div class="ss-slider-cont ss-slider-cont-prev hero-slider-button-prev color-bg"><i class="fal fa-long-arrow-left"></i></div>
+                <div class="ss-slider-cont ss-slider-cont-next hero-slider-button-next color-bg"><i class="fal fa-long-arrow-right"></i></div>
+               
+                <!-- home-slider-counter-wrap-->
+              
+                <!-- home-slider-counter-wrap end-->
             </div>
         </div>
-        <!--content end-->	
-        <!--share-wrapper-->
-        <div class="share-wrapper">
-            <div class="share-container fl-wrap  isShare"></div>
-        </div>
-        <!--share-wrapper end-->
+        <!--home-main_container end-->
     </div>
-    <!-- wrapper end -->
-    <!-- sidebar -->
+    <!--content end-->	
+    <!--share-wrapper-->
+    <div class="share-wrapper">
+        <div class="share-container fl-wrap  isShare"></div>
+    </div>
+    <!--share-wrapper end-->
+</div>
+<!-- wrapper end -->
+<!-- sidebar -->
+
+
+<!-- sidebar end -->
+<!-- cursor-->
+
+<!-- cursor end-->     
+</div>
 
     {% endblock %}
