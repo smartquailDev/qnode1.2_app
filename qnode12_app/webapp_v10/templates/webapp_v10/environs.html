@@ -1,0 +1,208 @@
+{% extends "webapp_v10/base_2.html" %}
+{% load i18n %}
+{% load wagtailcore_tags wagtailimages_tags %}
+{% load widget_tweaks %}
+{% load static %}
+
+{% block content %}
+
+
+
+<div id="wrapper"  >
+    <!-- content  -->
+    <div class="content full-height">
+        <div class="full-height fl-wrap hidden-item">
+            <!-- fs-slider-wrap  -->
+            <div class="fs-slider-wrap full-height fl-wrap">
+                <div class="fs-slider2 lightgallery full-height fl-wrap thumb-contr " data-mousecontrol2="true">
+                    <div class="swiper-container">
+                        <div class="swiper-wrapper" >
+                            <!-- swiper-slide-->
+                            <div class="swiper-slide hov_zoom" >
+                                <div class="fs-slider-item fl-wrap">
+                                    {% for item in page.galleria_6.all %}
+                                    {% image item.image width-1200 as s1 %}
+                                    <div class="bg"  data-bg="{{s1.url}}"></div>
+                                    <a href="{{s1.url}}" class="box-media-zoom   popup-image"><i class="fal fa-search"></i></a>  
+                                    {% endfor %}
+                                    
+                                </div>
+                            </div>
+                            <div class="swiper-slide hov_zoom" >
+                                <div class="fs-slider-item fl-wrap">
+                                    {% for item in page.galleria_6.all %}
+                                    {% image item.image_2 width-1200 as s2 %}
+                                    <div class="bg"  data-bg="{{s2.url}}"></div>
+                                    <a href="{{s2.url}}" class="box-media-zoom   popup-image"><i class="fal fa-search"></i></a>  
+                                    {% endfor %}
+                                    
+                                </div>
+                            </div>
+                            <div class="swiper-slide hov_zoom" >
+                                <div class="fs-slider-item fl-wrap">
+                                    {% for item in page.galleria_6.all %}
+                                    {% image item.image_3 width-1200 as s3 %}
+                                    <div class="bg"  data-bg="{{s3.url}}"></div>
+                                    <a href="{{s3.url}}" class="box-media-zoom   popup-image"><i class="fal fa-search"></i></a>  
+                                    {% endfor %}
+                                    
+                                </div>
+                            </div>
+                            <div class="swiper-slide hov_zoom" >
+                                <div class="fs-slider-item fl-wrap">
+                                    {% for item in page.galleria_6.all %}
+                                    {% image item.image_4 width-1200 as s4 %}
+                                    <div class="bg"  data-bg="{{s4.url}}"></div>
+                                    <a href="{{s4.url}}" class="box-media-zoom   popup-image"><i class="fal fa-search"></i></a>  
+                                    {% endfor %}
+                                    
+                                </div>
+                            </div>
+                            <div class="swiper-slide hov_zoom" >
+                                <div class="fs-slider-item fl-wrap">
+                                    {% for item in page.galleria_6.all %}
+                                    {% image item.image_5 width-1200 as s5 %}
+                                    <div class="bg"  data-bg="{{s5.url}}"></div>
+                                    <a href="{{s5.url}}" class="box-media-zoom   popup-image"><i class="fal fa-search"></i></a>  
+                                    {% endfor %}
+                                    
+                                </div>
+                            </div>
+                            <div class="swiper-slide hov_zoom" >
+                                <div class="fs-slider-item fl-wrap">
+                                    {% for item in page.galleria_6.all %}
+                                    {% image item.image_6 width-1200 as s6 %}
+                                    <div class="bg"  data-bg="{{s6.url}}"></div>
+                                    <a href="{{s6.url}}" class="box-media-zoom   popup-image"><i class="fal fa-search"></i></a>  
+                                    {% endfor %}
+                                    
+                                </div>
+                            </div>
+                            <div class="swiper-slide hov_zoom" >
+                                <div class="fs-slider-item fl-wrap">
+                                    {% for item in page.galleria_6.all %}
+                                    {% image item.image_7 width-1200 as s7 %}
+                                    <div class="bg"  data-bg="{{s7.url}}"></div>
+                                    <a href="{{s7.url}}" class="box-media-zoom   popup-image"><i class="fal fa-search"></i></a>  
+                                    {% endfor %}
+                                    
+                                </div>
+                            </div>
+                            <div class="swiper-slide hov_zoom" >
+                                <div class="fs-slider-item fl-wrap">
+                                    {% for item in page.galleria_6.all %}
+                                    {% image item.image_8 width-1200 as s8 %}
+                                    <div class="bg"  data-bg="{{s8.url}}"></div>
+                                    <a href="{{s8.url}}" class="box-media-zoom   popup-image"><i class="fal fa-search"></i></a>  
+                                    {% endfor %}
+                                    
+                                </div>
+                            </div>
+                            <div class="swiper-slide hov_zoom" >
+                                <div class="fs-slider-item fl-wrap">
+                                    {% for item in page.galleria_6.all %}
+                                    {% image item.image_9 width-1200 as s9 %}
+                                    <div class="bg"  data-bg="{{s9.url}}"></div>
+                                    <a href="{{s9.url}}" class="box-media-zoom   popup-image"><i class="fal fa-search"></i></a>  
+                                    {% endfor %}
+                                    
+                                </div>
+                            </div>
+                            <div class="swiper-slide hov_zoom" >
+                                <div class="fs-slider-item fl-wrap">
+                                    {% for item in page.galleria_6.all %}
+                                    {% image item.image_10 width-1200 as s10 %}
+                                    <div class="bg"  data-bg="{{s10.url}}"></div>
+                                    <a href="{{s10.url}}" class="box-media-zoom   popup-image"><i class="fal fa-search"></i></a>  
+                                    {% endfor %}
+                                    
+                                </div>
+                            </div>
+                            <div class="swiper-slide hov_zoom" >
+                                <div class="fs-slider-item fl-wrap">
+                                    {% for item in page.galleria_6.all %}
+                                    {% image item.image_11 width-1200 as s11 %}
+                                    <div class="bg"  data-bg="{{s11.url}}"></div>
+                                    <a href="{{s11.url}}" class="box-media-zoom   popup-image"><i class="fal fa-search"></i></a>  
+                                    {% endfor %}
+                                    
+                                </div>
+                            </div>
+                            <div class="swiper-slide hov_zoom" >
+                                <div class="fs-slider-item fl-wrap">
+                                    {% for item in page.galleria_6.all %}
+                                    {% image item.image_12 width-1200 as s12 %}
+                                    <div class="bg"  data-bg="{{s12.url}}"></div>
+                                    <a href="{{s12.url}}" class="box-media-zoom   popup-image"><i class="fal fa-search"></i></a>  
+                                    {% endfor %}
+                                    
+                                </div>
+                            </div>
+                            
+                            <!-- swiper-slide-->
+                            <!-- swiper-slide-->
+                            
+                            <!-- swiper-slide-->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- fs-slider-wrap end -->
+            <div class="ss-slider-cont ss-slider-cont-prev color-bg"><i class="fal fa-long-arrow-left"></i></div>
+            <div class="ss-slider-cont ss-slider-cont-next color-bg"><i class="fal fa-long-arrow-right"></i></div>
+            <div class="close-fs"><i class="fal fa-long-arrow-down"></i></div>
+        </div>
+        <!-- bottom-panel    -->   
+        <div class="bottom-panel single-carousel-control fs-slider-panel">
+            <div class="bottom-panel-column bottom-panel-column_left fix-size">
+                <div class="single-carousel-control_list">
+                    <ul>
+                        <li class="show_thumbnails unvisthum">{% trans "Show Thumbnails" %}</li>
+                        <li class="decl shibtn unvisthum2">{% trans "View Details" %}</li>
+                    </ul>
+                </div>
+                <div class="fw-carousel-counter"></div>
+            </div>
+            <div class="bottom-panel-column bottom-panel-column_right fix-size">
+                <div class="fs-mode isfs"><span></span></div>
+                <div class="fs-mode-title">{{page.title}}</div>
+            </div>
+        </div>
+        <!-- bottom-panel  end -->   
+        <!--thumbnail-container-->	
+        <div class="thumbnail-container">
+            <div class="thumbnail-wrap fl-wrap">
+            </div>
+        </div>
+        <!--thumbnail-container end-->	
+        <!-- project details -->
+        <div class="det-overlay act-closedet"></div>
+        <div class="fix-pr-det hid-det hid-det-anim">
+            <div class="act-closedet closedet_style det-anim"><i class="fal fa-long-arrow-left"></i></div>
+            <div class="pr-det-container initscroll">
+                <div class="fl-wrap det-anim">
+                    <h2>{{ page.title}}</h2>
+                    <span class="separator sep-b"></span>
+                    <div class="clearfix"></div>
+                    <p>{{page.bio | richtext }} </p>
+                    
+                </div>
+                <div class="content-nav det-anim">
+                    <ul>
+                        <li><a href="portfolio-single.html" class="ln"><i class="fal fa-angle-left"></i><span class="tooltip">Prev - Project Title</span></a></li>
+                        <li><a href="portfolio-single2.html" class="rn"><i class="fal fa-angle-right"></i><span class="tooltip">Next - Project Title</span></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- project details  end-->
+    </div>
+    <!--content end-->	
+    <!--share-wrapper-->
+    <div class="share-wrapper">
+        <div class="share-container fl-wrap  isShare"></div>
+    </div>
+    <!--share-wrapper end-->
+</div>
+
+{% endblock %}

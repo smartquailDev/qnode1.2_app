@@ -90,6 +90,9 @@ INSTALLED_APPS = [
     'storages',
     'social_django',
     'sorl.thumbnail',
+    'rosetta',
+    'parler',
+    'localflavor',
     'baton.autodiscover',   
 ]
 

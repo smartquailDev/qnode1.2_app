@@ -440,7 +440,7 @@ blockquote p {
 	left: 0;
 	z-index: 1;
 	padding:10px 0;
-	background: rgba(0,0,0,0.71);
+	background: rgba(0, 0, 0, 0.08);
 	transition: all .2s ease-in-out;
 }
 .nav-holder nav li:hover > ul {

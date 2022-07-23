@@ -10,6 +10,8 @@ from wagtail.documents import urls as wagtaildocs_urls
 
 from django.conf.urls.static import static
 from django.conf.urls.i18n import i18n_patterns
+from django.utils.translation import gettext_lazy as _
+
 
 urlpatterns = i18n_patterns(
     path('admin/', admin.site.urls),
@@ -18,7 +20,7 @@ urlpatterns = i18n_patterns(
     path('cart/', include('cart.urls', namespace='cart')),
     path('orders/', include('orders.urls', namespace='orders')),
     path('payment/', include('payment.urls', namespace='payment')),
-    path('shop/', include('shop.urls', namespace='shop')),
+    path('tours/', include('shop.urls', namespace='shop')),
     
      
     re_path(r'^smartbusinessmedia/', include(wagtailadmin_urls),name='wagtail'),

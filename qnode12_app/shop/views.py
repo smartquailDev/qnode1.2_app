@@ -22,9 +22,11 @@ def product_list(request, category_slug=None):
 
 
 def product_detail(request, id, slug):
-    #language = request.LANGUAGE_CODE
+    language = request.LANGUAGE_CODE
     product = get_object_or_404(Product,
                                 id=id,
+                                translations__language_code=language,
+                                translations__slug=slug,
                                 available=True)
     cart_product_form = CartAddProductForm()
 
