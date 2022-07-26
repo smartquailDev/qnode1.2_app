@@ -27,7 +27,7 @@
 <header class="main-header">
     <!-- logo   -->
     {% for item in page.galleria_5.all %}
-    {% image item.logo width-1200 format-png as logo %}
+    {% image item.logo width-900 format-png as logo %}
     <a href="{% slugurl 'home' %}" class="logo-holder"><img src="{{logo.url}}" alt="" width="{{ logo.width }}"></a>  
     {% endfor %}
     <!-- logo end  -->		
@@ -57,10 +57,10 @@
                 <li>
                     <a href="{% slugurl 'worlds' %}">{% trans "Worlds" %}</a>
                     <ul>
-                        <li><a href="index.html">{% trans "Natural Environ" %}</a></li>
-                        <li><a href="index2.html">{% trans "Geological Environ" %}</a></li>
-                        <li><a href="index3.html">{% trans "Marine Environ" %}</a></li>
-                        <li><a href="index4.html">{% trans "Community Environ" %}</a></li>
+                        <li><a href="{% slugurl 'natural environment' %}">{% trans "Natural Environ" %}</a></li>
+                        <li><a href="{% slugurl 'geological environment' %}">{% trans "Geological Environ" %}</a></li>
+                        <li><a href="{% slugurl 'marine environment' %}">{% trans "Marine Environ" %}</a></li>
+                        <li><a href="{% slugurl 'community environment' %}">{% trans "Community Environ" %}</a></li>
                      
                     </ul>
                 </li>
@@ -68,10 +68,10 @@
                     <a href="{% slugurl 'hosts' %}">{% trans "Hosts" %}</a>
                 </li>
                 <li>
-                    <a href="{% slugurl 'expeditions' %}">{% trans "Expeditions" %}</a>
+                    <a href="{% url 'shop:product_list' %}">{% trans "Expeditions" %}</a>
                 </li>
                 <li>
-                    <a hhref="{% slugurl 'contacts' %}">{% trans "Contacts" %}</a>
+                    <a href="{% slugurl 'contacts' %}">{% trans "Contacts" %}</a>
                 </li>
                 <li>
                     <a href="#" class="act-link">{% trans "Lenguage" %} </a>
