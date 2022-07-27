@@ -21,6 +21,9 @@ social-auth-app-django
 sorl-thumbnail
 django-widget-tweaks
 kombu==5.2.2
+django-parler
+django-localflavor
+django-rosetta
 
 
 boto3
