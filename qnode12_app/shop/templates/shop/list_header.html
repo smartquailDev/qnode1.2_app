@@ -11,13 +11,13 @@
 <head>
     <!--=============== basic  ===============-->
     <meta charset="UTF-8">
-    <title>Kotlis Photography - Creative  Responsive Photography  Template</title>
+    <title>CENTRO COMUNINARIO-ISLA FLOREANA</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <meta name="robots" content="index, follow"/>
     <meta name="keywords" content=""/>
     <meta name="description" content=""/>
     <!--=============== css  ===============-->	
-    <link type="text/css" rel="stylesheet" href="{% static 'css/reset.css' %}">
+    <link type="text/css" rel="stylesheet" href="{% static 'css/reset_2.css' %}">
     <link type="text/css" rel="stylesheet" href="{% static 'css/plugins.css' %}">
     <link type="text/css" rel="stylesheet" href="{% static 'css/style_2.css' %}">
     <!--=============== favicons ===============-->
@@ -27,10 +27,9 @@
 
 <header class="main-header">
     <!-- logo   -->
-    {% for item in page.galleria_5.all %}
-    {% image item.logo width-1200 format-png as logo %}
-    <a href="{% slugurl 'home' %}" class="logo-holder"><img src="{{logo.url}}" alt="" width="{{ logo.width }}"></a>  
-    {% endfor %}
+    
+    <a href="{% slugurl 'home' %}" class="logo-holder"><img src="{% static 'img/logo_flor.png' %}" alt="" ></a>  
+
     <!-- logo end  -->		
     <!-- search -->				
     

@@ -313,6 +313,8 @@ WAGTAILIMAGES_FORMAT_CONVERSIONS = {
 }
 
 #Internacionalitation
+
+
 USE_I18N = True
 WAGTAIL_I18N_ENABLED = True
 USE_L10N = True
