@@ -6,6 +6,7 @@ wagtail==2.16.2
 django-social-share
 wagtailgmaps
 wagalytics==1.3
+
 requests
 celery
 #gunicorn
@@ -24,6 +25,7 @@ kombu==5.2.2
 django-parler
 django-localflavor
 django-rosetta
+wagtail-localize
 
 
 boto3
