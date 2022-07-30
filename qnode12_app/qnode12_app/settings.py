@@ -309,9 +309,7 @@ if DB_IS_AVIAL and POSTGRES_READY:
     }
 }
 
-WAGTAILIMAGES_FORMAT_CONVERSIONS = {
-    'jpg': 'jpeg',
-}
+
 
 #Internacionalitation
 
