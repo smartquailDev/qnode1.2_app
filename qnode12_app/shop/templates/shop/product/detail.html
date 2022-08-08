@@ -10,29 +10,190 @@
 {% endblock %}
 
 {% block content %}
-  <div class="product-detail">
-    <img src="{% if product.image %}{{ product.image.url }}{% else %}{% static "img/no_image.png" %}{% endif %}">
-    <h1>{{ product.name }}</h1>
-    <h2><a href="{{ product.category.get_absolute_url }}">{{ product.category }}</a></h2>
-    <p class="price">${{ product.price }}</p>
-    <form action="{% url "cart:cart_add" product.id %}" method="post">
-      {{ cart_product_form }}
-      {% csrf_token %}
-      <input type="submit" value="{% trans "Add to cart" %}">
-    </form>
-    {{ product.description|linebreaks }}
-    {% if recommended_products %}
-      <div class="recommendations">
-        <h3>{% trans "People who bought this also bought" %}</h3>
-        {% for p in recommended_products %}
-          <div class="item">
-            <a href="{{ p.get_absolute_url }}">
-              <img src="{% if p.image %}{{ p.image.url }}{% else %}{% static "img/no_image.png" %}{% endif %}">
-            </a>
-            <p><a href="{{ p.get_absolute_url }}">{{ p.name }}</a></p>
+
+<div id="wrapper">
+  <!-- content -->	
+  <div class="content">
+      <!-- column-image  -->	
+      <div class="column-image">
+          <div class="bg"  data-bg="images/bg/1.jpg"></div>
+          <div class="overlay"></div>
+          <div class="column-title">
+           
+              <h2>{{ product.category }}</h2>
           </div>
-        {% endfor %}
+      
+          <div class="fixed-column-dec"></div>
       </div>
-    {% endif %}
+      <!-- column-image end  -->	
+      <!-- column-wrapper -->	
+      <div class="column-wrapper single-content-section">
+          <!--fixed-bottom-content -->	
+          <div class="fixed-bottom-content">
+              <!-- pagination   -->
+              <div class="content-nav-fixed">
+                  <ul>
+                      <li>
+                          <a href="blog-single.html" class="ln"><i class="fal fa-long-arrow-left"></i><span>Prev <strong>- Post Title</strong></span></a>
+                          <div class="content-nav_mediatooltip cnmd_leftside"><img  src="images/folio/1.jpg"   alt=""></div>
+                      </li>
+                      <li>
+                          <a href="blog-single.html" class="rn"><span >Next <strong>- Post Title</strong></span> <i class="fal fa-long-arrow-right"></i></a>
+                          <div class="content-nav_mediatooltip cnmd_rightside"><img  src="images/folio/1.jpg"   alt=""></div>
+                      </li>
+                  </ul>
+              </div>
+          </div>
+          <!--fixed-bottom-content end  -->	
+          <!--section  -->	
+           <section class="single-content-section">
+              <div class="container small-container">
+                  <!-- post -->
+                  <div class="post fl-wrap fw-post single-post ">
+                    {% for p in products %}
+                    {% if product.slug == p.slug %}class="selected"{% endif %}
+                      <h2><span>{{ p.name }}</span></h2>
+                    {% endfor %}
+                      <ul class="blog-title-opt">
+                          <li><a href="#">12 may 2017</a></li>
+                          <li> - </li>
+                          <li><a href="#">Interviews </a></li>
+                          <li><a href="#">Design</a></li>
+                          <li> - </li>
+                      </ul>
+                      <!-- blog media -->
+                      <div class="blog-media fl-wrap">
+                          <div class="single-slider-wrap">
+                              <div class="single-slider fl-wrap">
+                                  <div class="swiper-container">
+                                      <div class="swiper-wrapper lightgallery">
+                                          <div class="swiper-slide hov_zoom"><img src="{% if product.image %}{{ product.image.url }}{% else %}{% static "img/no_image.png" %}{% endif %}"><a href="{% if product.image %}{{ product.image.url }}{% else %}{% static "img/no_image.png" %}{% endif %}" class="box-media-zoom   popup-image"><i class="fal fa-search"></i></a></div>
+                                          <div class="swiper-slide hov_zoom"><img src="{% if product.image %}{{ product.image_2.url }}{% else %}{% static "img/no_image.png" %}{% endif %}"><a href="{% if product.image %}{{ product.image_2.url }}{% else %}{% static "img/no_image.png" %}{% endif %}" class="box-media-zoom   popup-image"><i class="fal fa-search"></i></a></div>
+                                          <div class="swiper-slide hov_zoom"><img src="{% if product.image %}{{ product.image_3.url }}{% else %}{% static "img/no_image.png" %}{% endif %}"><a href="{% if product.image %}{{ product.image_3.url }}{% else %}{% static "img/no_image.png" %}{% endif %}" class="box-media-zoom   popup-image"><i class="fal fa-search"></i></a></div>
+                                         
+                                      </div>
+                                  </div>
+                              </div>
+                              <div class="ss-slider-pagination_wrap">
+                                  <div class="ss-slider-pagination"></div>
+                              </div>
+                              <div class="ss-slider-cont ss-slider-cont-prev color-bg"><i class="fal fa-long-arrow-left"></i></div>
+                              <div class="ss-slider-cont ss-slider-cont-next color-bg"><i class="fal fa-long-arrow-right"></i></div>
+                          </div>
+                      </div>
+                      <!-- blog media end -->
+                      <div class="blog-text fl-wrap">
+                          <div class="pr-tags fl-wrap">
+                              <span>Tags : </span>
+                              <ul>
+                                  <li><a href="#">{{ product.item1 }}</a></li>
+                                  <li><a href="#">Photography</a></li>
+                                  <li><a href="#">Fasion</a></li>
+                              </ul>
+                          </div>
+                          <p>{{ product.description|linebreaks }}
+                          </p>
+                        
+                      </div>
+                      <!-- post-author-->                                   
+                      <div class="post-author fl-wrap">
+                          <div class="author-img">
+                              <img alt='' src="images/avatar/1.jpg">	
+                          </div>
+                          <div class="author-content">
+                              <h5><a href="#">Jane Kowalski</a></h5>
+                             
+                              <div class="author-social">
+                                  <ul>
+                                      <li><a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+                                      <li><a href="#" target="_blank"><i class="fab fa-instagram"></i></a></li>
+                                      <li><a href="#" target="_blank"><i class="fab fa-twitter"></i></a></li>
+                                      <li><a href="#" target="_blank"><i class="fab fa-vk"></i></a></li>
+                                  </ul>
+                              </div>
+                          </div>
+                      </div>
+                      <!--post-author end-->
+                      <div id="comments" class="single-post-comm fl-wrap">
+                          <!--title-->
+                          <h6 id="comments-title">Comments<span>( 2 )</span></h6>
+                          <ul class="commentlist clearafix">
+                              <li class="comment">
+                                  <div class="comment-body">
+                                      <div class="comment-author">
+                                          <img alt='' src='images/avatar/1.jpg' width="50" height="50">
+                                      </div>
+                                      <cite class="fn"><a href="#">Kevin</a></cite>
+                                      <div class="comment-meta">
+                                          <h6><a href="#">January 02, 2014 at 07:39 am</a> / <a class='comment-reply-link' href="#">Reply</a></h6>
+                                      </div>
+                                      <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus hendrerit. Pellentesque aliquet nibh nec urna. In nisi neque, aliquet vel, dapibus id, mattis vel, nisi. Sed pretium, ligula sollicitudin laoreet viverra, tortor libero sodales leo, eget blandit nunc tortor eu nibh. Nullam mollis. Ut justo.</p>
+                                  </div>
+                              </li>
+                              <li class="comment">
+                                  <!--comment body-->
+                                  <div class="comment-body">
+                                      <div class="comment-author">
+                                          <img alt='' src='images/avatar/1.jpg' width="50" height="50">
+                                      </div>
+                                      <cite class="fn"><a href="#">Andy</a></cite>
+                                      <div class="comment-meta">
+                                          <h6><a href="#">January 22, 2014 at 03:19 am</a> / <a class='comment-reply-link' href="#">Reply</a></h6>
+                                      </div>
+                                      <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus hendrerit. Pellentesque aliquet nibh nec urna. In nisi neque, aliquet vel, dapibus id, mattis vel, nisi. Sed pretium, ligula sollicitudin laoreet viverra, tortor libero sodales leo, eget blandit nunc tortor eu nibh. Nullam mollis. Ut justo.</p>
+                                  </div>
+                              </li>
+                          </ul>
+                          <div class="clearfix"></div>
+                          <div id="respond" class="clearafix">
+                              <h6 id="reply-title">Leave A Review</h6>
+                              <form  class="custom-form "   name="commentform">
+                                  <fieldset>
+                                      <input type="text" name="name" id="name2" placeholder="Your Name *" value=""/>
+                                      <input type="text"  name="email" id="email2" placeholder="Email Address *" value=""/>
+                                      <textarea name="comments"  id="comments2" cols="40" rows="3" placeholder="Your Message:"></textarea>
+                                      <button class="btn float-btn" id="submit">Add Comment </button>
+                                  </fieldset>
+                              </form>
+                              <form class="custom-form" name="commentform"  action="{% url "cart:cart_add" product.id %}" method="post">
+                                <fieldset>
+                                {{ cart_product_form }}
+                                {% csrf_token %}
+                                <input class="btn float-btn" type="submit" value="{% trans "Add to cart" %}">
+                              </fieldset>
+                              </form>
+                          </div>
+                          <!--end respond-->
+                      </div>
+                      <!--comments end -->
+                  </div>
+                  <!-- post end-->
+              </div>
+          </section>
+          <!--section end  -->	
+          <!--footer -->			
+          <footer class="min-footer fl-wrap content-animvisible">
+              <div class="container small-container">
+                  <div class="footer-inner fl-wrap">
+                      <!-- policy-box-->
+                      <div class="policy-box">
+                          <span>&#169; Kotlis 2019  /  All rights reserved. </span>
+                      </div>
+                      <!-- policy-box end-->
+                      <a href="#" class="to-top-btn to-top">Back to top <i class="fal fa-long-arrow-up"></i></a>
+                  </div>
+              </div>
+          </footer>
+          <!--footer end  -->	
+      </div>
+      <!-- column-wrapper -->	
   </div>
+  <!--content end-->	
+  <!--share-wrapper-->
+  <div class="share-wrapper">
+      <div class="share-container fl-wrap  isShare"></div>
+  </div>
+  <!--share-wrapper end-->
+</div>
+  
 {% endblock %}
