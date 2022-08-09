@@ -49,11 +49,13 @@
           </div>
           <!-- fixed-bottom-content end -->	
           <!--section  -->	
+          {% for c in categories %}
+          {% if category.slug == c.slug %}class="selected"{% endif %}
+          {% for product in products %}
           <section class="single-content-section">
               <div class="container small-container">
                   <!-- post -->
-                  {% for c in categories %}
-                {% if category.slug == c.slug %}class="selected"{% endif %}
+                  
                   <div class="post fl-wrap fw-post">
                     
                     <a href="{{ c.get_absolute_url }}"><h2><span>{{ c.name }}</span></h2></a>
@@ -77,15 +79,17 @@
                           <p>
                              {{c.description}}
                           </p>
-                          {% for product in products %}
+                         
                           <a href="{{ product.get_absolute_url }}" class="btn float-btn flat-btn">Read more </a>
-                          {% endfor %}
+                         
                       </div>
                   </div>
-                  {% endfor %}
+                 
 
               </div>
           </section>
+          {% endfor %}
+          {% endfor %}
           <!--section end  -->	
           <!--footer -->			
           <footer class="min-footer fl-wrap content-animvisible">
