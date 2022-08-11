@@ -11,39 +11,28 @@
 
 {% block content %}
 
+{% include 'shop/list_header.html' %}
+
 <div id="wrapper">
-  <!-- content -->	
-  <div class="content">
-      <!-- column-image  -->	
-      <div class="column-image">
-          <div class="bg"  data-bg="images/bg/1.jpg"></div>
-          <div class="overlay"></div>
-          <div class="column-title">
-           
-              <h2>{{ product.category }}</h2>
-          </div>
-      
-          <div class="fixed-column-dec"></div>
-      </div>
-      <!-- column-image end  -->	
-      <!-- column-wrapper -->	
-      <div class="column-wrapper single-content-section">
+    <!-- content -->	
+    <div class="content">
+        <!-- column-image  -->	
+        <div class="column-image">
+            <div class="bg"  data-bg="images/bg/1.jpg"></div>
+            <div class="overlay"></div>
+            <div class="column-title">
+             
+                <h2>{{ product.category }}</h2>
+            </div>
+        
+            <div class="fixed-column-dec"></div>
+        </div>
+
+        <!-- column-image end  -->	
+        <!-- column-wrapper -->	
+        <div class="column-wrapper single-content-section">
           <!--fixed-bottom-content -->	
-          <div class="fixed-bottom-content">
-              <!-- pagination   -->
-              <div class="content-nav-fixed">
-                  <ul>
-                      <li>
-                          <a href="blog-single.html" class="ln"><i class="fal fa-long-arrow-left"></i><span>Prev <strong>- Post Title</strong></span></a>
-                          <div class="content-nav_mediatooltip cnmd_leftside"><img  src="images/folio/1.jpg"   alt=""></div>
-                      </li>
-                      <li>
-                          <a href="blog-single.html" class="rn"><span >Next <strong>- Post Title</strong></span> <i class="fal fa-long-arrow-right"></i></a>
-                          <div class="content-nav_mediatooltip cnmd_rightside"><img  src="images/folio/1.jpg"   alt=""></div>
-                      </li>
-                  </ul>
-              </div>
-          </div>
+        
           <!--fixed-bottom-content end  -->	
           <!--section  -->	
            <section class="single-content-section">
@@ -54,13 +43,7 @@
                     {% if product.slug == p.slug %}class="selected"{% endif %}
                       <h2><span>{{ p.name }}</span></h2>
                     {% endfor %}
-                      <ul class="blog-title-opt">
-                          <li><a href="#">12 may 2017</a></li>
-                          <li> - </li>
-                          <li><a href="#">Interviews </a></li>
-                          <li><a href="#">Design</a></li>
-                          <li> - </li>
-                      </ul>
+                    
                       <!-- blog media -->
                       <div class="blog-media fl-wrap">
                           <div class="single-slider-wrap">
@@ -84,11 +67,11 @@
                       <!-- blog media end -->
                       <div class="blog-text fl-wrap">
                           <div class="pr-tags fl-wrap">
-                              <span>Tags : </span>
+                              <span>Details : </span>
                               <ul>
                                   <li><a href="#">{{ product.item1 }}</a></li>
-                                  <li><a href="#">Photography</a></li>
-                                  <li><a href="#">Fasion</a></li>
+                                  <li><a href="#">{{ product.item2 }}</a></li>
+                                  <li><a href="#">{{ product.item3 }}</a></li>
                               </ul>
                           </div>
                           <p>{{ product.description|linebreaks }}
@@ -96,70 +79,58 @@
                         
                       </div>
                       <!-- post-author-->                                   
-                      <div class="post-author fl-wrap">
-                          <div class="author-img">
-                              <img alt='' src="images/avatar/1.jpg">	
-                          </div>
-                          <div class="author-content">
-                              <h5><a href="#">Jane Kowalski</a></h5>
-                             
-                              <div class="author-social">
-                                  <ul>
-                                      <li><a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
-                                      <li><a href="#" target="_blank"><i class="fab fa-instagram"></i></a></li>
-                                      <li><a href="#" target="_blank"><i class="fab fa-twitter"></i></a></li>
-                                      <li><a href="#" target="_blank"><i class="fab fa-vk"></i></a></li>
-                                  </ul>
-                              </div>
-                          </div>
-                      </div>
+                      
                       <!--post-author end-->
                       <div id="comments" class="single-post-comm fl-wrap">
                           <!--title-->
-                          <h6 id="comments-title">Comments<span>( 2 )</span></h6>
-                          <ul class="commentlist clearafix">
-                              <li class="comment">
-                                  <div class="comment-body">
-                                      <div class="comment-author">
-                                          <img alt='' src='images/avatar/1.jpg' width="50" height="50">
-                                      </div>
-                                      <cite class="fn"><a href="#">Kevin</a></cite>
-                                      <div class="comment-meta">
-                                          <h6><a href="#">January 02, 2014 at 07:39 am</a> / <a class='comment-reply-link' href="#">Reply</a></h6>
-                                      </div>
-                                      <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus hendrerit. Pellentesque aliquet nibh nec urna. In nisi neque, aliquet vel, dapibus id, mattis vel, nisi. Sed pretium, ligula sollicitudin laoreet viverra, tortor libero sodales leo, eget blandit nunc tortor eu nibh. Nullam mollis. Ut justo.</p>
-                                  </div>
-                              </li>
-                              <li class="comment">
-                                  <!--comment body-->
-                                  <div class="comment-body">
-                                      <div class="comment-author">
-                                          <img alt='' src='images/avatar/1.jpg' width="50" height="50">
-                                      </div>
-                                      <cite class="fn"><a href="#">Andy</a></cite>
-                                      <div class="comment-meta">
-                                          <h6><a href="#">January 22, 2014 at 03:19 am</a> / <a class='comment-reply-link' href="#">Reply</a></h6>
-                                      </div>
-                                      <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus hendrerit. Pellentesque aliquet nibh nec urna. In nisi neque, aliquet vel, dapibus id, mattis vel, nisi. Sed pretium, ligula sollicitudin laoreet viverra, tortor libero sodales leo, eget blandit nunc tortor eu nibh. Nullam mollis. Ut justo.</p>
-                                  </div>
-                              </li>
-                          </ul>
-                          <div class="clearfix"></div>
-                          <div id="respond" class="clearafix">
-                              <h6 id="reply-title">Leave A Review</h6>
-                              <form  class="custom-form "   name="commentform">
-                                  <fieldset>
-                                      <input type="text" name="name" id="name2" placeholder="Your Name *" value=""/>
-                                      <input type="text"  name="email" id="email2" placeholder="Email Address *" value=""/>
-                                      <textarea name="comments"  id="comments2" cols="40" rows="3" placeholder="Your Message:"></textarea>
-                                      <button class="btn float-btn" id="submit">Add Comment </button>
-                                  </fieldset>
-                              </form>
+                      
+                        
+                              <h6 id="reply-title">Make you reservation now
+                              
+                              </h6>
+                             
                               <form class="custom-form" name="commentform"  action="{% url "cart:cart_add" product.id %}" method="post">
                                 <fieldset>
-                                {{ cart_product_form }}
+                                    <label for="{{ form.quantity }}"><h6>Number of persons on :</h6></label>  
                                 {% csrf_token %}
-                                <input class="btn float-btn" type="submit" value="{% trans "Add to cart" %}">
+                                      {% for hidden_field in cart_product_form.hidden_fields %}
+                                        {{ hidden_field }}
+                                      {% endfor %}
+                                      
+                                      {% if cart_product_form.non_field_errors %}
+                                        <div class="alert alert-danger" role="alert">
+                                        {% for error in cart_product_form.non_field_errors %}
+                                          {{ error }}
+                                        {% endfor %}
+                                        </div>
+                                      {% endif %}
+                                      
+                                      {% for field in cart_product_form.visible_fields %}
+                                        <div class="custom-form">
+                                        {{ field.label_tag }}
+                                      
+                                        {% if cart_product_form.is_bound %}
+                                          {% if field.errors %}
+                                          {% render_field field class="form-control is-invalid" %}
+                                          {% for error in field.errors %}
+                                            <div class="invalid-feedback">
+                                            {{ error }}
+                                            </div>
+                                          {% endfor %}
+                                          {% else %}
+                                          {% render_field field class="form-control is-valid" %}
+                                          {% endif %}
+                                        {% else %}
+                                          {% render_field field class="form-control" %}
+                                        {% endif %}
+                                      
+                                        {% if field.help_text %}
+                                          <small class="form-text text-muted">{{ field.help_text }}</small>
+                                          
+                                        {% endif %}
+                                        </div>
+                                      {% endfor %} 
+                                <button class="btn float-btn" type="submit">{% trans "Add a cart" %}  <i class="fal fa-shopping-cart"></i> </button>
                               </fieldset>
                               </form>
                           </div>
@@ -168,32 +139,33 @@
                       <!--comments end -->
                   </div>
                   <!-- post end-->
-              </div>
-          </section>
-          <!--section end  -->	
-          <!--footer -->			
-          <footer class="min-footer fl-wrap content-animvisible">
-              <div class="container small-container">
-                  <div class="footer-inner fl-wrap">
-                      <!-- policy-box-->
-                      <div class="policy-box">
-                          <span>&#169; Kotlis 2019  /  All rights reserved. </span>
-                      </div>
-                      <!-- policy-box end-->
-                      <a href="#" class="to-top-btn to-top">Back to top <i class="fal fa-long-arrow-up"></i></a>
-                  </div>
-              </div>
-          </footer>
-          <!--footer end  -->	
-      </div>
-      <!-- column-wrapper -->	
-  </div>
-  <!--content end-->	
-  <!--share-wrapper-->
-  <div class="share-wrapper">
-      <div class="share-container fl-wrap  isShare"></div>
-  </div>
-  <!--share-wrapper end-->
+
+                  
+              
+            </section>
+            <footer class="min-footer fl-wrap content-animvisible">
+                <div class="container small-container">
+                    <div class="footer-inner fl-wrap">
+                        <!-- policy-box-->
+                        <div class="policy-box">
+                            <span>&#169; Kotlis 2019  /  All rights reserved. </span>
+                        </div>
+                        <!-- policy-box end-->
+                        <a href="#" class="to-top-btn to-top">Back to top <i class="fal fa-long-arrow-up"></i></a>
+                    </div>
+                </div>
+            </footer>
+            </div>
+            
+        
+        <!-- column-wrapper -->	
+    </div>
+    
+    <!--content end-->	
+    <!--share-wrapper-->
+    <div class="share-wrapper">
+        <div class="share-container fl-wrap  isShare"></div>
+    </div>
+    <!--share-wrapper end-->
 </div>
-  
 {% endblock %}

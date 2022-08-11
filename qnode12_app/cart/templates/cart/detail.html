@@ -1,6 +1,8 @@
+
 {% extends "shop/base.html" %}
 {% load widget_tweaks %}
 {% load static %}
+{% load i18n %}
 
 
 
@@ -15,8 +17,7 @@
           <div class="bg"  data-bg="images/bg/1.jpg"></div>
           <div class="overlay"></div>
           <div class="column-title">
-              <h2>My Stories</h2>
-              <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas in pulvinar neque. Nulla finibus lobortis pulvinar.</h3>
+              <h2>Reservations</h2>
           </div>
         
           <div class="fixed-column-dec"></div>
@@ -24,28 +25,30 @@
       <!-- column-image end  -->	
       <!-- column-wrapper -->	
       <div class="column-wrapper  single-content-section">
+
           <!-- fixed-bottom-content-->	
-          <div class="fixed-bottom-content">
-              <!-- pagination   -->
-              <div class="pagination-container fl-wrap">
-                  <a href="#" class="prevposts-link"><i class="fal fa-chevron-left"></i></a>
-                  <a href="#">1</a>
-                  <a href="#" class="current-page">2</a>
-                  <a href="#">3</a>
-                  <a href="#">4</a>
-                  <a href="#" class="nextposts-link"><i class="fal fa-chevron-right"></i></a>
-              </div>
-              <!-- pagination  end -->
-          </div>
+        <div class="fixed-bottom-content">
+                            <!-- pagination   -->
+                            <div class="content-nav-fixed">
+                                <ul>
+                                    <li>
+                                        <a href="{% url "shop:product_list" %}" class="ln"><i class="fal fa-long-arrow-left"></i><span> <strong>- Continue shopping</strong></span></a>
+                                        <div class="content-nav_mediatooltip cnmd_leftside"><img  src="images/folio/1.jpg"   alt=""></div>
+                                    </li>
+                                    <li>
+                                        <a href="{% url "orders:order_create" %}" class="rn"><span > <strong>- Checkout</strong></span> <i class="fal fa-long-arrow-right"></i></a>
+                                        <div class="content-nav_mediatooltip cnmd_rightside"><img  src="images/folio/1.jpg"   alt=""></div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
           <!-- fixed-bottom-content end -->	
           <!--section  -->	
-          {% for item in cart %}
-          {% with product=item.product %}
+        
           <section id="sec3">
             <div class="container small-container">
                 <div class="section-title fl-wrap">
-                    <h3>Services and prices</h3>
-                    <h4>Sed tempor iaculis massa faucibus feugiat. In fermentum facilisis massa</h4>
+                    <h3>Make Reservations</h3>
                     <div class="section-number">03.</div>
                 </div>
                 <div class="column-wrapper_item fl-wrap">
@@ -53,83 +56,87 @@
                         <!-- serv-wrap--> 
                         <div class="serv-wrap fl-wrap">
                             <!-- serv-item --> 
+                            {% for item in cart %}
+                            {% with product=item.product %}
                            
                             <div class="serv-item">
+                             
+                              <h4>{{ product.name }}</h4>
 
                                 <div class="serv-media">
                                   <a href="{{ product.get_absolute_url }}">
                                     <img src="{% if product.image %}{{ product.image.url }}{% else %}{% static "img/no_image.png" %}{% endif %}" width="300px">
                                   </a>
+                                 
                                 </div>
-                                <div class="serv-text">
-                                  
-                                    <h4><a href="#">{{ product.name }}</a></h4>
-                                    <p>{{product.description}}</p>
-                                    <ul>
-                                        <li>{{product.item1}}</li>
-                                        <li> {{product.item2 }}</li>
-                                        <li>{{product.item3 }}</li>
-                                        <td><a href="{% url "cart:cart_remove" product.id %}">Remove</a></td>
-                                    </ul>
 
-                                    <form action="{% url "cart:cart_add" product.id %}" method="post">
-                                      {{ item.update_quantity_form.quantity }}
-                                      {{ item.update_quantity_form.update }}
-                                      {% csrf_token %}
-                                      {% for hidden_field in form.hidden_fields %}
-                                        {{ hidden_field }}
-                                      {% endfor %}
+                                <div class="column-wrapper_item fl-wrap">
+                                  
+                                  <div class="column-wrapper_text fl-wrap">
                                       
-                                      {% if form.non_field_errors %}
-                                        <div class="alert alert-danger" role="alert">
-                                        {% for error in form.non_field_errors %}
-                                          {{ error }}
-                                        {% endfor %}
-                                        </div>
-                                      {% endif %}
-                                      
-                                      {% for field in form.visible_fields %}
-                                        <div class="form-group">
-                                        {{ field.label_tag }}
-                                      
-                                        {% if form.is_bound %}
-                                          {% if field.errors %}
-                                          {% render_field field class="form-control is-invalid" %}
-                                          {% for error in field.errors %}
-                                            <div class="invalid-feedback">
-                                            {{ error }}
-                                            </div>
-                                          {% endfor %}
-                                          {% else %}
-                                          {% render_field field class="form-control is-valid" %}
-                                          {% endif %}
-                                        {% else %}
-                                          {% render_field field class="form-control" %}
-                                        {% endif %}
-                                      
-                                        {% if field.help_text %}
-                                          <small class="form-text text-muted">{{ field.help_text }}</small>
+                                      <div class="contact-details fl-wrap">
+                                        
+                                       
+                                        
+                                          <ul>
+                                           
+                                              <li><span>Price per person :</span>$ {{ item.price }}</li>
+                                              <li><span> Final Price :</span>${{ item.total_price }}</li>
+                                              <li><span># persons <i class="fal fa-user"></i> :</span> 
+                                                <form action="{% url "cart:cart_add" product.id %}" method="post">
+                                                  {{ item.update_quantity_form.quantity }}
+                                                  {{ item.update_quantity_form.update }}
+                                                  <input type="submit" class="btn btn-primary btn-block" value="Update">
+                                                  {% csrf_token %}
+                                                </form> 
+                                                <li>
+                                                  <p>Apply a Coupon</p>
+  <form action="{% url "coupons:apply" %}" method="post">
+    {{ coupon_apply_form }}
+    <input type="submit" value="Apply" class="btn btn-primary btn-block" >
+    {% csrf_token %}
+  </form>
+                                                </li>
+                                              <li>
+
+                                                {% if cart.coupon %}
+        <tr class="subtotal">
+        <td>Subtotal</td>
+        <td colspan="4"></td>
+        <td class="num">${{ cart.get_total_price|floatformat:"2" }}</td>
+      </tr>
+      <tr>
+        <td>
+          "{{ cart.coupon.code }}" coupon
+          ({{ cart.coupon.discount }}% off )
+        </td>
+        <td colspan="4">
+          <td class="num neg">
+            - $ {{cart.get_discount|floatformat:"2" }}
+          </td>
+        </td>
+      </tr>
+      {% endif %}
+                                              </li>
+                                              
+                                            
+                                           
                                           
-                                        {% endif %}
-                                        </div>
-                                      {% endfor %} 
-                                      <label>
-                                        <input type="submit" value="Update">
-                                    </label>   
-                                      <button type="submit" class="btn btn-primary btn-block">Sign In</button>
-                                      </form>
-                                    
-                                    <form action="{% url "cart:cart_add" product.id %}" method="post">
-                                      {{ item.update_quantity_form.quantity }}
-                                      {{ item.update_quantity_form.update }}
-                                      <input type="submit" value="Update">
-                                      {% csrf_token %}
-                                    </form>
-                                    <div class="serv-price">Price per person :<span> $ {{ item.price }}</span></div>
-                                    <div class="serv-price">Final Price :<span> $ {{ item.total_price }}</span></div>
-                                   
-                                </div>
+                                                <a href="{% url "cart:cart_remove" product.id %}" type="submit" value="Apply" class="btn btn-primary btn-block" > Cancel</a>
+                                             
+                                                
+                                          </ul>
+                                      </div>
+                                
+                                  </div>
+                                
+                              </div>
+
+                              
+                               
                             </div>
+                            {% endwith %}
+                              {% endfor %}
                            
                             <!-- serv-item end --> 
                             <!-- serv-item --> 
@@ -141,9 +148,10 @@
                     </div>
                 </div>
             </div>
+
+            
         </section>
-        {% endwith %}
-        {% endfor %}
+       
           <!--section end  -->	
           <!--footer -->			
           <footer class="min-footer fl-wrap content-animvisible">
