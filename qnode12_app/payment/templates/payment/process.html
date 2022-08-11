@@ -1,8 +1,12 @@
 {% extends "shop/base.html" %}
+{% load i18n %}
+{% load widget_tweaks %}
+{% load static %}
 
 {% block title %}Pay by credit card{% endblock %}
 
 {% block content %}
+{% include 'cart/detail_header.html' %}
   <h1>Pay by credit card</h1>
   <form action="." id="payment" method="post">
 
