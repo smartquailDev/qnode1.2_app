@@ -74,11 +74,21 @@
                     <a hhref="{% slugurl 'contacts' %}">{% trans "Contacts" %}</a>
                 </li>
                 <li>
+                    {% get_current_language as LANGUAGE_CODE %}
+                    {% get_available_languages as LANGUAGES %}
+                    {% get_language_info_list for LANGUAGES as languages %}
                     <a href="#" class="act-link">{% trans "Lenguage" %} </a>
-                    <ul>
-                    <!--second level -->
+                    <ul class="languages">
+                        {% for language in languages %}
+                          <li>
+                            <a href="/{{ language.code }}/" {% if language.code == LANGUAGE_CODE %} class="selected"{% endif %}>
+                              {{ language.name_local }}
+                            </a>
+                          </li>
+                        {% endfor %}
+                      </ul>
                    
-                </ul>
+                
                     <!--second level end-->
                 </li>
             </ul>

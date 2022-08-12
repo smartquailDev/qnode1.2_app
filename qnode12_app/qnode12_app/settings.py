@@ -91,11 +91,12 @@ INSTALLED_APPS = [
     'social_django',
     'sorl.thumbnail',
     'rosetta',
-    'parler',
     'wagtail_localize',
     'wagtail_localize.locales',
     'localflavor',
-    'baton.autodiscover',   
+    'parler',
+    'baton.autodiscover', 
+      
 ]
 
 
@@ -326,6 +327,17 @@ LANGUAGE_CODE = 'es'
 LOCALE_PATHS = (
     os.path.join(BASE_DIR, 'locale/'),
 )
+
+PARLER_LANGUAGES = {
+    None: (
+        {'code': 'en'},
+        {'code': 'es'},
+    ),
+    'default': {
+        'fallback':'en',
+        'hide_untranslated':False,
+    }
+}
 
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
