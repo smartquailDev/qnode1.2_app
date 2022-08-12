@@ -22,54 +22,41 @@
           <div class="bg"  data-bg="images/bg/1.jpg"></div>
           <div class="overlay"></div>
           <div class="column-title">
-              <h2>Contact Info</h2>
-              <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas in pulvinar neque. Nulla finibus lobortis pulvinar.</h3>
+            <div class="section-title fl-wrap">
+              <h3>Your Tours for Floreana</h3>
+              <div class="contact-details fl-wrap">
+                {% for item in cart %}
+                <ul>
+                  <li><span>Tour :</span>{{ item.product.name }} </li>
+                    <li><span># <i class="fal fa-user"></i>:</span>{{ item.quantity }}</li>
+                    <li><span>Sub total :</span>${{ item.total_price|floatformat:"2" }}</li>
+                    <li><span>Discount :</span>
+                      {% blocktrans with code=cart.coupon.code discount=cart.coupon.discount %}
+                        {{ code }} ({{ discount }}% off)
+                      {% endblocktrans %}
+                      <span>- ${{ cart.get_discount|floatformat:"2" }}</span>
+                    </li>
+                    <p>{% trans "Total" %}: ${{ cart.get_total_price_after_discount|floatformat:"2" }}</p>
+                </ul>
+                {% endfor %}
+            </div>   
           </div>
-          <div class="column-notifer">
-              <div class="scroll-down-wrap transparent_sdw">
-                  <div class="mousey">
-                      <div class="scroller"></div>
-                  </div>
-                  <span>Scroll down  to Discover</span>
-              </div>
           </div>
-          <div class="fixed-column-dec"></div>
+         
+         
       </div>
       <!-- column-image end  -->	
       <!-- column-wrapper -->	
       <div class="column-wrapper ">
 <!--scroll-nav-wrap -->	
-          <div class="scroll-nav-wrap">
-              <nav class="scroll-nav scroll-init">
-                  <ul>
-                      <li><a class="act-scrlink" href="#sec1">Details</a></li>
-                      <li><a href="#sec2">Location</a></li>
-                      <li><a href="#sec3">Say Hello</a></li>
-                  </ul>
-              </nav>
-          </div>
+      
 							
           <section id="sec3">
               <div class="container small-container">
-                  <div class="section-title fl-wrap">
-                      <h3>Make your reservations</h3>
-                      <div class="contact-details fl-wrap">
-                        {% for item in cart %}
-                        <ul>
-                          <li><span>Tour :</span>{{ item.product.name }} </li>
-                            <li><span># <i class="fal fa-user"></i>:</span>{{ item.quantity }}</li>
-                            <li><span>Sub total :</span>${{ item.total_price|floatformat:"2" }}</li>
-                            <li><span>Discount :</span>
-                              {% blocktrans with code=cart.coupon.code discount=cart.coupon.discount %}
-                                {{ code }} ({{ discount }}% off)
-                              {% endblocktrans %}
-                              <span>- ${{ cart.get_discount|floatformat:"2" }}</span>
-                            </li>
-                            <p>{% trans "Total" %}: ${{ cart.get_total_price_after_discount|floatformat:"2" }}</p>
-                        </ul>
-                        {% endfor %}
-                    </div>   
+                <div class="section-title fl-wrap">
+                  <h3>Make your reservations</h3>
                   </div>
+                 
                   <div class="column-wrapper_item fl-wrap">
                       <div class="column-wrapper_text fl-wrap">
                           <div id="contact-form" class="fl-wrap">
@@ -93,7 +80,7 @@
                   <div class="footer-inner fl-wrap">
                       <!-- policy-box-->
                       <div class="policy-box">
-                          <span>&#169; Kotlis 2019  /  All rights reserved. </span>
+                          <span>&#169; powered by SmartQuail, Inc   /  All rights reserved. </span>
                       </div>
                       <!-- policy-box end-->
                       <a href="#" class="to-top-btn to-top">Back to top <i class="fal fa-long-arrow-up"></i></a>
