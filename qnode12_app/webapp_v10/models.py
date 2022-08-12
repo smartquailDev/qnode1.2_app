@@ -413,14 +413,29 @@ class Charms(AbstractEmailForm):
     bio = RichTextField(blank=True,verbose_name='rseña bibliografica')
 
     banner_title4 = RichTextField(blank=True,verbose_name='Titulo de galeria-1 ')
+    banner_detail4 = models.CharField(max_length=1000,blank=True,verbose_name='detalle de galeria-1 ')
     banner_title5 = RichTextField(blank=True,verbose_name='Titulo de galeria-2  ')
+    banner_detail5 =  models.CharField(max_length=1000,blank=True,verbose_name='detalle de galeria-2 ')
     banner_title6 = RichTextField(blank=True,verbose_name='Titulo de galeria-3  ')
+    banner_detail6 = models.CharField(max_length=1000,blank=True,verbose_name='detalle de galeria-3 ')
     banner_title7 = RichTextField(blank=True,verbose_name='Titulo de galeria-4  ')
-    banner_title8 = RichTextField(blank=True,verbose_name='Titulo de galeria-4  ')
-    banner_title9 = RichTextField(blank=True,verbose_name='Titulo de galeria-4  ')
-    banner_title10 = RichTextField(blank=True,verbose_name='Titulo de galeria-4  ')
-    banner_title11 = RichTextField(blank=True,verbose_name='Titulo de galeria-4  ')
-    banner_title12 = RichTextField(blank=True,verbose_name='Titulo de galeria-4  ')
+    banner_detail7 =  models.CharField(max_length=1000,blank=True,verbose_name='detalle de galeria-4 ')
+    banner_title8 = RichTextField(blank=True,verbose_name='Titulo de galeria-5  ')
+    banner_detail8 =  models.CharField(max_length=1000,blank=True,verbose_name='detalle de galeria-5 ')
+    banner_title9 = RichTextField(blank=True,verbose_name='Titulo de galeria-6  ')
+    banner_detail9 =  models.CharField(max_length=1000,blank=True,verbose_name='detalle de galeria-6 ')
+    banner_title10 = RichTextField(blank=True,verbose_name='Titulo de galeria-7  ')
+    banner_detail10 =  models.CharField(max_length=1000,blank=True,verbose_name='detalle de galeria-7 ')
+    banner_title11 = RichTextField(blank=True,verbose_name='Titulo de galeria-8  ')
+    banner_detail11 =  models.CharField(max_length=1000,blank=True,verbose_name='detalle de galeria-8')
+    banner_title12 = RichTextField(blank=True,verbose_name='Titulo de galeria-9  ')
+    banner_detail12 =  models.CharField(max_length=1000,blank=True,verbose_name='detalle de galeria-9 ')
+    banner_title13 = RichTextField(blank=True,verbose_name='Titulo de galeria-10  ')
+    banner_detail13 =  models.CharField(max_length=1000,blank=True,verbose_name='detalle de galeria-10')
+    banner_title14 = RichTextField(blank=True,verbose_name='Titulo de galeria-11 ')
+    banner_detail14 =  models.CharField(max_length=1000,blank=True,verbose_name='detalle de galeria-11 ')
+    banner_title15 = RichTextField(blank=True,verbose_name='Titulo de galeria-12  ')
+    banner_detail15 =  models.CharField(max_length=1000,blank=True,verbose_name='detalle de galeria-12')
 
     
     #Campos de Noticias
@@ -448,14 +463,29 @@ class Charms(AbstractEmailForm):
     #Panel Gelerias
         FieldPanel('bio', classname="full"),
         FieldPanel('banner_title4', classname="full"),
+        FieldPanel('banner_detail4', classname="full"),
         FieldPanel('banner_title5', classname="full"),
+        FieldPanel('banner_detail5', classname="full"),
         FieldPanel('banner_title6', classname="full"),
+        FieldPanel('banner_detail6', classname="full"),
         FieldPanel('banner_title7', classname="full"),
+        FieldPanel('banner_detail7', classname="full"),
         FieldPanel('banner_title8', classname="full"),
+        FieldPanel('banner_detail8', classname="full"),
         FieldPanel('banner_title9', classname="full"),
+        FieldPanel('banner_detail9', classname="full"),
         FieldPanel('banner_title10', classname="full"),
+        FieldPanel('banner_detail10', classname="full"),
         FieldPanel('banner_title11', classname="full"),
+        FieldPanel('banner_detail11', classname="full"),
         FieldPanel('banner_title12', classname="full"),
+        FieldPanel('banner_detail12', classname="full"),
+        FieldPanel('banner_title13', classname="full"),
+        FieldPanel('banner_detail13', classname="full"),
+        FieldPanel('banner_title14', classname="full"),
+        FieldPanel('banner_detail14', classname="full"),
+        FieldPanel('banner_title15', classname="full"),
+        FieldPanel('banner_detail15', classname="full"),
 
 #panel para campos de consulta
         FieldPanel('consulta', classname="full"),

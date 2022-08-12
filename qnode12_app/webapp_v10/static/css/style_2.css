@@ -100,12 +100,14 @@ body {
 /*--------------Typography--------------------------------------*/
 p {
 	font-size: 12px;
-	line-height: 24px;
+	line-height: 13px;
 	padding-bottom: 10px;
 	font-weight: 500;
 	color: #5e646a;
-	text-align:left;
-}
+	text-align: left;
+	margin-top: -7px;
+  }
+
 blockquote {
 	float: left;
 	padding: 10px 20px;
@@ -838,9 +840,10 @@ blockquote p {
 	color:rgba(255,255,255,0.61);
 }
 .thumb-info p {
-	color:#fff;
-	opacity:0.6;
-	font-style:italic;
+  color: #fff;
+  opacity: 0.6;
+  font-style: italic;
+  margin-top: -5px;
 }
 .vis-thumb-info .thumb-info {
 	float:left;

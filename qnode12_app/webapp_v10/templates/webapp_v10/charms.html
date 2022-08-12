@@ -25,11 +25,15 @@
                         <div class="grid-item-holder hov_zoom">
                             {% for item in page.galleria_2.all %}
                             {% image item.image width-1200 as s1 %}
-                            <img  src="{{s1.url}}"    alt="">
+                            <figure>
+                                
+                            <img  src="{{s1.url}}"  alt="">
                             <a href="{{s1.url}}" class="box-media-zoom   popup-image"><i class="fal fa-search"></i></a> 
+                        </figure>
                             {% endfor %}                                   
                             <div class="thumb-info">
-                                <h3><a href="portfolio-single.html">{{page.banner_title4| richtext}}</a></h3>
+                                <h3><a href="{{s1.url}}">{{page.banner_title4| richtext}} </a></h3>
+                                <p style="font-size: 7px;">{{page.banner_detail4| richtext}}</p>
                             </div>
                         </div>
                     </div>
@@ -44,6 +48,7 @@
                             {% endfor %}                                  
                             <div class="thumb-info">
                                 <h3><a href="portfolio-single.html">{{page.banner_title5| richtext}}</a></h3>
+                                <p style="font-size: 7px;">{{page.banner_detail5| richtext}}</p>
                             </div>
                         </div>
                     </div>
@@ -58,6 +63,7 @@
                             {% endfor %}                                 
                             <div class="thumb-info">
                                 <h3><a href="portfolio-single.html">{{page.banner_title6| richtext}}</a></h3>
+                                <p style="font-size: 7px;">{{page.banner_detail6| richtext}}</p>
                             </div>
                         </div>
                     </div>
@@ -71,7 +77,8 @@
                             <a href="{{s4.url}}"  class="box-media-zoom   popup-image"><i class="fal fa-search"></i></a>  
                             {% endfor %}                                  
                             <div class="thumb-info">
-                                <h3><a href="portfolio-single.html">{{page.banner_title5| richtext}}</a></h3>
+                                <h3><a href="portfolio-single.html">{{page.banner_title7| richtext}}</a></h3>
+                                <p style="font-size: 7px;">{{page.banner_detail7| richtext}}</p>
                             </div>
                         </div>
                     </div>
@@ -83,7 +90,8 @@
                             <a href="{{s5.url}}" class="box-media-zoom   popup-image"><i class="fal fa-search"></i></a> 
                             {% endfor %}                                   
                             <div class="thumb-info">
-                                <h3><a href="portfolio-single.html">{{page.banner_title5| richtext}}</a></h3>
+                                <h3><a href="portfolio-single.html">{{page.banner_title8| richtext}}</a></h3>
+                                <p style="font-size: 7px;">{{page.banner_detail8| richtext}}</p>
                             </div>
                         </div>
                     </div>
@@ -97,7 +105,8 @@
                             <a href="{{s6.url}}"  class="box-media-zoom   popup-image"><i class="fal fa-search"></i></a>  
                             {% endfor %}                                  
                             <div class="thumb-info">
-                                <h3><a href="portfolio-single.html">{{page.banner_title6| richtext}}</a></h3>
+                                <h3><a href="portfolio-single.html">{{page.banner_title9| richtext}}</a></h3>
+                                <p style="font-size: 7px;">{{page.banner_detail9| richtext}}</p>
                             </div>
                         </div>
                     </div>
@@ -111,7 +120,8 @@
                             <a href="{{s7.url}}" class="box-media-zoom   popup-image"><i class="fal fa-search"></i></a>   
                             {% endfor %}                                 
                             <div class="thumb-info">
-                                <h3><a href="portfolio-single.html">{{page.banner_title7| richtext}}</a></h3>
+                                <h3><a href="portfolio-single.html">{{page.banner_title10| richtext}}</a></h3>
+                                <p style="font-size: 7px;">{{page.banner_detail10| richtext}}</p>
                             </div>
                         </div>
                     </div>
@@ -125,7 +135,8 @@
                             <a href="{{s8.url}}"  class="box-media-zoom   popup-image"><i class="fal fa-search"></i></a>  
                             {% endfor %}                                  
                             <div class="thumb-info">
-                                <h3><a href="portfolio-single.html">{{page.banner_title8| richtext}}</a></h3>
+                                <h3><a href="portfolio-single.html">{{page.banner_title11| richtext}}</a></h3>
+                                <p style="font-size: 7px;">{{page.banner_detail11| richtext}}</p>
                             </div>
                         </div>
                     </div>
@@ -137,7 +148,8 @@
                             <a href="{{s9.url}}" class="box-media-zoom   popup-image"><i class="fal fa-search"></i></a> 
                             {% endfor %}                                   
                             <div class="thumb-info">
-                                <h3><a href="portfolio-single.html">{{page.banner_title9| richtext}}</a></h3>
+                                <h3><a href="portfolio-single.html">{{page.banner_title12| richtext}}</a></h3>
+                                <p style="font-size: 7px;">{{page.banner_detail12| richtext}}</p>
                             </div>
                         </div>
                     </div>
@@ -151,7 +163,8 @@
                             <a href="{{s10.url}}"  class="box-media-zoom   popup-image"><i class="fal fa-search"></i></a>  
                             {% endfor %}                                  
                             <div class="thumb-info">
-                                <h3><a href="portfolio-single.html">{{page.banner_title10| richtext}}</a></h3>
+                                <h3><a href="portfolio-single.html">{{page.banner_title13| richtext}}</a></h3>
+                                <p style="font-size: 7px;">{{page.banner_detail13| richtext}}</p>
                             </div>
                         </div>
                     </div>
@@ -159,13 +172,14 @@
                     <!-- gallery-item-->
                     <div class="gallery-item models">
                         <div class="grid-item-holder hov_zoom">
-                            {% for item in page.galleria_11.all %}
+                            {% for item in page.galleria_2.all %}
                             {% image item.image_11 width-1200 as s11 %}
                             <img  src="{{s11.url}}" width="{{s3.width}}"   alt="">
                             <a href="{{s11.url}}" class="box-media-zoom   popup-image"><i class="fal fa-search"></i></a>   
                             {% endfor %}                                 
                             <div class="thumb-info">
-                                <h3><a href="portfolio-single.html">{{page.banner_title11| richtext}}</a></h3>
+                                <h3><a href="portfolio-single.html">{{page.banner_title14| richtext}}</a></h3>
+                                <p style="font-size: 7px;">{{page.banner_detail14}}</p>
                             </div>
                         </div>
                     </div>
@@ -179,7 +193,8 @@
                             <a href="{{s12.url}}"  class="box-media-zoom   popup-image"><i class="fal fa-search"></i></a>  
                             {% endfor %}                                  
                             <div class="thumb-info">
-                                <h3><a href="portfolio-single.html">{{page.banner_title12| richtext}}</a></h3>
+                                <h3><a href="portfolio-single.html">{{page.banner_title15| richtext}}</a></h3>
+                                <p style="font-size: 7px;">{{page.banner_detail15| richtext}}</p>
                             </div>
                         </div>
                     </div>
