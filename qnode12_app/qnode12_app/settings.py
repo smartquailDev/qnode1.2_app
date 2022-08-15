@@ -318,12 +318,13 @@ if DB_IS_AVIAL and POSTGRES_READY:
 USE_I18N = True
 WAGTAIL_I18N_ENABLED = True
 USE_L10N = True
+
 WAGTAIL_CONTENT_LANGUAGES = LANGUAGES = [
     ('en', "English"),
     ('es', "Spanish"),
 ]
 
-LANGUAGE_CODE = 'es'
+#LANGUAGE_CODE = 'es'
 LOCALE_PATHS = (
     os.path.join(BASE_DIR, 'locale/'),
 )
@@ -334,7 +335,7 @@ PARLER_LANGUAGES = {
         {'code': 'es'},
     ),
     'default': {
-        'fallback':'en',
+        'fallback':'es',
         'hide_untranslated':False,
     }
 }

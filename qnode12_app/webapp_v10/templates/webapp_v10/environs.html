@@ -19,7 +19,7 @@
             {% endfor %}
             <div class="overlay"></div>
             <div class="column-title">
-                <h2>{{page.title}}</h2>
+                <h2>{{page.bio|richtext}}</h2>
             </div>
           
             <div class="fixed-column-dec"></div>
@@ -35,31 +35,22 @@
                 <div class="container small-container">
                     <!-- post -->
                     <div class="post fl-wrap fw-post">
-                        <h2><span>Blog post title</span></h2>
-                        <ul class="blog-title-opt">
-                            <li><a href="#">12 may 2017</a></li>
-                            <li> - </li>
-                            <li><a href="#">Interviews </a></li>
-                            <li><a href="#">Design</a></li>
-                        </ul>
+                        
                         <!-- blog media -->
                         <div class="blog-media fl-wrap">
-                            <img src="images/folio/1.jpg" class="respimg" alt="">
+                            {% for item in page.galleria_6.all %}
+                            {% image item.image_2 width-1200 as s2 %}
+                            <img src="{{s2.url}}" class="respimg" alt="">
+                            {% endfor %}
                         </div>
                         <!-- blog media end -->
                         <div class="blog-text fl-wrap">
                             <div class="pr-tags fl-wrap">
-                                <span>Tags : </span>
-                                <ul>
-                                    <li><a href="#">Design</a></li>
-                                    <li><a href="#">Photography</a></li>
-                                    <li><a href="#">Fasion</a></li>
-                                </ul>
-                            </div>
+                               
                             <p>
-                                Dorándose sobre las rocas del muelle, encontrarás a lobos marinos e iguanas concentrados en el disfrute de su vida libre. Verás piqueros de patas azules y fragatas surcando los cielos con la confianza de quien se sabe dueño de ese territorio. A tus pies, la arena blanca y brillante se sentirá como una alfombra suave. Cactus, Sesuvium y un bosque de Scalecia colmarán tu vida de un esplender vegetal único en esta isla..
+                                {{page.banner_title4|richtext}}
                             </p>
-                            <a href="blog-single.html" class="btn float-btn flat-btn">Read more </a>
+                           
                         </div>
                     </div>
                    
@@ -72,10 +63,10 @@
                     <div class="footer-inner fl-wrap">
                         <!-- policy-box-->
                         <div class="policy-box">
-                            <span>&#169; Kotlis 2019  /  All rights reserved. </span>
+                            <span>&#169; Powered by SmartQuail, Inc / Design by Edward Cooper  </span>
                         </div>
                         <!-- policy-box end-->
-                        <a href="#" class="to-top-btn to-top">Back to top <i class="fal fa-long-arrow-up"></i></a>
+                       
                     </div>
                 </div>
             </footer>
