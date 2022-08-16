@@ -868,6 +868,9 @@ class Environs(AbstractEmailForm):
     banner_title9 = RichTextField(blank=True,verbose_name='Titulo de galeria-4  ')
     banner_title10 = RichTextField(blank=True,verbose_name='Titulo de galeria-4  ')
     banner_title11 = RichTextField(blank=True,verbose_name='Titulo de galeria-4  ')
+    next = models.CharField(max_length=150, null=True, blank=True,verbose_name='Next')
+    prev = models.CharField(max_length=150, null=True, blank=True,verbose_name='Prev')
+
 
 
 
@@ -946,6 +949,8 @@ class Environs(AbstractEmailForm):
         FieldPanel('banner_title10', classname="full"),
         FieldPanel('banner_title11', classname="full"),
     #Tearsheet Info
+        FieldPanel('next', classname="full"),
+        FieldPanel('prev', classname="full"),
         FieldPanel('TS_info1', classname="full"),
         FieldPanel('TS_date1', classname="full"),
         FieldPanel('TS_info2', classname="full"),

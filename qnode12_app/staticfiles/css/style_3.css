@@ -99,13 +99,13 @@ body {
 } 
 /*--------------Typography--------------------------------------*/
 p {
-	font-size: 12px;
-	line-height: 13px;
-	padding-bottom: 10px;
-	font-weight: 500;
-	color: #5e646a;
-	text-align: left;
-	margin-top: -7px;
+font-size: 18px;
+line-height: 13px;
+padding-bottom: 10px;
+font-weight: 500;
+color: #5e646a;
+text-align: center;
+margin-top: -7px;
   }
 
 blockquote {

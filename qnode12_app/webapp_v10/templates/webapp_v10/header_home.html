@@ -16,7 +16,7 @@
   
     
    
-    <div class="share-btn showshare"><i class="fal fa-share"></i><span>Share</span></div>
+    <div class="share-btn showshare"><i class="fal fa-share"></i><span>{% trans "Share" %}</span></div>
     <div class="share-btn"><a href="{% url 'shop:product_list' %}"><i class="fal fa-shopping-cart"></i></a><span>Cart</span></div>
     <!-- mobile nav -->
     <div class="nav-button-wrap">
@@ -34,12 +34,12 @@
                     <a href="{% slugurl 'charms' %}">{% trans "Charms"%}</a>
                 </li>
                 <li>
-                    <a href="{% slugurl 'worlds' %}">{% trans "Worlds" %}</a>
+                    <a href="#">{% trans "Worlds" %}</a>
                     <ul>
-                        <li><a href="{% slugurl 'natural environment' %}">{% trans "Natural Environ" %}</a></li>
-                        <li><a href="{% slugurl 'geological environment' %}">{% trans "Geological Environ" %}</a></li>
-                        <li><a href="{% slugurl 'marine environment' %}">{% trans "Marine Environ" %}</a></li>
-                        <li><a href="{% slugurl 'community environment' %}">{% trans "Community Environ" %}</a></li>
+                        <li><a href="{% slugurl 'natural' %}">{% trans "Natural Environ" %}</a></li>
+                        <li><a href="{% slugurl 'geological' %}">{% trans "Geological Environ" %}</a></li>
+                        <li><a href="{% slugurl 'marine' %}">{% trans "Marine Environ" %}</a></li>
+                        <li><a href="{% slugurl 'community' %}">{% trans "Community Environ" %}</a></li>
                      
                     </ul>
                 </li>

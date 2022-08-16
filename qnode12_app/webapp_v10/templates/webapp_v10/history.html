@@ -1,5 +1,5 @@
 
-{% extends "webapp_v10/base_2.html" %}
+{% extends "webapp_v10/base_3.html" %}
 {% load i18n %}
 {% load wagtailcore_tags wagtailimages_tags %}
 {% load widget_tweaks %}
@@ -31,7 +31,7 @@
                                         {% endfor %}
                                         <div class="overlay"></div>
                                         <div class="fs-slider_align_title">
-                                            <p><a href="portfolio-single.html">{{page.banner_title4| richtext}}</a></p>
+                                            <h3>{{page.banner_title4| richtext}}</h3>
                                            <p></p>
                                         </div>
                                     </div>
@@ -44,7 +44,7 @@
                                         {% endfor %}
                                         <div class="overlay"></div>
                                         <div class="fs-slider_align_title">
-                                            <h2><a href="portfolio-single.html">{{page.banner_title5| richtext}}</a></h2>
+                                            <h3>{{page.banner_title5| richtext}}</h3>
                                            <p></p>
                                         </div>
                                     </div>
