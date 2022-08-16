@@ -19,11 +19,15 @@
                     <span>{% trans "Follow" %}</span> <i class="fal fa-arrow-right"></i>
                 </div>
                 <div class="clearfix"></div>
-                <ul>
-                    <li><a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
-                    <li><a href="#" target="_blank"><i class="fab fa-instagram"></i></a></li>
-                    <li><a href="#" target="_blank"><i class="fab fa-twitter"></i></a></li>
-                    <li><a href="#" target="_blank"><i class="fab fa-vk"></i></a></li>
+                <ul>{% if settings.webapp_0.SocialMediaSettings.facebook %}
+                    <li><a href="{{ settings.webapp_0.SocialMediaSettings.facebook }}" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+                    {% endif %}
+                    {% if settings.webapp_0.SocialMediaSettings.instagram %}
+                    <li><a href="{{ settings.webapp_0.SocialMediaSettings.instagram }}" target="_blank"><i class="fab fa-instagram"></i></a></li>
+                    {% endif %}
+                    {% if settings.webapp_0.SocialMediaSettings.twitter %}
+                    <li><a href="{{ settings.webapp_0.SocialMediaSettings.twitter }}" target="_blank"><i class="fab fa-twitter"></i></a></li>
+                    {% endif %}
                 </ul>
             </div>
             <!--follow-wrap end-->
