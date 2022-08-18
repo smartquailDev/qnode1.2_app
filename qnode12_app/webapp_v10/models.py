@@ -1085,3 +1085,21 @@ class GaleriadeImagenes_6(Orderable):
         ImageChooserPanel('image_27'),
         
     ]
+
+@register_setting
+class SocialMediaSettings_v10(BaseSetting):
+    facebook = models.URLField(blank=True,null=True,help_text="")
+    twitter = models.URLField(blank=True,null=True,help_text="")
+    instagram = models.URLField(blank=True,null=True,help_text="")
+    youtube = models.URLField(blank=True,null=True,help_text="")
+
+    panels = [
+        MultiFieldPanel(
+            [
+            FieldPanel("facebook"),
+            FieldPanel("twitter"),
+            FieldPanel("instagram"),
+            FieldPanel("youtube"),           
+            ]
+        ,heading= "Social Media Settings")
+    ]
