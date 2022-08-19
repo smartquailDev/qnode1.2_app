@@ -18,7 +18,7 @@
     <div class="content">
         <!-- column-image  -->	
         <div class="column-image">
-            <div class="bg"  data-bg="images/bg/1.jpg"></div>
+            <div class="bg"  data-bg="{% static "img/2.jpg" %}" ></div>       
             <div class="overlay"></div>
             <div class="column-title">
              
@@ -40,7 +40,7 @@
                   <!-- post -->
                   <div class="post fl-wrap fw-post single-post ">
                     {% for p in products %}
-                    {% if product.slug == p.slug %}class="selected"{% endif %}
+                    {% if product.slug == p.slug %}{% endif %}
                       <h2><span>{{ p.name }}</span></h2>
                     {% endfor %}
                     
@@ -51,8 +51,8 @@
                                   <div class="swiper-container">
                                       <div class="swiper-wrapper lightgallery">
                                           <div class="swiper-slide hov_zoom"><img src="{% if product.image %}{{ product.image.url }}{% else %}{% static "img/no_image.png" %}{% endif %}"><a href="{% if product.image %}{{ product.image.url }}{% else %}{% static "img/no_image.png" %}{% endif %}" class="box-media-zoom   popup-image"><i class="fal fa-search"></i></a></div>
-                                          <div class="swiper-slide hov_zoom"><img src="{% if product.image %}{{ product.image_2.url }}{% else %}{% static "img/no_image.png" %}{% endif %}"><a href="{% if product.image %}{{ product.image_2.url }}{% else %}{% static "img/no_image.png" %}{% endif %}" class="box-media-zoom   popup-image"><i class="fal fa-search"></i></a></div>
-                                          <div class="swiper-slide hov_zoom"><img src="{% if product.image %}{{ product.image_3.url }}{% else %}{% static "img/no_image.png" %}{% endif %}"><a href="{% if product.image %}{{ product.image_3.url }}{% else %}{% static "img/no_image.png" %}{% endif %}" class="box-media-zoom   popup-image"><i class="fal fa-search"></i></a></div>
+                                          <div class="swiper-slide hov_zoom"><img src="{% if product.image_2 %}{{ product.image_2.url }}{% else %}{% static "img/no_image.png" %}{% endif %}"><a href="{% if product.image %}{{ product.image_2.url }}{% else %}{% static "img/no_image.png" %}{% endif %}" class="box-media-zoom   popup-image"><i class="fal fa-search"></i></a></div>
+                                          <div class="swiper-slide hov_zoom"><img src="{% if product.image_3 %}{{ product.image_3.url }}{% else %}{% static "img/no_image.png" %}{% endif %}"><a href="{% if product.image %}{{ product.image_3.url }}{% else %}{% static "img/no_image.png" %}{% endif %}" class="box-media-zoom   popup-image"><i class="fal fa-search"></i></a></div>
                                          
                                       </div>
                                   </div>
@@ -85,13 +85,13 @@
                           <!--title-->
                       
                         
-                              <h6 id="reply-title">Make you reservation now
+                              <h2 id="reply-title">{% trans "Make you reservation now" %}
                               
-                              </h6>
+                              </h2>
                              
                               <form class="custom-form" name="commentform"  action="{% url "cart:cart_add" product.id %}" method="post">
                                 <fieldset>
-                                    <label for="{{ form.quantity }}"><h6>Number of persons on :</h6></label>  
+                                    <label for="{{ form.quantity }}"><h2>{% trans "Number of persons on Tour" %} :</h2></label>  
                                 {% csrf_token %}
                                       {% for hidden_field in cart_product_form.hidden_fields %}
                                         {{ hidden_field }}

@@ -13,40 +13,33 @@
   <div class="content">
       <!-- column-image  -->	
       <div class="column-image">
-          <div class="bg"  data-bg="images/bg/1.jpg"></div>
+        <div class="bg"  data-bg="{% static "img/2.jpg" %}" ></div>  
           <div class="overlay"></div>
+         
           <div class="column-title">
-              <h2>Contact Info</h2>
-              <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas in pulvinar neque. Nulla finibus lobortis pulvinar.</h3>
+         
+              <h2>{% trans "Payment Process" %}</h2>
+              
           </div>
-          <div class="column-notifer">
-              <div class="scroll-down-wrap transparent_sdw">
-                  <div class="mousey">
-                      <div class="scroller"></div>
-                  </div>
-                  <span>Scroll down  to Discover</span>
-              </div>
-          </div>
+         
           <div class="fixed-column-dec"></div>
       </div>
       <!-- column-image end  -->	
       <!-- column-wrapper -->	
       <div class="column-wrapper ">
 <!--scroll-nav-wrap -->	
-          <div class="scroll-nav-wrap">
-              <nav class="scroll-nav scroll-init">
-                  <ul>
-                      <li><a class="act-scrlink" href="#sec1">Details</a></li>
-                      <li><a href="#sec2">Location</a></li>
-                      <li><a href="#sec3">Say Hello</a></li>
-                  </ul>
-              </nav>
-          </div>
+         
 							
           <section id="sec3">
               <div class="container small-container">
                   <div class="section-title fl-wrap">
-                      <h3>Make your reservations</h3>
+                      <h3>{% trans "Pay your reservation now"%}</h3>
+                      <h4>{% trans "Pay your reservation securely and quickly, with our e-commerce system. We accept the following cards." %}</h4>
+                      <img src="{% static '/img/credit/american-express.png' %}">
+                      <img src="{% static '/img/credit/cirrus.png' %}">
+                      <img src="{% static '/img/credit/mastercard.png' %}">
+                      <img src="{% static '/img/credit/paypal2.png' %}">
+                      <img src="{% static '/img/credit/visa.png' %}">
                       <div class="contact-details fl-wrap">
                         {% for item in cart %}
                         <ul>
@@ -83,31 +76,24 @@
                                     </a>
                                   </nav>
                               
-                                  <form action="/" method="post" id="cardForm">
-                                    <div class="field-container">
-                                      <label class="hosted-field--label " for="card-number">Card Number
-                                      </label>
-                                      <div class="hosted-field" id="card-number"></div>
+                                  <form action="." id="payment" method="post">
+                                    <div class="form-group">
+                                      <label for="card-number">Número de tarjeta:</label>
+                                      <div id="card-number" class="field form-control"></div>
+                                     
                                     </div>
-                              
-                                    <div class="field-container field-container--hidden">
-                                      <label class="hosted-field--label " for="expiration-date">
-                                        Exp (MM/YY)
-                                      </label>
-                                      <div class="hosted-field" id="expiration-date"></div>
+                                    <div class="form-group">
+                                      <label for="cvv">Codigo de seguridad / CVV:</label>
+                                       <div id="cvv" class="field form-control"></div>
                                     </div>
-                              
-                                    <div class="field-container field-container--hidden">
-                                      <label class="hosted-field--label " for="cvv">
-                                      CVV
-                                    </label>
-                                      <div class="hosted-field" id="cvv"></div>
+                                    <div class="form-group">
+                                      <label for="expiration-date">Fecha de Expiración:</label>
+                                      <div id="expiration-date" class="field form-control"></div>
                                     </div>
-                              
-                                    <div class="field-container field-container--hidden field-container--button">
-                                      <input id="button-pay" type="submit" value="Pay" />
-                                    </div>
-                                  </form>
+                                    <input type="hidden" id="nonce" name="payment_method_nonce" value="">
+                                    {% csrf_token %}
+                                    <input  class="btn btn-block btn-success" type="submit" value="Realizar pago">
+                              </form>
                               
                                   <div class="form-info">
                                     <p class="field-message">Let's add your card number.</p>
@@ -131,7 +117,7 @@
                   <div class="footer-inner fl-wrap">
                       <!-- policy-box-->
                       <div class="policy-box">
-                          <span>&#169; Kotlis 2019  /  All rights reserved. </span>
+                        <span>&#169; Powered by SmartQuail, Inc / Design by Edward Cooper  </span>
                       </div>
                       <!-- policy-box end-->
                       <a href="#" class="to-top-btn to-top">Back to top <i class="fal fa-long-arrow-up"></i></a>

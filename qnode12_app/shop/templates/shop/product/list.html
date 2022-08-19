@@ -22,7 +22,7 @@
   <div class="content">
       <!-- column-image  -->	
       <div class="column-image">
-          <div class="bg"  data-bg="images/bg/1.jpg"></div>
+          <div class="bg"  data-bg="{% static 'img/1.jpg' %}"></div>
           <div class="overlay"></div>
           <div class="column-title">
               <h2>{% trans "Expeditions" %}</h2>
@@ -39,7 +39,7 @@
           <!-- fixed-bottom-content end -->	
           <!--section  -->	
           {% for c in categories %}
-          {% if category.slug == c.slug %}class="selected"{% endif %}
+          {% if category.slug == c.slug %}{% endif %}
           {% for product in products %}
           <section class="single-content-section">
               <div class="container small-container">

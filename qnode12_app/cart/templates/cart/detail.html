@@ -14,10 +14,10 @@
   <div class="content">
       <!-- column-image  -->	
       <div class="column-image">
-          <div class="bg"  data-bg="images/bg/1.jpg"></div>
+          <div class="bg"  data-bg="{% static 'img/1.jpg' %}"></div>
           <div class="overlay"></div>
           <div class="column-title">
-              <h2>Reservations</h2>
+              <h2>{% trans "Reservations" %}</h2>
           </div>
         
           <div class="fixed-column-dec"></div>
@@ -32,11 +32,11 @@
                             <div class="content-nav-fixed">
                                 <ul>
                                     <li>
-                                        <a href="{% url "shop:product_list" %}" class="ln"><i class="fal fa-long-arrow-left"></i><span> <strong>- Continue shopping</strong></span></a>
+                                        <a href="{% url "shop:product_list" %}" class="ln"><i class="fal fa-long-arrow-left"></i><span> <strong>- {% trans "Continue shopping" %}</strong></span></a>
                                         <div class="content-nav_mediatooltip cnmd_leftside"><img  src="images/folio/1.jpg"   alt=""></div>
                                     </li>
                                     <li>
-                                        <a href="{% url "orders:order_create" %}" class="rn"><span > <strong>- Checkout</strong></span> <i class="fal fa-long-arrow-right"></i></a>
+                                        <a href="{% url "orders:order_create" %}" class="rn"><span > <strong>- {% trans "Checkout" %}</strong></span> <i class="fal fa-long-arrow-right"></i></a>
                                         <div class="content-nav_mediatooltip cnmd_rightside"><img  src="images/folio/1.jpg"   alt=""></div>
                                     </li>
                                 </ul>
@@ -48,8 +48,8 @@
           <section id="sec3">
             <div class="container small-container">
                 <div class="section-title fl-wrap">
-                    <h3>Make Reservations</h3>
-                    <div class="section-number">03.</div>
+                    <h3>{% trans "Make Reservations" %}</h3>
+                    
                 </div>
                 <div class="column-wrapper_item fl-wrap">
                     <div class="column-wrapper_text fl-wrap">
@@ -80,9 +80,9 @@
                                         
                                           <ul>
                                            
-                                              <li><span>Price per person :</span>$ {{ item.price }}</li>
-                                              <li><span> Final Price :</span>${{ item.total_price }}</li>
-                                              <li><span># persons <i class="fal fa-user"></i> :</span> 
+                                              <li><span>{% trans "Price per person "%} :</span>$ {{ item.price }}</li>
+                                              <li><span>{% trans "Final Price" %} :</span>${{ item.total_price }}</li>
+                                              <li><span># {% trans "persons" %} <i class="fal fa-user"></i> :</span> 
                                                 <form action="{% url "cart:cart_add" product.id %}" method="post">
                                                   {{ item.update_quantity_form.quantity }}
                                                   {{ item.update_quantity_form.update }}
@@ -90,7 +90,7 @@
                                                   {% csrf_token %}
                                                 </form> 
                                                 <li>
-                                                  <p>Apply a Coupon</p>
+                                                  <p>{% trans "Apply a Coupon" %}</p>
   <form action="{% url "coupons:apply" %}" method="post">
     {{ coupon_apply_form }}
     <input type="submit" value="Apply" class="btn btn-primary btn-block" >
@@ -122,7 +122,7 @@
                                             
                                            
                                           
-                                                <a href="{% url "cart:cart_remove" product.id %}" type="submit" value="Apply" class="btn btn-primary btn-block" > Cancel</a>
+                                                <a href="{% url "cart:cart_remove" product.id %}" type="submit" value="Apply" class="btn btn-primary btn-block" > {% trans "Cancel" %}</a>
                                              
                                                 
                                           </ul>
@@ -159,7 +159,7 @@
                   <div class="footer-inner fl-wrap">
                       <!-- policy-box-->
                       <div class="policy-box">
-                          <span>&#169; Kotlis 2019  /  All rights reserved. </span>
+                        <span>&#169; Powered by SmartQuail, Inc / Design by Edward Cooper  </span>
                       </div>
                       <!-- policy-box end-->
                       <a href="#" class="to-top-btn to-top">Back to top <i class="fal fa-long-arrow-up"></i></a>

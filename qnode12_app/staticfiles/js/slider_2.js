@@ -78,7 +78,7 @@ function initZabor() {
             spaceBetween: 0,
             effect: "slide",
             autoplay: {
-                delay: 9500,
+                delay: 10500,
                 disableOnInteraction: false
             },
         });
@@ -117,7 +117,7 @@ function initZabor() {
             spaceBetween: 0,
             effect: "fade",
             autoplay: {
-                delay: 9500,
+                delay: 10500,
                 disableOnInteraction: false
             },
         });
@@ -341,7 +341,7 @@ function initZabor() {
                 }
             },
             autoplay: {
-                delay: 3500,
+                delay: 10500,
                 disableOnInteraction: false
             },
             navigation: {

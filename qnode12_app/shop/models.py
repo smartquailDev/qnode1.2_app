@@ -48,6 +48,10 @@ class Product(TranslatableModel):
     item3 = models.CharField(max_length=200,null=True)
     image = models.ImageField(upload_to='products/%Y/%m/%d',
                               blank=True)
+    image_2 = models.ImageField(upload_to='products/%Y/%m/%d',
+                              blank=True)
+    image_3 = models.ImageField(upload_to='products/%Y/%m/%d',
+                              blank=True)
     created = models.DateTimeField(auto_now_add=True)
     updated = models.DateTimeField(auto_now=True)
     

@@ -99,13 +99,15 @@ body {
 } 
 /*--------------Typography--------------------------------------*/
 p {
-font-size: 18px;
-line-height: 13px;
+font-size: 20px;
+line-height: 21px;
+font-family: hoefler_textregular;
 padding-bottom: 10px;
 font-weight: 500;
 color: #5e646a;
 text-align: center;
 margin-top: -7px;
+text-transform:none;
   }
 
 blockquote {
@@ -1223,10 +1225,10 @@ blockquote p {
 }
 .fs-slider_align_title {
 	float:left;
-	width:55%;
-	padding-left:180px;
+	width: 84%;
+    padding-left: 470px;
 	position:relative;
-	top:44%;
+	top:20%;
 	z-index:20;
 	text-align:left;
 	opacity:0;
@@ -3914,7 +3916,7 @@ section {
 }
 .fs-slider_align_title {
     padding: 0 30px;
-    top: 34%;
+    top: 5%;
 }
 .swiper-container {height: auto;} 
 .column-title {
