@@ -63,37 +63,28 @@
                       <div class="column-wrapper_text fl-wrap">
                           <div id="contact-form" class="fl-wrap">
                               <div id="message"></div>
-                            
-                            
-                                  
-                                  <div class="form-controls__steps">1/4</div>
-                            
                                   <form id="my-sample-form" class="scale-down">
                                     <div class="cardinfo-card-number">
-                                      <label class="cardinfo-label" for="card-number">Card Number</label>
+                                      <label class="cardinfo-label" for="card-number">{% trans "Write your credit" %}</label>
                                       <div class='input-wrapper' id="card-number"></div>
                                       <div id="card-image"></div>
                                     </div>
                                 
                                     <div class="cardinfo-wrapper">
                                       <div class="cardinfo-exp-date">
-                                        <label class="cardinfo-label" for="expiration-date">Valid Thru</label>
+                                        <label class="cardinfo-label" for="expiration-date">{% trans "Write a Valid Thru " %} </label>
                                         <div class='input-wrapper' id="expiration-date"></div>
                                       </div>
                                 
                                       <div class="cardinfo-cvv">
-                                        <label class="cardinfo-label" for="cvv">CVV</label>
+                                        <label class="cardinfo-label" for="cvv">{% trans "Write a Valid CVV " %} </label>
                                         <div class='input-wrapper' id="cvv"></div>
                                       </div>
                                     </div>
                                   </form>
+                                  <input   class="btn btn-block btn-success" type="submit" value="Realizar pago">
                                 
-                                  <input id="button-pay" type="submit" value="Continue" />
-                             
-                              
-                              
-                                
-                            
+       
                           </div>
                       </div>
                   </div>
@@ -131,7 +122,7 @@
   <script src="https://js.braintreegateway.com/web/3.29.0/js/hosted-fields.min.js"></script>
 
   <script>
-  var form = document.querySelector('#my-sample-form');
+var form = document.querySelector('#my-sample-form');
 var submit = document.querySelector('input[type="submit"]');
 
 braintree.client.create({
