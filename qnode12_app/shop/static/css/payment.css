@@ -71,16 +71,19 @@ h1 {
   }
 }
 
+
 #my-sample-form {
-  background-color: #FFF;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.12);
+  background-color: #525355;
+  box-shadow: 0 2px 4px rgba(255, 255, 255, 0);
   padding: 8em 3em 2em;
   width: 20em;
   margin-bottom: 2em;
   transition: all 600ms cubic-bezier(0.2, 1.3, 0.7, 1);
   animation: cardIntro 500ms cubic-bezier(0.2, 1.3, 0.7, 1);
   z-index: 1;
+  width: 85%;
 }
+
 #my-sample-form:hover {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.06);
 }
@@ -93,25 +96,27 @@ h1 {
 }
 #my-sample-form.visa {
   color: #fff;
-  background-color: #0D4AA2;
+  background-color: #59595C;
+  width: 100%;
 }
 #my-sample-form.master-card {
   color: #fff;
-  background-color: #363636;
+  width: 100%;
   background: linear-gradient(115deg, #d82332, #d82332 50%, #f1ad3d 50%, #f1ad3d);
 }
 #my-sample-form.maestro {
   color: #fff;
-  background-color: #363636;
+  width: 100%;
   background: linear-gradient(115deg, #009ddd, #009ddd 50%, #ed1c2e 50%, #ed1c2e);
 }
 #my-sample-form.american-express {
   color: #fff;
-  background-color: #007CC3;
+  background-color: #59595C;
+  width: 100%;
 }
 #my-sample-form.discover {
   color: #fff;
-  background-color: #ff6000;
+  width: 100%;
   background: linear-gradient(#d14310, #f7961e);
 }
 #my-sample-form.unionpay, #my-sample-form.jcb, #my-sample-form.diners-club {
@@ -124,6 +129,8 @@ h1 {
   font-size: 11px;
   margin-bottom: 0.5em;
   text-transform: uppercase;
+  color: white;
+  height: px;
 }
 
 .cardinfo-exp-date {
