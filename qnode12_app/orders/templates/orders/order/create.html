@@ -19,13 +19,17 @@
   <div class="content">
       <!-- column-image  -->	
       <div class="column-image">
-          <div class="bg"  data-bg="images/bg/1.jpg"></div>
+        {% for item in cart %}
+        {% with product=item.product %}
+          <div class="bg"  data-bg="{% if product.image %}{{ product.image.url }}{% else %}{% static "img/no_image.png" %}{% endif %}"></div>
+          {% endwith %}
+         
           <div class="overlay"></div>
           <div class="column-title">
             <div class="section-title fl-wrap">
               <h3>Your Tours for Floreana</h3>
               <div class="contact-details fl-wrap">
-                {% for item in cart %}
+               
                 <ul>
                   <li><span>Tour :</span>{{ item.product.name }} </li>
                     <li><span># <i class="fal fa-user"></i>:</span>{{ item.quantity }}</li>
@@ -54,6 +58,7 @@
           <section id="sec3">
               <div class="container small-container">
                 <div class="section-title fl-wrap">
+                  <h3>{% trans "Check In" %} <i class="fal fa-plane"></i></h3>
                   <h3>Make your reservations</h3>
                   </div>
                  

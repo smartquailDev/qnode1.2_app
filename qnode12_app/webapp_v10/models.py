@@ -831,10 +831,14 @@ class Contacts(AbstractEmailForm):
 class GaleriadeImagenes_5(Orderable):
     page = ParentalKey(Contacts, on_delete=models.CASCADE, related_name='galleria_5')
     logo = models.ForeignKey('wagtailimages.Image',null=True,blank=True,on_delete=models.SET_NULL,related_name='+',verbose_name='Logotipo de Juan Silva Photo')
+    logo_2 = models.ForeignKey('wagtailimages.Image',null=True,blank=True,on_delete=models.SET_NULL,related_name='+',verbose_name='Logotipo de Juan Silva Photo')
+    logo_3 = models.ForeignKey('wagtailimages.Image',null=True,blank=True,on_delete=models.SET_NULL,related_name='+',verbose_name='Logotipo de Juan Silva Photo')
     image = models.ForeignKey('wagtailimages.Image',null=True,blank=True,on_delete=models.SET_NULL,related_name='+',verbose_name='Imagen Slide Banner 1')
 
     panels = [
         ImageChooserPanel('logo'),
+        ImageChooserPanel('logo_2'),
+        ImageChooserPanel('logo_3'),
         ImageChooserPanel('image'),
     ]
 

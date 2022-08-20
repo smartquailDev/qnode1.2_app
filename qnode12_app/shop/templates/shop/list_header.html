@@ -49,7 +49,7 @@
         <nav>
             <ul>
                 <li>
-                    <a href="{% slugurl 'history' %}" class="act-link">{% trans "The Island" %} </a>
+                    <a href="{% slugurl 'story' %}" class="act-link">{% trans "The Island" %} </a>
                 </li>
                 <li>
                     <a href="{% slugurl 'charms' %}">{% trans "Charms"%}</a>
@@ -57,10 +57,10 @@
                 <li>
                     <a href="#">{% trans "Worlds" %}</a>
                     <ul>
-                        <li><a href="index.html">{% trans "Natural Environment" %}</a></li>
-                        <li><a href="index2.html">{% trans "Geological Environment" %}</a></li>
-                        <li><a href="index3.html">{% trans "Marine Environment" %}</a></li>
-                        <li><a href="index4.html">{% trans "Community Environment" %}</a></li>
+                        <li><a href="{% slugurl 'natural' %}">{% trans "Natural Environ" %}</a></li>
+                        <li><a href="{% slugurl 'geological environment' %}">{% trans "Geological Environ" %}</a></li>
+                        <li><a href="{% slugurl 'marine environment' %}">{% trans "Marine Environ" %}</a></li>
+                        <li><a href="{% slugurl 'community environment' %}">{% trans "Community Environ" %}</a></li>
                      
                     </ul>
                 </li>

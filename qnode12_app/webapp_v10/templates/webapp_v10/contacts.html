@@ -1,4 +1,4 @@
-{% extends "webapp_v10/base_2.html" %}
+{% extends "webapp_v10/base_3.html" %}
 {% load i18n %}
 {% load wagtailcore_tags wagtailimages_tags %}
 {% load widget_tweaks %}
@@ -19,8 +19,13 @@
             {% endfor %}
             <div class="overlay"></div>
             <div class="column-title">
-                <h2>CENTRO COMUNITARIO</h2>
-                <h2>ISLA FLOREANA</h2>
+                {% for item in page.galleria_5.all %}
+            {% image item.logo_2 width-1200 as l1 %}
+                <img src="{{l1.url}}">
+                {% endfor %}
+            <div class="overlay"></div>
+               
+               
             </div>
            
             <div class="fixed-column-dec"></div>
