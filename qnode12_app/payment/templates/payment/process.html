@@ -64,26 +64,33 @@
                           <div id="contact-form" class="fl-wrap">
                               <div id="message"></div>
                               
-                                  <form id="my-sample-form" class="scale-down">
-                                    <div class="cardinfo-card-number">
-                                      <label class="cardinfo-label" for="card-number">{% trans "Write your credit card number" %}</label>
-                                      <div class='input-wrapper' id="card-number"></div>
-                                      <div id="card-image"></div>
+                              <form action="." id="payment" class="scale-down" method="post">
+                     
+
+                                  <div class="cardinfo-card-number">
+                                    <label class="cardinfo-label" for="card-number">{% trans "Credit Card Number" %}</label>
+                                    <div class='input-wrapper' id="card-number"></div>
+                                    <div id="card-image"></div>
+                                  </div>
+                               
+                                  <div class="cardinfo-wrapper">
+                                    <div class="cardinfo-exp-date">
+                                      <label class="cardinfo-label" for="expiration-date">{% trans "Valid Thru" %}</label>
+                                      <div class='input-wrapper' id="expiration-date"></div>
                                     </div>
-                                
-                                    <div class="cardinfo-wrapper">
-                                      <div class="cardinfo-exp-date">
-                                        <label class="cardinfo-label" for="expiration-date">{% trans "Write a Valid Thru " %} </label>
-                                        <div class='input-wrapper' id="expiration-date"></div>
-                                      </div>
-                                
-                                      <div class="cardinfo-cvv">
-                                        <label class="cardinfo-label" for="cvv">{% trans "Write a Valid CVV " %} </label>
-                                        <div class='input-wrapper' id="cvv"></div>
-                                      </div>
+
+                               
+                                    <div class="cardinfo-cvv">
+                                      <label class="cardinfo-label" for="cvv">CVV</label>
+                                      <div class='input-wrapper' id="cvv"></div>
                                     </div>
-                                  </form>
-                                  <input   class="btn btn-block btn-success" type="submit" value="Realizar pago">
+                                  </div>
+                             
+                                <input type="hidden" id="nonce" name="payment_method_nonce" value="">
+                                {% csrf_token %}
+                                <input  class="btn btn-block btn-success" type="submit" value="Realizar pago">
+                          </form>
+                                 
                                 
        
                           </div>
@@ -123,10 +130,10 @@
   <script src="https://js.braintreegateway.com/web/3.29.0/js/hosted-fields.min.js"></script>
 
   <script>
-var form = document.querySelector('#my-sample-form');
-var submit = document.querySelector('input[type="submit"]');
+    var form = document.querySelector('#payment');
+    var submit = document.querySelector('input[type="submit"]');
 
-braintree.client.create({
+    braintree.client.create({
       authorization: '{{ client_token }}'
     }, function (clientErr, clientInstance) {
       if (clientErr) {
@@ -134,119 +141,119 @@ braintree.client.create({
         return;
       }
 
-  // Create input fields and add text styles  
-  braintree.hostedFields.create({
-    client: clientInstance,
-    styles: {
-      'input': {
-        'color': '#282c37',
-        'font-size': '16px',
-        'transition': 'color 0.1s',
-        'line-height': '3'
-      },
-      // Style the text of an invalid input
-      'input.invalid': {
-        'color': '#E53A40'
-      },
-      // placeholder styles need to be individually adjusted
-      '::-webkit-input-placeholder': {
-        'color': 'rgba(0,0,0,0.6)'
-      },
-      ':-moz-placeholder': {
-        'color': 'rgba(0,0,0,0.6)'
-      },
-      '::-moz-placeholder': {
-        'color': 'rgba(0,0,0,0.6)'
-      },
-      ':-ms-input-placeholder': {
-        'color': 'rgba(0,0,0,0.6)'
-      },
-      // prevent IE 11 and Edge from
-      // displaying the clear button
-      // over the card brand icon
-      'input::-ms-clear': {
-        opacity: '0'
-      }
-    },
-    // Add information for individual fields
-    fields: {
-      number: {
-        selector: '#card-number',
-        placeholder: '1111 1111 1111 1111'
-      },
-      cvv: {
-        selector: '#cvv',
-        placeholder: '123'
-      },
-      expirationDate: {
-        selector: '#expiration-date',
-        placeholder: '10 / 2019'
-      }
-    }
-  }, function (hostedFieldsErr, hostedFieldsInstance) {
+      braintree.hostedFields.create({
+        client: clientInstance,
+        styles: {
+          'input': {
+            'color': '#282c37',
+            'font-size': '16px',
+            'transition': 'color 0.1s',
+            'line-height': '3'
+          },
+          // Style the text of an invalid input
+          'input.invalid': {
+            'color': '#E53A40'
+          },
+          // placeholder styles need to be individually adjusted
+          '::-webkit-input-placeholder': {
+            'color': 'rgba(0,0,0,0.6)'
+          },
+          ':-moz-placeholder': {
+            'color': 'rgba(0,0,0,0.6)'
+          },
+          '::-moz-placeholder': {
+            'color': 'rgba(0,0,0,0.6)'
+          },
+          ':-ms-input-placeholder': {
+            'color': 'rgba(0,0,0,0.6)'
+          },
+          // prevent IE 11 and Edge from
+          // displaying the clear button
+          // over the card brand icon
+          'input::-ms-clear': {
+            opacity: '0'
+          }
+        },
+        fields: {
+          number: {
+            selector: '#card-number',
+            placeholder: '1111 1111 1111 1111'
+          },
+          cvv: {
+            selector: '#cvv',
+            placeholder: '123'
+          },
+          expirationDate: {
+            selector: '#expiration-date',
+            placeholder: '10 / 2019'
+          }
+        }
+      }, function (hostedFieldsErr, hostedFieldsInstance) {
         if (hostedFieldsErr) {
           console.error(hostedFieldsErr);
           return;
         }
 
-    hostedFieldsInstance.on('validityChange', function (event) {
-      // Check if all fields are valid, then show submit button
-      var formValid = Object.keys(event.fields).every(function (key) {
-        return event.fields[key].isValid;
-      });
-
-      if (formValid) {
-        $('#button-pay').addClass('show-button');
-      } else {
-        $('#button-pay').removeClass('show-button');
-      }
-    });
-
-    hostedFieldsInstance.on('empty', function (event) {
-      $('header').removeClass('header-slide');
-      $('#card-image').removeClass();
-      $(form).removeClass();
-    });
-
-    hostedFieldsInstance.on('cardTypeChange', function (event) {
-      // Change card bg depending on card type
-      if (event.cards.length === 1) {
-        $(form).removeClass().addClass(event.cards[0].type);
-        $('#card-image').removeClass().addClass(event.cards[0].type);
-        $('header').addClass('header-slide');
-        
-        // Change the CVV length for AmericanExpress cards
-        if (event.cards[0].code.size === 4) {
-          hostedFieldsInstance.setAttribute({
-            field: 'cvv',
-            attribute: 'placeholder',
-            value: '1234'
+        hostedFieldsInstance.on('validityChange', function (event) {
+          // Check if all fields are valid, then show submit button
+          var formValid = Object.keys(event.fields).every(function (key) {
+            return event.fields[key].isValid;
           });
-        } 
-      } else {
-        hostedFieldsInstance.setAttribute({
-          field: 'cvv',
-          attribute: 'placeholder',
-          value: '123'
+    
+          if (formValid) {
+            $('#button-pay').addClass('show-button');
+          } else {
+            $('#button-pay').removeClass('show-button');
+          }
         });
-      }
-    });
+    
+        hostedFieldsInstance.on('empty', function (event) {
+          $('header').removeClass('header-slide');
+          $('#card-image').removeClass();
+          $(form).removeClass();
+        });
+    
+        hostedFieldsInstance.on('cardTypeChange', function (event) {
+          // Change card bg depending on card type
+          if (event.cards.length === 1) {
+            $(form).removeClass().addClass(event.cards[0].type);
+            $('#card-image').removeClass().addClass(event.cards[0].type);
+            $('header').addClass('header-slide');
+            
+            // Change the CVV length for AmericanExpress cards
+            if (event.cards[0].code.size === 4) {
+              hostedFieldsInstance.setAttribute({
+                field: 'cvv',
+                attribute: 'placeholder',
+                value: '1234'
+              });
+            } 
+          } else {
+            hostedFieldsInstance.setAttribute({
+              field: 'cvv',
+              attribute: 'placeholder',
+              value: '123'
+            });
+          }
+        });
 
-    submit.addEventListener('submit', function (event) {
-      event.preventDefault();
+        submit.removeAttribute('disabled');
 
-      hostedFieldsInstance.tokenize(function (err, payload) {
-        if (err) {
-          console.error(err);
-          return;
-        }
+        form.addEventListener('submit', function (event) {
+          event.preventDefault();
 
-        // This is where you would submit payload.nonce to your server
-        document.getElementById('nonce').value = payload.nonce;
-        document.getElementById('my-sample-form').submit();
+          hostedFieldsInstance.tokenize(function (tokenizeErr, payload) {
+            if (tokenizeErr) {
+              console.error(tokenizeErr);
+              return;
+            }
+            // set nonce to send to the server
+            document.getElementById('nonce').value = payload.nonce;
+            // submit form
+            document.getElementById('payment').submit();
+          });
+        }, false);
       });
-    }, false);
-  });
-});
+    });
   </script>
 {% endblock %}
