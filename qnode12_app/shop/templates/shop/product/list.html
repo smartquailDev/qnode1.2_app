@@ -20,6 +20,7 @@
 <div id="wrapper">
   <!-- content -->	
   <div class="content">
+    
       <!-- column-image  -->	
       <div class="column-image">
           <div class="bg"  data-bg="{% static 'img/1.jpg' %}"></div>
@@ -34,18 +35,41 @@
       <!-- column-image end  -->	
       <!-- column-wrapper -->	
       <div class="column-wrapper  single-content-section">
+    
           <!-- fixed-bottom-content-->	
        
           <!-- fixed-bottom-content end -->	
           <!--section  -->	
-          {% for c in categories %}
-          {% if category.slug == c.slug %}{% endif %}
-          {% for product in products %}
+   
           <section class="single-content-section">
               <div class="container small-container">
+               
                   <!-- post -->
                   
                   <div class="post fl-wrap fw-post">
+                    <div id="subheader">
+                        <div class="cart">
+                          {% with total_items=cart|length %}
+                              {% if cart|length > 0 %}
+                                <h2>{% trans "Your" %} <i class="fal fa-shopping-cart"></i> {% trans "have to "%}:
+                                <a href="{% url "cart:cart_detail" %}">
+                                  {% blocktrans with total_items_plural=total_items|pluralize  total_price=cart.get_total_price %}
+                                    {{ total_items }} tour reservation{{ total_items_plural }},
+                                    ${{ total_price }}
+                                  {% endblocktrans %}
+                                
+                                </a>
+            
+                              {% else %}
+                               <h2>{% trans "Your" %}<i class="fal fa-shopping-cart"></i>  {% trans "is empty." %}</h2> 
+                              {% endif %}
+                            {% endwith %}
+                        </h2>
+                        </div>
+                      </div>
+                      {% for c in categories %}
+                      {% if category.slug == c.slug %}{% endif %}
+                      {% for product in products %}
                     
                     <a href="{{ c.get_absolute_url }}"><h2><span>{{ c.name }}</span></h2></a>
                     
@@ -70,15 +94,15 @@
                           </p>
                          
                           <a href="{{ product.get_absolute_url }}" class="btn float-btn flat-btn">Read more </a>
-                         
+                          {% endfor %}
+          {% endfor %}
                       </div>
                   </div>
                  
 
               </div>
           </section>
-          {% endfor %}
-          {% endfor %}
+         
           <!--section end  -->	
           <!--footer -->			
           <footer class="min-footer fl-wrap content-animvisible">

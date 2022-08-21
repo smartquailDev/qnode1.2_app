@@ -21,7 +21,8 @@
                     <span>{% trans "Follow" %}</span> <i class="fal fa-arrow-right"></i>
                 </div>
                 <div class="clearfix"></div>
-                <ul>{% if settings.webapp_v10.SocialMediaSettings_v10.facebook %}
+                <ul>
+                    {% if settings.webapp_v10.SocialMediaSettings_v10.facebook %}
                     <li><a href="{{ settings.webapp_v10.SocialMediaSettings_v10.facebook }}" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
                     {% endif %}
                     {% if settings.webapp_v10.SocialMediaSettings_v10.instagram %}

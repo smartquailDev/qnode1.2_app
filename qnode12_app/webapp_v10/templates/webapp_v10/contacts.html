@@ -48,15 +48,15 @@
             <section id="sec1">
                 <div class="container small-container">
                     <div class="section-title fl-wrap">
-                        <h3>Contact Information</h3>
+                        <h3>{% trans "Contact Information" %}</h3>
                     </div>
                     <div class="column-wrapper_item fl-wrap">
                         <div class="column-wrapper_text fl-wrap">
                             <div class="contact-details fl-wrap">
                                 <ul>
-                                    <li><span>Mail :</span><a href="#" target="_blank">yourmail@domain.com</a></li>
-                                    <li><span>Adress :</span><a href="#" target="_blank">USA 27TH Brooklyn NY</a></li>
-                                    <li><span>Phone :</span><a href="#">+7(111)123456789</a> , <a href="#">+8(222)987654321</a></li>
+                                    <li><span>{% trans "Mail" %} :</span><a href="#" target="_blank">{{page.banner_title5 | richtext }}</a></li>
+                                    <li><span>{% trans "Adress" %} :</span><a href="#" target="_blank">{{page.banner_title6 | richtext }}</a></li>
+                                    <li><span>{% trans "Phone" %} :</span><a href="#">{{ page.banner_title7| richtext }}</a></li>
                                 </ul>
                             </div>
                             <a href="#sec3" class="custom-scroll-link btn fl-btn">{% trans " Make your comments "%}</a>
@@ -77,7 +77,7 @@
                             <div class="map-container">
                                 <div id="singleMap" data-latitude="40.7427837" data-longitude="-73.11445617675781"></div>
                             </div>
-                            <p>Praesent nec leo venenatis elit semper aliquet id ac enim. Maecenas nec mi leo. Etiam venenatis ut dui non hendrerit. Integer dictum, diam vitae blandit accumsan, dolor odio tempus arcu, vel ultrices nisi nibh vitae ligula. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi varius lacinia vestibulum. Aliquam lobortis facilisis tellus, in facilisis ex vehicula ac. In malesuada quis turpis vel viverra.</p>
+                            <p>{{page.banner_title4|richtext}}</p>
                         </div>
                     </div>
                 </div>

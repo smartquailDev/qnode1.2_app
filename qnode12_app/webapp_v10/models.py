@@ -766,11 +766,11 @@ class Contacts(AbstractEmailForm):
     # Empieza Banner de Galerias
    
 
-    banner_title4 = RichTextField(blank=True,verbose_name='Titulo de galeria-1 ')
+    banner_title4 = RichTextField(blank=True,verbose_name='Descripcion de la localizacion')
     bio = RichTextField(blank=True,verbose_name='rseña bibliografica')
-    banner_title5 = RichTextField(blank=True,verbose_name='Titulo de galeria-2  ')
-    banner_title6 = RichTextField(blank=True,verbose_name='Titulo de galeria-3  ')
-    banner_title7 = RichTextField(blank=True,verbose_name='Titulo de galeria-4  ')
+    banner_title5 = RichTextField(blank=True,verbose_name='Email  ')
+    banner_title6 = RichTextField(blank=True,verbose_name='Adress  ')
+    banner_title7 = RichTextField(blank=True,verbose_name='phone number')
 
 
     
