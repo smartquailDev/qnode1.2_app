@@ -87,16 +87,12 @@ RUN python -m venv /py && \
 ENV PATH="/scripts:/py/bin:$PATH"
 #COPY ./scripts/gunicorn.socket /qnode0.0_app/qnode0_app/run/
 
+RUN apk add --no-cache --update musl musl-utils musl-locales tzdata
+ENV TZ=America/Guayaquil
+RUN cp /usr/share/zoneinfo/America/Guayaquil /etc/localtime
 
-
-
-
-COPY ./locale.md /locale.md
-RUN cat locale.md | xargs -i /usr/glibc-compat/bin/localedef -i {} -f UTF-8 {}.UTF-8
-
-ENV LANG en_US.UTF-8
-ENV LANGUAGE en_US:en
-ENV LC_ALL en_US.UTF-8
+RUN echo 'export LC_ALL=es_ES.UTF-8' >> /etc/profile.d/locale.sh && \
+    sed -i 's|LANG=C.UTF-8|LANG=es_ES.UTF-8|' /etc/profile.d/locale.sh
 
 USER qnode12
 
