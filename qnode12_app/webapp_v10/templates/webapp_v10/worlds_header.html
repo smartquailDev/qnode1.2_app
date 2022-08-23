@@ -35,12 +35,12 @@
                     <a href="{% slugurl 'charms' %}">{% trans "Charms"%}</a>
                 </li>
                 <li>
-                    <a href="#">{% trans "Worlds" %}</a>
+                    <a href="{% slugurl 'worlds' %}">{% trans "Worlds" %}</a>
                     <ul>
-                        <li><a href="{% slugurl 'natural' %}">{% trans "Natural Environ" %}</a></li>
-                        <li><a href="{% slugurl 'geological' %}">{% trans "Geological Environ" %}</a></li>
-                        <li><a href="{% slugurl 'marine' %}">{% trans "Marine Environ" %}</a></li>
-                        <li><a href="{% slugurl 'community' %}">{% trans "Community Environ" %}</a></li>
+                        <li><a href="{% slugurl 'natural' %}">{% trans "Natural Environment" %}</a></li>
+                        <li><a href="{% slugurl 'geological' %}">{% trans "Geological Environment" %}</a></li>
+                        <li><a href="{% slugurl 'marine' %}">{% trans "Marine Environment" %}</a></li>
+                        <li><a href="{% slugurl 'community' %}">{% trans "Community Environment" %}</a></li>
                      
                     </ul>
                 </li>
@@ -56,17 +56,13 @@
                 <li>
                     <a href="#" class="act-link">{% trans "Lenguage" %} </a>
                     <ul>
-
-                        {% if page %}
-                        {% for translation in page.get_translations.live %}
-                            {% get_language_info for translation.locale.language_code as lang %}
-                            <li>  <a href="{% pageurl translation %}" rel="alternate" hreflang="{{ language_code }}">
-                                {{ lang.name_local }}
-                            </a></li>
-                        {% endfor %}
-                    {% endif %}
                     <!--second level -->
-                   
+                    {% for language_code, language_name in LANGUAGES %} 
+                    {% get_language_info for language_code as lang %}  
+                    {% language language_code %}   
+                        <li> <a href="{% pageurl page.localized %}" rel="alternate" hreflang="{{ language_code }}">{{ lang.name_local }}</a></li>
+                    {% endlanguage %}
+                    {% endfor %}
                 </ul>
                     <!--second level end-->
                 </li>
