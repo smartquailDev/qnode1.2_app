@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-08-22 18:58-0500\n"
-"PO-Revision-Date: 2022-08-23 00:43+0000\n"
+"PO-Revision-Date: 2022-08-23 02:03+0000\n"
 "Last-Translator:   <fghdf@kjhjk.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
@@ -27,7 +27,7 @@ msgstr ""
 #: templates/webapp_v10/hosts_header.html:20
 #: templates/webapp_v10/worlds_header.html:20
 msgid "Share"
-msgstr ""
+msgstr "Compartir"
 
 #: templates/webapp_v10/charms_header.html:52
 #: templates/webapp_v10/contacts_header.html:52
@@ -49,7 +49,7 @@ msgstr "La Isla"
 #: templates/webapp_v10/story_header.html:55
 #: templates/webapp_v10/worlds_header.html:35
 msgid "Charms"
-msgstr ""
+msgstr "Encantos"
 
 #: templates/webapp_v10/charms_header.html:58
 #: templates/webapp_v10/contacts_header.html:58
@@ -60,7 +60,7 @@ msgstr ""
 #: templates/webapp_v10/story_header.html:58
 #: templates/webapp_v10/worlds_header.html:38
 msgid "Worlds"
-msgstr ""
+msgstr "Mundos"
 
 #: templates/webapp_v10/charms_header.html:60
 #: templates/webapp_v10/contacts_header.html:60
@@ -71,7 +71,7 @@ msgstr ""
 #: templates/webapp_v10/story_header.html:60
 #: templates/webapp_v10/worlds_header.html:40
 msgid "Natural Environ"
-msgstr ""
+msgstr "Entorno Natural"
 
 #: templates/webapp_v10/charms_header.html:61
 #: templates/webapp_v10/contacts_header.html:61
@@ -82,7 +82,7 @@ msgstr ""
 #: templates/webapp_v10/story_header.html:61
 #: templates/webapp_v10/worlds_header.html:41
 msgid "Geological Environ"
-msgstr ""
+msgstr "Entorno Geologico"
 
 #: templates/webapp_v10/charms_header.html:62
 #: templates/webapp_v10/contacts_header.html:62
@@ -137,7 +137,7 @@ msgstr ""
 #: templates/webapp_v10/story_header.html:74
 #: templates/webapp_v10/worlds_header.html:54
 msgid "Contacts"
-msgstr ""
+msgstr "Contactos"
 
 #: templates/webapp_v10/charms_header.html:77
 #: templates/webapp_v10/contacts_header.html:77
@@ -148,64 +148,64 @@ msgstr ""
 #: templates/webapp_v10/story_header.html:77
 #: templates/webapp_v10/worlds_header.html:57
 msgid "Lenguage"
-msgstr ""
+msgstr "Idioma"
 
 #: templates/webapp_v10/contacts.html:40
 msgid "Details"
-msgstr ""
+msgstr "Detalles"
 
 #: templates/webapp_v10/contacts.html:41 templates/webapp_v10/contacts.html:73
 msgid "Location"
-msgstr ""
+msgstr "Lugar"
 
 #: templates/webapp_v10/contacts.html:42
 msgid "Commments"
-msgstr ""
+msgstr "Comentarios"
 
 #: templates/webapp_v10/contacts.html:51
 msgid "Contact Information"
-msgstr ""
+msgstr "Información de Contacto"
 
 #: templates/webapp_v10/contacts.html:57
 msgid "Mail"
-msgstr ""
+msgstr "Correo Electronico"
 
 #: templates/webapp_v10/contacts.html:58
 msgid "Adress"
-msgstr ""
+msgstr "Dirección"
 
 #: templates/webapp_v10/contacts.html:59
 msgid "Phone"
-msgstr ""
+msgstr "Teléfono"
 
 #: templates/webapp_v10/contacts.html:62
 msgid " Make your comments "
-msgstr ""
+msgstr "Realizar comenarios"
 
 #: templates/webapp_v10/contacts.html:91
 msgid "Make your comments"
-msgstr ""
+msgstr "Realiza tus comentarios"
 
 #: templates/webapp_v10/home.html:21
 msgid "Follow"
-msgstr ""
+msgstr "Seguir"
 
 #: templates/webapp_v10/home.html:69 templates/webapp_v10/home.html:84
 #: templates/webapp_v10/home.html:99 templates/webapp_v10/home.html:114
 #: templates/webapp_v10/home.html:129 templates/webapp_v10/home.html:144
 msgid "Explore "
-msgstr ""
+msgstr "Explorar"
 
 #: templates/webapp_v10/host.html:45
 msgid "My Little Story"
-msgstr ""
+msgstr "Mi historia"
 
 #: templates/webapp_v10/hosts.html:38 templates/webapp_v10/hosts.html:53
 #: templates/webapp_v10/hosts.html:68 templates/webapp_v10/hosts.html:83
 msgid "Conoce mi historia "
-msgstr ""
+msgstr "Conoce mi historia "
 
 #: templates/webapp_v10/worlds.html:38 templates/webapp_v10/worlds.html:53
 #: templates/webapp_v10/worlds.html:68 templates/webapp_v10/worlds.html:83
 msgid "Descubrir"
-msgstr ""
+msgstr "Descubrir"
