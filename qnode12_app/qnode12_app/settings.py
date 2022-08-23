@@ -366,7 +366,9 @@ AUTH_PASSWORD_VALIDATORS = [
 
 
 
-TIME_ZONE = 'UTC'
+
+
+TIME_ZONE = 'America/Guayaquil'
 
 USE_I18N = True
 
