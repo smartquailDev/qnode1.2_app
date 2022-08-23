@@ -3,6 +3,10 @@ LABEL maintainer="smartquail.io"
 
 ENV PYTHONUNBUFFERED 1
 
+ENV LANG en_US.UTF-8
+ENV LANGUAGE en_US:en
+ENV LC_ALL en_US.UTF-8
+
 RUN apk add --no-cache git
 ARG username=smartquailDev
 ARG password=ms1719183830
