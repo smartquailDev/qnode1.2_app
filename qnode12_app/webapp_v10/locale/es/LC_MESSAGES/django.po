@@ -9,14 +9,15 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-08-22 18:58-0500\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"PO-Revision-Date: 2022-08-23 00:43+0000\n"
+"Last-Translator:   <fghdf@kjhjk.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Translated-Using: django-rosetta 0.9.8\n"
 
 #: templates/webapp_v10/charms_header.html:40
 #: templates/webapp_v10/contacts_header.html:40
@@ -37,7 +38,7 @@ msgstr ""
 #: templates/webapp_v10/story_header.html:52
 #: templates/webapp_v10/worlds_header.html:32
 msgid "The Island"
-msgstr ""
+msgstr "La Isla"
 
 #: templates/webapp_v10/charms_header.html:55
 #: templates/webapp_v10/contacts_header.html:55

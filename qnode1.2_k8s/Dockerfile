@@ -36,6 +36,7 @@ RUN python -m venv /py && \
     apk del libressl-dev && \
     apk add busybox-extras && \
     apk add openssl-dev && \
+    apk add gettext && \
     #/py/bin/pip install  rust  &&  \
     #/py/bin/pip install   py3-kiwisolver &&  \
     /py/bin/pip install -r /requirements.txt && \
