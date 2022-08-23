@@ -846,6 +846,110 @@ class GaleriadeImagenes_5(Orderable):
 
 
 # pagina de inicio
+class consultas_9(AbstractFormField):
+    page = ParentalKey('worlds', on_delete=models.CASCADE, related_name='form_fields')
+
+class Worlds(AbstractEmailForm):
+    # Empieza Barner de Inicio
+    template = "webapp_v10/worlds.html"
+    #cliente_Navbar = RichTextField(blank=True,verbose_name='Cliente-url')
+    
+   # banner_title1 = RichTextField(blank=True,verbose_name='Titulo del primer banner ')
+   # banner_info1 = RichTextField(blank=True,verbose_name='Informacion del primer banner ')
+   # banner_title2 = RichTextField(blank=True,verbose_name='Titulo del segundo banner ')
+   # banner_info2 = RichTextField(blank=True,verbose_name='Informacion del segundo banner ')
+   # banner_title3 = RichTextField(blank=True,verbose_name='Titulo del tercer banner ')
+   # banner_info3 = RichTextField(blank=True,verbose_name='Informacion del tercer banner ')
+
+    # Empieza Banner de Galerias
+    bio = RichTextField(blank=True,verbose_name='rseña bibliografica')
+
+    banner_title4 = RichTextField(blank=True,verbose_name='Titulo de galeria-1 ')
+    banner_title5 = RichTextField(blank=True,verbose_name='Titulo de galeria-2  ')
+    banner_title6 = RichTextField(blank=True,verbose_name='Titulo de galeria-3  ')
+    banner_title7 = RichTextField(blank=True,verbose_name='Titulo de galeria-4  ')
+
+
+    
+    #Campos de Noticias
+
+    #template = "webapp_0/index.html"
+    custom_title = models.CharField(max_length=100,blank=True,null=True,help_text="Reescribe el  Titulo de la publicacion ")
+
+
+    
+    # Campos de consulta
+
+    consulta= RichTextField(blank=True,verbose_name='Mensaje para que nos consulten por el formulario')
+    thank_you_text = RichTextField(blank=True)
+    # galeria de imagenes barner de presentacion
+
+    content_panels = AbstractEmailForm.content_panels + Page.content_panels + [
+
+       # FieldPanel('title', classname="full"),
+      #  FieldPanel('cliente_Navbar', classname="full"),
+      #  FieldPanel('banner_info1', classname="full"),
+      #  FieldPanel('banner_title2', classname="full"),
+      #  FieldPanel('banner_info2', classname="full"),
+      #  FieldPanel('banner_title3', classname="full"),
+      #  FieldPanel('banner_info3', classname="full"),
+    #Panel Gelerias
+        FieldPanel('bio', classname="full"),
+        FieldPanel('banner_title4', classname="full"),
+        FieldPanel('banner_title5', classname="full"),
+        FieldPanel('banner_title6', classname="full"),
+        FieldPanel('banner_title7', classname="full"),
+  
+
+#panel para campos de consulta
+        FieldPanel('consulta', classname="full"),
+
+        InlinePanel('galleria_7', label="Imagen de Fondo Barner"),
+        FormSubmissionsPanel(),
+        InlinePanel('form_fields', label="consultas"),
+        FieldPanel('thank_you_text', classname="full"),
+        MultiFieldPanel([
+            FieldRowPanel([
+                FieldPanel('from_address', classname="col6"),
+                FieldPanel('to_address', classname="col6"),
+            ]),
+            FieldPanel('subject'),
+        ], "Email"),
+#Panel capo de noticas
+        FieldPanel("custom_title"),
+    ]
+
+  #  def get_context(self, request, *args, **kwargs):
+   #     context = super().get_context(request, *args, **kwargs)
+    #    context["posts"] = NewsDetailPage.objects.live().public()
+    #    return context
+        
+
+class GaleriadeImagenes_7(Orderable):
+    page = ParentalKey(Worlds, on_delete=models.CASCADE, related_name='galleria_7')
+    logo = models.ForeignKey('wagtailimages.Image',null=True,blank=True,on_delete=models.SET_NULL,related_name='+',verbose_name='Logotipo de Juan Silva Photo')
+    image = models.ForeignKey('wagtailimages.Image',null=True,blank=True,on_delete=models.SET_NULL,related_name='+',verbose_name='Imagen Slide Banner 1')
+    image_2 = models.ForeignKey('wagtailimages.Image',null=True,blank=True,on_delete=models.SET_NULL,related_name='+',verbose_name='Imagen Slide Banner 2')
+    image_3 = models.ForeignKey('wagtailimages.Image',null=True,blank=True,on_delete=models.SET_NULL,related_name='+',verbose_name='Imagen Slide Banner 3')
+
+    # Imagenes Thumb Portfolio
+    
+    image_4 = models.ForeignKey('wagtailimages.Image',null=True,blank=True,on_delete=models.SET_NULL,related_name='+',verbose_name='Imagen Advertising Thumb-Galeria')
+
+
+
+    panels = [
+        ImageChooserPanel('logo'),
+        ImageChooserPanel('image'),
+        ImageChooserPanel('image_2'),
+        ImageChooserPanel('image_3'),
+        ImageChooserPanel('image_4'),
+      
+    ]
+
+
+
+# pagina de inicio
 class consultas_7(AbstractFormField):
     page = ParentalKey('Environs', on_delete=models.CASCADE, related_name='form_fields')
 
