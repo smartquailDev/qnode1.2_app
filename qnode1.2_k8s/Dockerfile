@@ -94,6 +94,9 @@ RUN cp /usr/share/zoneinfo/America/Guayaquil /etc/localtime
 RUN echo 'export LC_ALL=es_ES.UTF-8' >> /etc/profile.d/locale.sh && \
     sed -i 's|LANG=C.UTF-8|LANG=es_ES.UTF-8|' /etc/profile.d/locale.sh
 
+ENV LANG=es_ES.UTF-8 \
+    LANGUAGE=es_ES.UTF-8
+
 USER qnode12
 
 CMD ["run.sh"]
