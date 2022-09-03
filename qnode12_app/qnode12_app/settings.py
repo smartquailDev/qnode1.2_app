@@ -152,12 +152,12 @@ REDIS_DB =os.environ.get('REDIS_DB')
 #LOGOUT_URL = 'logout'
 
 BATON = {
-    'SITE_HEADER': 'SmartQuail',
-    'SITE_TITLE': 'Baton',
-    'INDEX_TITLE': 'Site administration',
-    'SUPPORT_HREF': 'https://github.com/otto-torino/django-baton/issues',
-    'COPYRIGHT': 'copyright © 2022 <a href="https://www.otto.to.it">Be Smarty que tan smarty?100%, Be a SamrtQuail</a>', # noqa
-    'POWERED_BY': '<a href="https://www.otto.to.it">SmartQuail technology foundation</a>',
+    'SITE_HEADER': '<img src="/static/img/logo_flor.png" width="180px" >',
+    'SITE_TITLE': 'Isla Floreana CC',
+    'INDEX_TITLE': 'Administración- Centro comunitario Isla Floreana',
+    #'SUPPORT_HREF': 'https://github.com/otto-torino/django-baton/issues',
+    'COPYRIGHT': 'copyright © 2022 <a href="#">Isla Floreana Centro Comunitario</a>', # noqa
+    'POWERED_BY': '<img src="/static/img/logo.png" width="40px" >',
     'CONFIRM_UNSAVED_CHANGES': True,
     'SHOW_MULTIPART_UPLOADING': True,
     'ENABLE_IMAGES_PREVIEW': True,
@@ -165,16 +165,17 @@ BATON = {
     'CHANGELIST_FILTERS_ALWAYS_OPEN': False,
     'CHANGELIST_FILTERS_FORM': True,
     'MENU_ALWAYS_COLLAPSED': False,
-    'MENU_TITLE': 'Canvas',
-    'MESSAGES_TOASTS': False,
+    'MENU_TITLE': 'Isla Floreana',
+    'MESSAGES_TOASTS': True,
     'GRAVATAR_DEFAULT_IMG': 'retro',
-    'LOGIN_SPLASH': '/static/core/img/login-splash.png',
+    'LOGIN_SPLASH': '/static/img/3.jpg',
+    'LOGOUT_SPLASH': '/static/img/3.jpg',
     'SEARCH_FIELD': {
         'label': 'Search contents...',
         'url': '/search/',
     },
     'MENU': (
-        { 'type': 'title', 'label': 'main', 'apps': ('auth', ) },
+        { 'type': 'title', 'label': 'Smart Office', 'apps': ('auth', ) },
         {
             'type': 'app',
             'name': 'auth',
@@ -191,6 +192,24 @@ BATON = {
                 },
             )
         },
+
+        {
+            'type': 'app',
+            'name': 'orders',
+            'label': 'Reservas',
+            'icon': 'fa fa-folder-open',
+            'models': (
+                {
+                    'name': 'order',
+                    'label': 'Reservas Online'
+                },
+                {
+                    'name': 'group',
+                    'label': 'Groups'
+                },
+            )
+        },
+
         { 'type': 'title', 'label': 'Contents', 'apps': ('flatpages', ) },
         { 'type': 'model', 'label': 'Pages', 'name': 'flatpage', 'app': 'flatpages' },
         { 'type': 'free', 'label': 'Custom Link', 'url': 'http://www.google.it', 'perms': ('flatpages.add_flatpage', 'auth.change_user') },
