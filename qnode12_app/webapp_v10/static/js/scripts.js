@@ -679,6 +679,7 @@
          cssEasing: "cubic-bezier(0.25, 0, 0.25, 1)",
          download: false,
          counter: false
+        
      });
      var o = $(".lightgallery"),
          p = o.data("looped");

@@ -322,11 +322,15 @@ source {
   margin: 0;
   font-size: 13px;
   font-weight: bold;
+  text-align: left;
 }
 .lg-sub-html p {
   font-size: 12px;
   margin: 5px 0 0;
+  text-align: center;
+  color: #d2d2d2;
 }
+
 
 #lg-counter {
   color: #fff;
@@ -856,6 +860,12 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
   width: auto !important;
   height: auto !important;
 }
+
+.caption {
+  display: table-caption;
+  text-align: left;
+}
+
 .lg-outer.lg-show-after-load .lg-item .lg-object, .lg-outer.lg-show-after-load .lg-item .lg-video-play {
   opacity: 0;
   -webkit-transition: opacity 0.15s ease 0s;
