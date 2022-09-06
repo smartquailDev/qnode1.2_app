@@ -16,6 +16,7 @@ RUN git clone https://github.com/smartquailDev/qnode1.2_app.git
 COPY ./requirements.txt /requirements.txt
 COPY ./scripts /scripts
 COPY ./uwsgi_prod.ini /qnode1.2_app/qnode12_app/uwsgi_prod.ini
+COPY ./baton.min.js /qnode1.2_app/qnode12_app/baton.min.js
 
 #COPY ./.env /qnode0.1_app/qnode01_app/.env 
 #No olvidar sacar las variables de entorno.
