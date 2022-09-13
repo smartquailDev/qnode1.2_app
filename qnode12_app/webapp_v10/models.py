@@ -830,16 +830,24 @@ class Contacts(AbstractEmailForm):
 
 class GaleriadeImagenes_5(Orderable):
     page = ParentalKey(Contacts, on_delete=models.CASCADE, related_name='galleria_5')
-    logo = models.ForeignKey('wagtailimages.Image',null=True,blank=True,on_delete=models.SET_NULL,related_name='+',verbose_name='Logotipo de Juan Silva Photo')
-    logo_2 = models.ForeignKey('wagtailimages.Image',null=True,blank=True,on_delete=models.SET_NULL,related_name='+',verbose_name='Logotipo de Juan Silva Photo')
-    logo_3 = models.ForeignKey('wagtailimages.Image',null=True,blank=True,on_delete=models.SET_NULL,related_name='+',verbose_name='Logotipo de Juan Silva Photo')
-    image = models.ForeignKey('wagtailimages.Image',null=True,blank=True,on_delete=models.SET_NULL,related_name='+',verbose_name='Imagen Slide Banner 1')
+    logo  = models.ForeignKey('wagtailimages.Image',null=True,blank=True,on_delete=models.SET_NULL,related_name='+',verbose_name='Imagen Isla Florena')
+    logo_1 = models.ForeignKey('wagtailimages.Image',null=True,blank=True,on_delete=models.SET_NULL,related_name='+',verbose_name='Logo Isla Florena blanco')
+    logo_0 = models.ForeignKey('wagtailimages.Image',null=True,blank=True,on_delete=models.SET_NULL,related_name='+',verbose_name='Logo Isla Florena')
+    logo_2 = models.ForeignKey('wagtailimages.Image',null=True,blank=True,on_delete=models.SET_NULL,related_name='+',verbose_name='Logo 0')
+    logo_3 = models.ForeignKey('wagtailimages.Image',null=True,blank=True,on_delete=models.SET_NULL,related_name='+',verbose_name='Logo 1')
+    logo_4 = models.ForeignKey('wagtailimages.Image',null=True,blank=True,on_delete=models.SET_NULL,related_name='+',verbose_name='Logo 2')
+    logo_5 = models.ForeignKey('wagtailimages.Image',null=True,blank=True,on_delete=models.SET_NULL,related_name='+',verbose_name='Logo 3')
+    logo_6 = models.ForeignKey('wagtailimages.Image',null=True,blank=True,on_delete=models.SET_NULL,related_name='+',verbose_name='Logo 4')
 
     panels = [
         ImageChooserPanel('logo'),
+        ImageChooserPanel('logo_1'),
+        ImageChooserPanel('logo_0'),
         ImageChooserPanel('logo_2'),
         ImageChooserPanel('logo_3'),
-        ImageChooserPanel('image'),
+        ImageChooserPanel('logo_4'),
+        ImageChooserPanel('logo_5'),
+        ImageChooserPanel('logo_6'),
     ]
 
 

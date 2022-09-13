@@ -14,15 +14,16 @@
         <!-- column-image  -->	
         <div class="column-image">
             {% for item in page.galleria_5.all %}
-            {% image item.image width-1200 as s1 %}
+            {% image item.logo_0 width-1200 as s1 %}
             <div class="bg"  data-bg="{{s1.url}}"></div>
             {% endfor %}
-            <div class="overlay"></div>
+            
             <div class="column-title">
-                {% for item in page.galleria_5.all %}
-            {% image item.logo_2 width-1200 as l1 %}
+                <div class="overlay"></div>
+            {% for item in page.galleria_5.all %}
+            {% image item.logo_1 width-1200 as l1 %}
                 <img src="{{l1.url}}">
-                {% endfor %}
+            {% endfor %}
             <div class="overlay"></div>
                
                
@@ -44,8 +45,53 @@
                 </nav>
             </div>
             <!--scroll-nav-wrap end-->							
-            <!--section  -->							
+            <!--section  -->	
+            
             <section id="sec1">
+                <div class="container small-container">
+
+                    {% for item in page.galleria_5.all %}
+                    {% image item.logo_2 width-1200 as l2 %}
+                        <img src="{{l2.url}}" width="150px">
+                    {% endfor %}
+
+                    {% for item in page.galleria_5.all %}
+                    {% image item.logo_3 width-1200 as l3 %}
+                        <img src="{{l3.url}}" width="150px">
+                    {% endfor %}
+
+                    {% for item in page.galleria_5.all %}
+                    {% image item.logo_4 width-1200 as l4 %}
+                        <img src="{{l4.url}}" width="110px">
+                    {% endfor %}
+
+                    {% for item in page.galleria_5.all %}
+                    {% image item.logo_5 width-1200 as l5 %}
+                        <img src="{{l5.url}}" width="110px">
+                    {% endfor %}
+
+                    <div class="section-title fl-wrap">
+                        <h3>{% trans "About us" %}</h3>
+                    </div>
+                    <div class="column-wrapper_item fl-wrap">
+                        <div class="column-wrapper_text fl-wrap">
+                            <p>{{page.bio | richtext }}</p>
+                            <div class="contact-details fl-wrap">
+                                <ul>
+                                    <li><span>{% trans "Mail" %} :</span><a href="#" target="_blank">{{page.banner_title5 | richtext }}</a></li>
+                                    <li><span>{% trans "Adress" %} :</span><a href="#" target="_blank">{{page.banner_title6 | richtext }}</a></li>
+                                    <li><span>{% trans "Phone" %} :</span><a href="#">{{ page.banner_title7| richtext }}</a></li>
+                                </ul>
+                            </div>
+                            <a href="#sec3" class="custom-scroll-link btn fl-btn">{% trans " Make your comments "%}</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!--section end  -->							
+            <div class="sec-dec"></div>
+            
+            <section id="sec2">
                 <div class="container small-container">
                     <div class="section-title fl-wrap">
                         <h3>{% trans "Contact Information" %}</h3>
@@ -67,7 +113,7 @@
             <!--section end  -->							
             <div class="sec-dec"></div>
             <!--section   -->							
-            <section id="sec2">
+            <section id="sec3">
                 <div class="container small-container">
                     <div class="section-title fl-wrap">
                         <h3>{% trans "Location" %}</h3>
@@ -85,7 +131,7 @@
             <!--section end  -->							
             <div class="sec-dec"></div>
             <!--section -->							
-            <section id="sec3">
+            <section id="sec4">
                 <div class="container small-container">
                     <div class="section-title fl-wrap">
                         <h3>{% trans "Make your comments" %}</h3>
