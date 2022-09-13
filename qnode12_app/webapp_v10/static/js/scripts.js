@@ -78,7 +78,7 @@
              spaceBetween: 0,
              effect: "slide",
              autoplay: {
-                 delay: 3500,
+                 delay: 5500,
                  disableOnInteraction: false
              },
          });
@@ -117,7 +117,7 @@
              spaceBetween: 0,
              effect: "fade",
              autoplay: {
-                 delay: 3500,
+                 delay: 5500,
                  disableOnInteraction: false
              },
          });
@@ -222,7 +222,7 @@
                  prevEl: '.hero-slider-button-prev',
              },
              autoplay: {
-                 delay: 2500,
+                 delay: 5500,
                  disableOnInteraction: false
              },
              on: {
