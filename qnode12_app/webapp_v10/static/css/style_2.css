@@ -99,14 +99,14 @@ body {
 } 
 /*--------------Typography--------------------------------------*/
 p {
-	font-size: 12px;
-	line-height: 13px;
-	padding-bottom: 10px;
-	font-weight: 500;
-	color: #5e646a;
-	text-align: left;
-	margin-top: -7px;
-  }
+    font-size: 16px;
+    line-height: 19px;
+    padding-bottom: 10px;
+    font-weight: 500;
+    color: #5e646a;
+    text-align: left;
+    margin-top: -7px;
+}
 
 blockquote {
 	float: left;
@@ -210,13 +210,13 @@ blockquote p {
 	background-origin: content-box;
 }
 .overlay {
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-    background: rgba(45,45,50,0.21);
-	z-index: 3;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgb(112 112 112 / 15%);
+    z-index: 3;
 }
 .dark-bg {
 	background:#2A2A2E;
@@ -2399,6 +2399,18 @@ section.single-content-section {
     width: 100%;
 	padding-bottom:15px;
 }
+
+
+.section-title li {
+	text-align: left;
+    font-size: 15px;
+    text-transform: uppercase;
+    font-weight: 700;
+    float: left;
+    width: 100%;
+	padding-bottom:15px;
+}
+
 .section-title h4 {
     font-family: 'Playfair+Display', serif;
     font-style: italic;
@@ -2406,6 +2418,50 @@ section.single-content-section {
 	max-width:400px;
 	text-align:left;
 }
+
+.section-title h5 {
+    text-align: right;
+    font-size: 24px;
+    text-transform: uppercase;
+    font-weight: 700;
+    float: right;
+    width: 100%;
+	padding-bottom:15px;
+	margin-top: -53px;
+}
+
+
+
+
+.section-title-sub {
+	float:right;
+	width:100%;
+	position:relative;
+    padding-bottom: 20px;
+	margin-bottom:40px;
+	border-bottom:1px solid #eee;
+}
+
+.section-title-sub h3 {
+	text-align: right;
+    font-size: 24px;
+    text-transform: uppercase;
+    font-weight: 700;
+    float: right;
+    width: 100%;
+	padding-bottom:15px;
+}
+
+.section-title-sub li {
+	text-align: right;
+    font-size: 15px;
+    text-transform: uppercase;
+    font-weight: 700;
+    float: right;
+    width: 100%;
+	padding-bottom:15px;
+}
+
 /*------ facts ------------------------------------------------*/
 .inline-facts-holder {
 	margin:40px 0 50px;
