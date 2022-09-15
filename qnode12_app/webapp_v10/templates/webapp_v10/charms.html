@@ -25,17 +25,15 @@
                         <div class="grid-item-holder hov_zoom">
                             {% for item in page.galleria_2.all %}
                             {% image item.image width-1200 as s1 %}
-                            <figure>
+                          
                                 
                             <img  src="{{s1.url}}"  alt="">
-                            <a href="{{s1.url}}"  data-sub-html="<h4>La Lobería: Lobos marinos en su hábitat</h4><p>
-                                Observa de cerca la vida apacible de los lobos marinos sobre la arena blanca, decorada por pedazos multicolores de conchas y corales, y el esplendor de la alfombra roja que la planta Sesuvium, rodeada de cactus, ofrece camino a este paraje.
-                            </p>" class="box-media-zoom   popup-image"><i class="fal fa-search"></i></a> 
-                        </figure>
+                            <a href="{{s1.url}}"  data-sub-html=".thumb-info" class="box-media-zoom   popup-image"><i class="fal fa-search"></i></a> 
+                    
                             {% endfor %}                                   
                             <div class="thumb-info">
-                                <h3><a href="{{s1.url}}">{{page.banner_title4| richtext}} </a></h3>
-                                <p style="font-size: 7px;">{{page.banner_detail4| richtext}}</p>
+                                <h3>{{page.banner_title4| richtext}}</h3>
+                                <p>{{page.banner_detail4| richtext}}</p>
                             </div>
                         </div>
                     </div>
@@ -47,7 +45,7 @@
                             {% image item.image_2 width-1200 as s2 %}
                             <img  src="{{s2.url}}"    alt="">
                             
-                            <a href="{{s2.url}}" data-sub-html="<h4>Fading Light</h4><p>Classic view from Rigwood Jetty on Coniston Water an old archive shot similar to an old post but a little later on.</p>"   class="box-media-zoom   popup-image"><i class="fal fa-search"></i></a>  
+                            <a href="{{s2.url}}" data-sub-html=".thumb-info"   class="box-media-zoom   popup-image"><i class="fal fa-search"></i></a>  
                             {% endfor %}                                   
                             <div class="thumb-info">
                                 <h3>{{page.banner_title5| richtext}}</h3>
