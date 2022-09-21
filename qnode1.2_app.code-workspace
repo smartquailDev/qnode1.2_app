@@ -1,0 +1,21 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "../../PRODU-SMARTQUAIL/QNODES-DROPLETS/qnodes-dots/QNODE1.2"
+		},
+		{
+			"path": "../../PRODU-SMARTQUAIL/QNODES-DROPLETS/qnodes-dots/QNODE0.1"
+		},
+		{
+			"path": "../qnode0.1_app"
+		}
+	],
+	"settings": {
+		"terminal.integrated.env.osx": {
+			"KUBECONFIG": "${workspaceFolder}/qnode1.2_k8s/.kube/qnode12-k8s-kubeconfig.yaml"
+		}
+	}
+}

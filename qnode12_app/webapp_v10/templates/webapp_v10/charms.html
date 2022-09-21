@@ -28,9 +28,9 @@
                           
                                 
                             <img  src="{{s1.url}}"  alt="">
-                            <a href="{{s1.url}}"  data-sub-html=".thumb-info" class="box-media-zoom   popup-image"><i class="fal fa-search"></i></a> 
+                            <a href="{{s1.url}}"  data-sub-html=".thumb-info " class="box-media-zoom   popup-image"><i class="fal fa-search"></i></a> 
                     
-                            {% endfor %}                                   
+                            {% endfor %}                                                        
                             <div class="thumb-info">
                                 <h3>{{page.banner_title4| richtext}}</h3>
                                 <p>{{page.banner_detail4| richtext}}</p>
@@ -45,11 +45,11 @@
                             {% image item.image_2 width-1200 as s2 %}
                             <img  src="{{s2.url}}"    alt="">
                             
-                            <a href="{{s2.url}}" data-sub-html=".thumb-info"   class="box-media-zoom   popup-image"><i class="fal fa-search"></i></a>  
+                            <a href="{{s2.url}}" data-sub-html=".thumb-info_2"   class="box-media-zoom   popup-image"><i class="fal fa-search"></i></a>  
                             {% endfor %}                                   
-                            <div class="thumb-info">
+                            <div class="thumb-info_2">
                                 <h3>{{page.banner_title5| richtext}}</h3>
-                                <p style="font-size: 7px;">{{page.banner_detail5| richtext}}</p>
+                                <p>{{page.banner_detail5| richtext}}</p>
                             </div>
                         </div>
                     </div>

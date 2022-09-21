@@ -23,10 +23,11 @@ COPY ./baton.min.js /qnode1.2_app/qnode12_app/baton.min.js
 
 
 WORKDIR /qnode1.2_app/qnode12_app/
-EXPOSE 443 
-EXPOSE 25
+#EXPOSE 443 
+#EXPOSE 25
 EXPOSE 9000
-EXPOSE 587
+#EXPOSE 587
+
 
 RUN python -m venv /py && \
     /py/bin/pip install --upgrade pip && \

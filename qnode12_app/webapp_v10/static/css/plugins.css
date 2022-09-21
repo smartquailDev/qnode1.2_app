@@ -307,16 +307,16 @@ source {
 }
 
 .lg-sub-html {
-  background-color: rgba(0, 0, 0, 0.45);
-  bottom: 0;
-  color: #EEE;
-  font-size: 16px;
-  left: 0;
-  padding: 10px 40px;
-  position: fixed;
-  right: 0;
-  text-align: center;
-  z-index: 1080;
+background-color: rgba(0, 0, 0, 0.45);
+bottom: 176px;
+color: #EEE;
+font-size: 16px;
+left: 0;
+padding: 10px 40px;
+position: fixed;
+right: 0;
+text-align: left;
+z-index: 1080;
 }
 .lg-sub-html h4 {
   margin: 0;
