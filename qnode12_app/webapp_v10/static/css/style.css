@@ -1423,7 +1423,8 @@ blockquote p {
 	margin-right:20px;
 }
 .follow-wrap ul li a {
-	color:#fff;
+	color:#63c8f0;
+	font-size: 20px;
 }
 .follow-wrap:hover ul {
 	visibility:visible;
