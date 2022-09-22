@@ -147,12 +147,12 @@
 
 .thumb-info_22 h3{
 	text-align:left;
-	color:#fff;
+	color:rgba(255, 255, 255, 0);
 	font-size:18px;
 	font-weight:600;
 }
 .thumb-info_22 h3 a{
-	 color:#fff;
+	 color:rgba(255, 255, 255, 0);
 	  -webkit-transition: all 200ms linear;
     transition: all 200ms linear;
 }
@@ -160,7 +160,7 @@
 	color:rgba(255,255,255,0.61);
 }
 .thumb-info_22 p {
-	color:#fff;
+	color:rgba(255, 255, 255, 0);
 	opacity:0.6;
 	font-style:italic;
 }
