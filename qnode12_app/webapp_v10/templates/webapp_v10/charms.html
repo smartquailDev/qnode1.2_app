@@ -24,12 +24,9 @@
                     <div class="gallery-item nature">
                         <div class="grid-item-holder hov_zoom">
                             {% for item in page.galleria_2.all %}
-                            {% image item.image width-1200 as s1 %}
-                          
-                                
+                            {% image item.image width-1200 as s1 %}       
                             <img  src="{{s1.url}}"  alt="">
                             <a href="{{s1.url}}"  data-sub-html=".thumb-info_1 " class="box-media-zoom   popup-image"><i class="fal fa-search"></i></a> 
-                    
                             {% endfor %}                                                        
                             <div class="thumb-info_1">
                                 <h3>{{page.banner_title4| richtext}}</h3>
@@ -43,8 +40,7 @@
                         <div class="grid-item-holder hov_zoom">
                             {% for item in page.galleria_2.all %}
                             {% image item.image_2 width-1200 as s2 %}
-                            <img  src="{{s2.url}}"    alt="">
-                            
+                            <img  src="{{s2.url}}"    alt="">            
                             <a href="{{s2.url}}" data-sub-html=".thumb-info_22"   class="box-media-zoom   popup-image"><i class="fal fa-search"></i></a>  
                             {% endfor %}                                   
                             <div class="thumb-info_22">
@@ -64,8 +60,7 @@
                             {% endfor %}                                 
                             <div class="thumb-info_3">
                                 <h3>{{page.banner_title6| richtext}}</h3>
-                                <p>{{page.banner_detail6| richtext}}</p>
-                               
+                                <p>{{page.banner_detail6| richtext}}</p>  
                             </div>
                             
                         </div>
@@ -81,7 +76,7 @@
                             {% endfor %}                                  
                             <div class="thumb-info_4">
                                 <h3>{{page.banner_title7| richtext}}</h3>
-                                <p style="font-size: 7px;">{{page.banner_detail7| richtext}}</p>
+                                <p>{{page.banner_detail7| richtext}}</p>
                             </div>
                         </div>
                     </div>
@@ -94,7 +89,7 @@
                             {% endfor %}                                   
                             <div class="thumb-info_5">
                                 <h3>{{page.banner_title8| richtext}}</h3>
-                                <p style="font-size: 7px;">{{page.banner_detail8| richtext}}</p>
+                                <p>{{page.banner_detail8| richtext}}</p>
                             </div>
                         </div>
                     </div>
@@ -109,7 +104,7 @@
                             {% endfor %}                                  
                             <div class="thumb-info_6">
                                 <h3>{{page.banner_title9| richtext}}</h3>
-                                <p style="font-size: 7px;">{{page.banner_detail9| richtext}}</p>
+                                <p>{{page.banner_detail9| richtext}}</p>
                             </div>
                         </div>
                     </div>
@@ -124,7 +119,7 @@
                             {% endfor %}                                 
                             <div class="thumb-info_7">
                                 <h3>{{page.banner_title10| richtext}}</h3>
-                                <p style="font-size: 7px;">{{page.banner_detail10| richtext}}</p>
+                                <p>{{page.banner_detail10| richtext}}</p>
                             </div>
                         </div>
                     </div>
@@ -139,7 +134,7 @@
                             {% endfor %}                                  
                             <div class="thumb-info_8">
                                 <h3>{{page.banner_title11| richtext}}</h3>
-                                <p style="font-size: 7px;">{{page.banner_detail11| richtext}}</p>
+                                <p>{{page.banner_detail11| richtext}}</p>
                             </div>
                         </div>
                     </div>
@@ -152,7 +147,7 @@
                             {% endfor %}                                   
                             <div class="thumb-info_9">
                                 <h3>{{page.banner_title12| richtext}}</h3>
-                                <p style="font-size: 7px;">{{page.banner_detail12| richtext}}</p>
+                                <p>{{page.banner_detail12| richtext}}</p>
                             </div>
                         </div>
                     </div>
@@ -167,7 +162,7 @@
                             {% endfor %}                                  
                             <div class="thumb-info_10">
                                 <h3>{{page.banner_title13| richtext}}</h3>
-                                <p style="font-size: 7px;">{{page.banner_detail13| richtext}}</p>
+                                <p>{{page.banner_detail13| richtext}}</p>
                             </div>
                         </div>
                     </div>
@@ -182,7 +177,7 @@
                             {% endfor %}                                 
                             <div class="thumb-info_11">
                                 <h3>{{page.banner_title14| richtext}}</h3>
-                                <p style="font-size: 7px;">{{page.banner_detail14}}</p>
+                                <p>{{page.banner_detail14}}</p>
                             </div>
                         </div>
                     </div>
@@ -197,7 +192,7 @@
                             {% endfor %}                                  
                             <div class="thumb-info_12">
                                 <h3>{{page.banner_title15| richtext}}</h3>
-                                <p style="font-size: 7px;">{{page.banner_detail15| richtext}}</p>
+                                <p>{{page.banner_detail15| richtext}}</p>
                             </div>
                         </div>
                     </div>
