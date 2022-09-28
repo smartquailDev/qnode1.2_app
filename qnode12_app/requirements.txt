@@ -31,7 +31,7 @@ wagtail-localize
 boto3
 #System HOST
 PyOpenSSL
-python-dotenv
+python-dotenv==0.21.0
 
 #Ecommerce
 braintree
