@@ -34,6 +34,16 @@ jobs:
     - name: Push Image
       run: | 
         docker push smartquail/qnode12_app --all-tags
+
+      working-directory: ./qnode12_prod_env
+      run: | 
+        docker build -f Dockerfile \
+            -t smartquail/qnode12_nginx:latest \
+            -t smartquail/qnode12_nginx:${GITHUB_SHA::2}-${GITHUB_RUN_ID::2} \
+            .
+    - name: Push Image
+      run: | 
+        docker push smartquail/qnode12_nginx --all-tags
    
 
        

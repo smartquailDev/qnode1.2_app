@@ -1,0 +1,111 @@
+version: "3.9"
+
+services:
+  qnode12_app:
+    image: smartquail/qnode12_app:latest
+    environment:
+      - PORT=9000
+    restart: always
+    env_file:
+      - .env
+    depends_on:
+      - smartquaildb
+    #  - redis
+    #links:
+    #  - "smartquaildb"
+    #  - "worker"
+    expose:
+      - 443
+      - 9000
+      - 587
+      - 25
+    ports:
+      - "9000:9000"
+      - "587:587"
+      - "25:25"
+      - "443"
+    volumes:
+      - static-data-qnode12:/qnode1.2_app/qnode12_app/staticfiles/
+      - static-data-qnode12:/qnode1.2_app/qnode12_app/media/
+   # command: sh -c "chmod +x /scripts/migrations.sh && sh /scripts/migrations.sh && sh /scripts/run.sh"
+    networks: 
+      - lansmartquail
+
+  smartquaildb:
+    image: postgres:13-alpine
+    env_file:
+      - .env
+    restart: always
+    command: -p 5432
+    ports:
+      - "5432:5432"
+    expose:
+     - 5432
+    volumes:
+      - smartquaildb_data-qnode12:/var/lib/postgresql/data/
+    networks: 
+      - lansmartquail
+
+  proxy:
+    image: smartquail/qnode12_nginx:prod
+    restart: always
+    depends_on:
+      - qnode12_app
+    ports:
+      - 80:80
+      - 443:443
+    volumes:
+      - certbot-web_2:/vol/www
+      - proxy-dhparams_2:/vol/proxy
+      - certbot-certs_2:/etc/letsencrypt
+    env_file:
+      - .env
+    networks: 
+      - lansmartquail
+
+
+  redis:
+    image: redis:3.0
+    restart: always
+    expose:
+      - 6379
+    ports:
+      - "6379:6379"
+    env_file:
+      - .env
+    volumes:
+      - redis_data-qnode12:/data
+    entrypoint: redis-server --appendonly yes --port 6379
+    networks: 
+      - lansmartquail
+
+  rabbitmq:
+    image: rabbitmq:3-management-alpine
+    restart: always
+    command: rabbitmq-server
+    ports:
+      - "5672:5672"
+      - "15672:15672"
+    env_file:
+      - .env
+    volumes:
+      - rabbitmq-data-qnode12:/var/lib/rabbitmq
+      - rabbitmq-data-qnode12:/var/log/rabbitmq
+    expose:
+      - 5672
+      - 15672
+    networks:
+        - lansmartquail
+
+volumes:
+  certbot-web_2:
+  proxy-dhparams_2:
+  certbot-certs_2:
+  static-data-qnode12:
+  smartquaildb_data-qnode12:
+  rabbitmq-data-qnode12:
+  redis_data-qnode12:
+
+networks: 
+   lansmartquail:
+       driver: bridge
