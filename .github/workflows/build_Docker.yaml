@@ -35,7 +35,7 @@ jobs:
       run: | 
         docker push smartquail/qnode12_app --all-tags
 
-jobs_2:
+jobs:
   test_qnode12_app:
     uses: smartquailDev/qnode1.2_app/.github/workflows/test-qnode12_app.yaml@main
   Docker_qnode12:
