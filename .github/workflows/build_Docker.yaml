@@ -35,6 +35,7 @@ jobs:
       run: | 
         docker push smartquail/qnode12_app --all-tags
 
+     - name: Build nginx image
       working-directory: ./qnode12_prod_env
       run: | 
         docker build -f Dockerfile \
