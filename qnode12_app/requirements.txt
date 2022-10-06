@@ -21,6 +21,8 @@ django-social-auth
 social-auth-app-django
 sorl-thumbnail
 django-widget-tweaks
+django-phone-field
+django-phonenumber-field[phonenumberslite]
 kombu==5.2.2
 django-parler
 django-localflavor

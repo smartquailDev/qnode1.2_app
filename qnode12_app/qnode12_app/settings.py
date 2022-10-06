@@ -105,6 +105,8 @@ INSTALLED_APPS = [
     'wagtail_localize.locales',
     'localflavor',
     'parler',
+    'phone_field',
+    'phonenumber_field',
     'baton.autodiscover', 
       
 ]
@@ -233,6 +235,8 @@ BATON = {
 #WEBAPP SETTINGS
 
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+PHONENUMBER_DEFAULT_REGION = 'Ec'
+PHONENUMBER_DB_FORMAT="RFC3966"
 
 #Ecommerce App
 CART_SESSION_ID = 'cart'

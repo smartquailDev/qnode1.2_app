@@ -1,6 +1,7 @@
 from django.db import models
 from shop.models import Product
 from decimal import Decimal
+from phone_field import PhoneField
 from django.core.validators import MinValueValidator, \
                                    MaxValueValidator
 from coupons.models import Coupon
@@ -8,9 +9,10 @@ from django.utils.translation import gettext_lazy as _
 
 
 class Order(models.Model):
-    first_name = models.CharField(_('first name'), max_length=50)
-    last_name = models.CharField(_('last name'), max_length=50)
-    email = models.EmailField(_('e-mail'))
+    first_name = models.CharField(_('First name'), max_length=50)
+    last_name = models.CharField(_('Last name'), max_length=50)
+    email = models.EmailField(_('E-mail'))
+    phone = models.CharField(blank=True, help_text='Contact phone number',max_length=16)
     address = models.CharField(_('address'), max_length=250)
     postal_code = models.CharField(_('postal code'), max_length=20)
     city = models.CharField(_('city'), max_length=100)
@@ -23,6 +25,9 @@ class Order(models.Model):
                                null=True,
                                blank=True,
                                on_delete=models.SET_NULL)
+    arrival = models.DateTimeField(_('Date for Arrival to CC-floreana'),null=True)
+    departure = models.DateTimeField(_('Date for departure from CC-floreana'),null=True)
+    agree_term = models.BooleanField(_('I accept the terms and conditions of this services.'),default=False,null=False,blank=False)
     discount = models.IntegerField(default=0,
                                    validators=[MinValueValidator(0),
                                                MaxValueValidator(100)])

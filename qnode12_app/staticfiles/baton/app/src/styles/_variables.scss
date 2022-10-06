@@ -20,7 +20,7 @@ $login-bg: #fff;
 $password-visibility-toggler-icon-fg: #999;
 
 // navbar
-$navbar-bg: #ffffff;
+$navbar-bg: #1c2429;
 $navbar-link-color: #fff;
 $navbar-dropdown-link-color: #000;
 $navbar-link-color-hover: #d32d41;
@@ -73,7 +73,7 @@ $dashboard-bg: #f5f5f5;
 $dashboard-title-bg: #fafafa;
 $dashboard-module-bg: #fff;
 $dashboard-module-border-color: #fff;
-$dashboard-caption-bg: #fcaf17;
+$dashboard-caption-bg: #f6f6f6;
 $dashboard-caption-color: #000;
 $dashboard-icon-color: #f90;
 $dashboard-delete-bg: #dc3545;
@@ -85,7 +85,7 @@ $breadcrumbs-bg: #f0f0f0;
 $breadcrumbs-border-color: #bbb;
 
 // content
-$content-bg: #fcaf17;
+$content-bg: #f5f5f5;
 
 // changelist
 $changelist-bg: #fff;
@@ -103,7 +103,7 @@ $filter-selected-border-color: $base;
 $filters-clear-bg: #17a2b8;
 $rl-head-bg: #f0f0f0;
 $rl-head-color: inherit;
-$rl-tr-odd-bg: #fafafa;
+$rl-tr-odd-bg: rgba(0, 0, 0, .05);
 $rl-tr-odd-color: inherit;
 $rl-tr-selected-bg-color: #cfc4a8;
 $rl-tr-selected-bg: lighten($rl-tr-selected-bg-color, 10%);

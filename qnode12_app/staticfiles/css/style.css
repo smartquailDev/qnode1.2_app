@@ -319,7 +319,7 @@ blockquote p {
 	left:0;
 	margin-left:-29px;
 	font-size:12px;
-	color:#666;
+	color: #fff;
  	font-weight:100;
     font-family: 'Playfair+Display', serif;
     font-style: italic;
@@ -1423,7 +1423,8 @@ blockquote p {
 	margin-right:20px;
 }
 .follow-wrap ul li a {
-	color:#fff;
+	color:#63c8f0;
+	font-size: 20px;
 }
 .follow-wrap:hover ul {
 	visibility:visible;
