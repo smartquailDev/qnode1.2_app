@@ -21,6 +21,13 @@ django-social-auth
 social-auth-app-django
 sorl-thumbnail
 django-widget-tweaks
+django-phone-field
+django-phonenumber-field[phonenumberslite]
+django-bootstrap-datepicker-plus
+django-bootstrap-v5
+django-bootstrap4
+django-jquery
+
 kombu==5.2.2
 django-parler
 django-localflavor
@@ -31,7 +38,7 @@ wagtail-localize
 boto3
 #System HOST
 PyOpenSSL
-python-dotenv
+python-dotenv==0.21.0
 
 #Ecommerce
 braintree
