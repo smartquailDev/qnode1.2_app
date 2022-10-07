@@ -26,8 +26,8 @@
           <div class="bg"  data-bg="{% static 'img/1.jpg' %}"></div>
           <div class="overlay"></div>
           <div class="column-title">
-              <h2>{% trans "Expeditions" %}</h2>
-              <p>GET THE MOST OUT OF FLOREANA</p>
+              <h2 style="font-size: 100px;"><i class="fal fa-shopping-cart"></i></h2>
+              <p>{% trans "Make your reservations online and pay now, easily and securely." %}</p>
           </div>
       
           <div class="fixed-column-dec"></div>
@@ -45,40 +45,33 @@
               <div class="container small-container">
                
                   <!-- post -->
-                  {% for c in categories %}
-                      {% if category.slug == c.slug %}{% endif %}
-                      {% for product in products %}
+                  
                   <div class="post fl-wrap fw-post">
-                      
-                    
-                    <a href="{{ c.get_absolute_url }}"><h2><span>{{ c.name }}</span></h2></a>
-                    
-                      <ul class="blog-title-opt">
-                          <li><a href="#">Salidas:{{c.salidas}}</a></li>
-                          <li> - </li>
-                          <li><a href="#">Desdes:{{c.desde}} </a></li>
-                         
-                      </ul>
-                      <!-- blog media -->
-                      <div class="blog-media fl-wrap">
-                        <img src="{% if c.image %}{{ c.image.url }}{% else %}{% static "img/no_image.png" %}{% endif %}" width="400px">
+                    <div id="subheader">
+                        <div class="cart">
+                          {% with total_items=cart|length %}
+                              {% if cart|length > 0 %}
+                                <h2 style="font-size:30px;">{% trans "Your" %}  <i class="fal fa-shopping-cart"></i> {% trans "reservation shopping" %} {% trans "have to "%}:
+                                <a href="{% url "cart:cart_detail" %}">
+                                  {% blocktrans with total_items_plural=total_items|pluralize  total_price=cart.get_total_price %}
+                                  <p> <li>{{ total_items }}  passengers tour reservation
+                                   {{ total_items_plural }}:
+                                    ${{ total_price }}</li></p>
+                                  {% endblocktrans %}
+                                
+                                </a>
+            
+                              {% else %}
+                               <h2>{% trans "Your" %}<i class="fal fa-shopping-cart"></i>  {% trans "is empty." %}</h2> 
+                              {% endif %}
+                            {% endwith %}
+                        </h2>
+                        </div>
                       </div>
+                      
                       
                       <!-- blog media end -->
-                      <div class="blog-text fl-wrap">
-                          <div class="pr-tags fl-wrap">
-                            <a href="{{ c.detail.url }}" >   <span>{% trans "Description" %} :  <i class="fal fa-solid fa-file"></i></span></a>
-                          </div>
-                          <h2>
-                           
-                          </h2>
-                         
-                          <a href="{{ product.get_absolute_url }}" class="btn float-btn flat-btn">Read more </a>
-                          
-                      </div>
-                  </div>
-                  {% endfor %}
-                          {% endfor %}
+                   
                  
 
               </div>
@@ -94,7 +87,7 @@
                           <span>&#169; Powered by SmartQuail, Inc / Design by Edward Cooper  </span>
                       </div>
                       <!-- policy-box end-->
-                      <a href="#" class="to-top-btn to-top">Back to top <i class="fal fa-long-arrow-up"></i></a>
+                    
                   </div>
               </div>
           </footer>
