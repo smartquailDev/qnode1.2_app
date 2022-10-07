@@ -98,15 +98,15 @@ body {
   }
 } 
 /*--------------Typography--------------------------------------*/
-p {
-    font-size: 16px;
-    line-height: 19px;
-    padding-bottom: 10px;
-    font-weight: 500;
-    color: #5e646a;
-    text-align: left;
-    margin-top: -7px;
-}
+p  {
+	font-size: 22px;
+	line-height: 21px;
+	padding-bottom: 10px;
+	font-weight: 500;
+	color: #acd6ff;
+	text-align: left;
+	margin-top: -7px;
+  }
 
 blockquote {
 	float: left;
@@ -164,6 +164,7 @@ blockquote p {
 	margin: 0 auto;
 	position: relative;
 	z-index: 5;
+	overflow: scroll;
 }
 .full-height {
 	height: 100%;
@@ -215,7 +216,7 @@ blockquote p {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgb(89, 90, 92);
+    background: rgba(255, 255, 255, 0.06);
     z-index: 3;
 }
 .dark-bg {
@@ -2435,7 +2436,7 @@ section.single-content-section {
 }
 .column-title {
 	position:absolute;
-	bottom:140px;
+	bottom: 100px;
 	left:0;
 	width:100%;
 	text-align:left;
@@ -2443,7 +2444,7 @@ section.single-content-section {
 	z-index:11;
 }
 .column-title h2 {
-	font-size:48px;
+	font-size: 30px;
 	font-weight:700;
 	color:#fff;
 	position:relative;
@@ -2996,12 +2997,12 @@ section.single-content-section {
     word-spacing: 0;
     text-transform: uppercase;
 	margin-bottom:12px;
-	font-size:12px;
+	font-size: 16px;
 }
 .contact-details ul li span {
 	float:left;
 	padding-bottom:10px;
-	color: #999;
+	color: #fcaf17;
 	width:100%;
 	text-transform: none;
 }
@@ -3134,11 +3135,12 @@ section.single-content-section {
 	margin-bottom:20px;
 }
 .pr-tags span {
-	float:left;
-	margin-right:10px;
-	color:#000;
-	font-weight:700;
-	text-transform:uppercase;
+	float: left;
+margin-right: 10px;
+color: #bdcff0;
+font-weight: 700;
+text-transform: uppercase;
+font-size: 20px;
 }
 .pr-tags ul{
 	position:relative;

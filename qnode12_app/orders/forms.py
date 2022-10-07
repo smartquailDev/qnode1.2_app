@@ -51,8 +51,8 @@ class OrderCreateForm(forms.ModelForm):
         model = Order
         fields = ['first_name', 'last_name', 'email','phone','arrival_date_time','departure_date_time','agree_term']
         widgets = {
-            'arrival_date_time':  DateTimePickerInput(format='%m/%d%Y:H'),
-            'departure_date_time':  DateTimePickerInput(format='%m/%d%Y:H'),
+            'arrival_date_time':  DateTimePickerInput(format='%m/%d/%Y %H:%M'),
+            'departure_date_time':  DateTimePickerInput(format='%m/%d/%Y %H:%M'),
         #    'end_departure_date':  DateTimePickerInput(options={
         #            "format": "MM/DD/YYYY",
         #            "locale": "ec",
