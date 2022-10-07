@@ -184,7 +184,7 @@ BATON = {
     'MENU_ALWAYS_COLLAPSED': False,
     'MENU_TITLE': 'Isla Floreana',
     'MESSAGES_TOASTS': True,
-    'GRAVATAR_DEFAULT_IMG': 'retro',
+    'GRAVATAR_DEFAULT_IMG': 'mp',
     'LOGIN_SPLASH': '/static/img/3.jpg',
     'LOGOUT_SPLASH': '/static/img/3.jpg',
     'SEARCH_FIELD': {
