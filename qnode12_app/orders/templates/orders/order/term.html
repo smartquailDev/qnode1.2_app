@@ -76,48 +76,34 @@
           <section id="sec3">
               <div class="container small-container">
                 <div class="section-title fl-wrap">
-                  <h3>{% trans "Check In Now!" %}</h3>
-                  <h3>{% trans "To Centro Comunitario Isla Floreana" %} <i class="fal fa-plane"></i></h3>
-                  <p>{%  trans "Fill out the form below and you will receive an email confirmation of your Check In Track." %}</p>
-                  </div>
+                    
+                   <h3>{%  trans "TERMS & CONDITIONS OF ISLA FLOREANA GALAPAGOS RESERVATION SERVICE." %} </h3> 
+                   
                  
+        
+                  </div>
+                  {% for c in categories %}
+                  {% if category.slug == c.slug %}{% endif %}
                   <div class="column-wrapper_item fl-wrap">
                       <div class="column-wrapper_text fl-wrap">
                           <div id="contact-form" class="fl-wrap">
                               <div id="message"></div>
-                           
-                              <form  class="custom-form" action="." method="post" >
-                                {% csrf_token %}
-                                {% bootstrap_form form %}
-                                {% if field.is_hidden %}
-   {# Don't render label #}
-{% endif %}
-                                {% if  label.is_hidden %}
-                                {{form.last_name}} {{sudaca}}
-                                {% endif %}
-                                {% for field in form.hidden_fields %}
-                                {{ field }}
-                               {% endfor %}
-                               {% for field in  bootstrap_form.visible_fields %}
-                                {{ field }}
-                          
-                                {% endfor %}
-                               
-                                 
-  {% buttons %}
-  
-  <p><input type="submit" class="btn float-btn flat-btn color-bg" value="{% trans "Place order" %}"></p>
-  <a href="{% url "orders:order_term"  %}" style="text-decoration: underline;"> {% trans "terms & conditions for reserve this service" %}</a>
-  {% endbuttons %}
-                                 
-                                   
-                                   
-                                
-                              </form>
+                            
+                            <p>{{c.name}}</p>   
+                            
+                              
+                              {{ c.terms }}
+                             
                           </div>
                       </div>
                   </div>
+                 
+                  {% endfor %}
+                 
+                  
               </div>
+
+             
           </section>
 
 
@@ -132,7 +118,7 @@
                              Powered by SmartQuail, Inc / Design by Edward Cooper </span>
                       </div>
                       <!-- policy-box end-->
-                      <a href="#" class="to-top-btn to-top">Back to top <i class="fal fa-long-arrow-up"></i></a>
+                      <a href="{% url "cart:cart_detail" %}" class="to-top-btn">Back to Cart <i class="fal fa-shopping-cart"></i></a>
                   </div>
               </div>
           </footer>

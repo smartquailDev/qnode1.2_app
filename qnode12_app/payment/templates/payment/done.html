@@ -16,8 +16,9 @@
         <div class="bg"  data-bg="{% static "img/3.jpg" %}" ></div>  
           <div class="overlay"></div>
           <div class="column-title">
+            <img src="{% static 'img/logo_flor.png' %} " width=500px>
               <h2>{% trans "Payment Done" %}</h2>
-              <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas in pulvinar neque. Nulla finibus lobortis pulvinar.</h3>
+              <p>"{% trans "Your dream trip, its every closer"%}"</p>
           </div>
        
           <div class="fixed-column-dec"></div>
@@ -31,8 +32,9 @@
           <section id="sec3">
               <div class="container small-container">
                   <div class="section-title fl-wrap">
-                      <h3>Your payment was successful</h3>
-                     <p> Your payment has been processed successfully.</p>
+                      <h3>{% trans "Your payment reservation for Centro Cultural Isla Floreana was successful" %}</h3>
+                     <p> {% trans "Your payment reservation has been processed successfully." %}</p>
+                     <p> "{% trans "THANKS FOR VISIT US" %}"</p>
                       
                  
               </div>

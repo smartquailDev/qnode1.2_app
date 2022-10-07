@@ -14,6 +14,8 @@ class Category(TranslatableModel):
     salidas = models.DateTimeField(null=True),
     desde =  models.CharField(max_length=200, null=True),
     description = models.TextField(blank=True,null=True),
+    detail = models.FileField(upload_to='tours/%Y/%m/%d',null=True),
+    terms = models.TextField(blank=True),
 
     )
 
@@ -40,6 +42,7 @@ class Product(TranslatableModel):
     category = models.ForeignKey(Category,
                                  related_name='products',
                                  on_delete=models.CASCADE,null=True),
+    
     )
     available = models.BooleanField(default=True)
 

@@ -11,12 +11,16 @@ from django.conf import settings
 from django.http import HttpResponse
 from django.template.loader import render_to_string
 import weasyprint
+from bootstrap_datepicker_plus.widgets import DateTimePickerInput
+from shop.models import Category, Product
 
 
 def order_create(request):
     cart = Cart(request)
+    fields = ['arrival_date_time', 'firts_name']
     if request.method == 'POST':
         form = OrderCreateForm(request.POST)
+        form.fields['arrival_date_time'].widget = DateTimePickerInput()
         if form.is_valid():
             order = form.save(commit=False)
             if cart.coupon:
@@ -42,6 +46,22 @@ def order_create(request):
                   'orders/order/create.html',
                   {'cart': cart, 'form': form})
 
+def order_term(request, category_slug=None):
+    category = None
+    categories = Category.objects.all()
+    products = Product.objects.filter(available=True)
+    if category_slug:
+        language = request.LANGUAGE_CODE
+        category = get_object_or_404(Category,
+                                     translations__language_code=language,
+                                     translations__slug=category_slug)
+        products = products.filter(category=category)
+    return render(request,
+                  'orders/order/term.html',
+                  {'category': category,
+                   'categories': categories,
+                   'products': products})
+
 
 @staff_member_required
 def admin_order_detail(request, order_id):
@@ -59,4 +79,10 @@ def admin_order_pdf(request, order_id):
     response = HttpResponse(content_type='application/pdf')
     response['Content-Disposition'] = 'filename=order_{}.pdf"'.format(order.id)
     weasyprint.HTML(string=html,  base_url=request.build_absolute_uri() ).write_pdf(response,stylesheets=[weasyprint.CSS('staticfiles/css/pdf.css')], presentational_hints=True)
+    return response
+
+@staff_member_required
+def admin_order_phone(request, order_id):
+    order = get_object_or_404(Order, id=order_id)
+    response['Content-Disposition'] = '{}'.format(order.phone)
     return response

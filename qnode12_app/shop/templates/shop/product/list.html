@@ -87,11 +87,11 @@
                       <!-- blog media end -->
                       <div class="blog-text fl-wrap">
                           <div class="pr-tags fl-wrap">
-                              <span>{% trans "Description" %} : </span>
+                            <a href="{{ c.detail.url }}" >   <span>{% trans "Description" %} :  <i class="fal fa-solid fa-file"></i></span></a>
                           </div>
-                          <p>
-                             {{c.description}}
-                          </p>
+                          <h2>
+                           
+                          </h2>
                          
                           <a href="{{ product.get_absolute_url }}" class="btn float-btn flat-btn">Read more </a>
                           {% endfor %}

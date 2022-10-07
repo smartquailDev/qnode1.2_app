@@ -2,8 +2,12 @@ from django import forms
 from .models import Order
 from phonenumber_field.formfields import PhoneNumberField
 from phonenumber_field.widgets import PhoneNumberPrefixWidget
-from .widget import DatePickerInput, TimePickerInput, DateTimePickerInput
+from .widget import DatePickerInput, TimePickerInput,  DateTimePickerInput
+from bootstrap_datepicker_plus.widgets import DatePickerInput, TimePickerInput , MonthPickerInput, YearPickerInput
 
+
+class MyDatePickerInput(DatePickerInput):
+    template_name = 'orders/order/date-picker.html'
 
 
 class OrderCreateForm(forms.ModelForm):
@@ -42,10 +46,26 @@ class OrderCreateForm(forms.ModelForm):
             ],
         ), help_text="Choice you local country extension number"
     )
+
     class Meta:
         model = Order
-        fields = ['first_name', 'last_name', 'email','phone','arrival','departure','agree_term']
+        fields = ['first_name', 'last_name', 'email','phone','arrival_date_time','departure_date_time','agree_term']
         widgets = {
-            'arrival' : DateTimePickerInput(),
-            'departure' : DateTimePickerInput(),
+            'arrival_date_time':  DateTimePickerInput(format='%m/%d%Y:H'),
+            'departure_date_time':  DateTimePickerInput(format='%m/%d%Y:H'),
+        #    'end_departure_date':  DateTimePickerInput(options={
+        #            "format": "MM/DD/YYYY",
+        #            "locale": "ec",
+        #        }).end_of('event days'),
+        #    'start_arrival_time': DateTimePickerInput().start_of('party time'),
+        #    'end_departure_time': DateTimePickerInput(options={
+        #            "format": "MM/DD/YYYY", # moment date-time format
+        #            "showClose": True,
+        #            "showClear": True,
+        #            "showTodayButton": True,
+        #        }).end_of('party time'),
         }
+       # widgets = {
+       #     'arrival' : DateTimePickerInput(),
+       #     'departure' : DateTimePickerInput(),
+       # }

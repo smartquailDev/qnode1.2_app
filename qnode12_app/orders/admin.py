@@ -5,6 +5,8 @@ from django.http import HttpResponse
 from .models import Order, OrderItem
 from django.urls import reverse
 from django.utils.safestring import mark_safe
+from django.db.models import Count
+from django.views.generic import ListView
 
 def order_detail(obj):
     return mark_safe('<a href="{}">View</a>'.format(
@@ -37,6 +39,7 @@ export_to_csv.short_description = 'Export to CSV'
 class OrderItemInline(admin.TabularInline):
     model = OrderItem
     raw_id_fields = ['product']
+    readonly_fields = ['price','quantity','order','product']
 
 
 def order_pdf(obj):
@@ -44,12 +47,36 @@ def order_pdf(obj):
         reverse('orders:admin_order_pdf', args=[obj.id])))
 order_pdf.short_description = 'Invoice'
 
+def whatsapp(obj):
+     return mark_safe('<a href="https://api.whatsapp.com/send?phone={}"><i><i class="fa fa-phone"></i></a>'.format(obj.phone))
+whatsapp.short_description = 'Send Mail'
+
+def email(obj):
+     return mark_safe('<a href="mailto:{}" target="_blank" ><i class="fa fa-envelope"></i></a>'.format(obj.email))
+whatsapp.short_description = 'Whatsapp'
+
+
+class OrderListView(ListView):
+    paginate_by = 2
+    model = Order
+
 
 @admin.register(Order)
 class OrderAdmin(admin.ModelAdmin):
-    list_display = ['id', 'first_name', 'last_name', 'email',
-                    'address', 'postal_code', 'city', 'paid',
-                    'created', 'updated', order_detail, order_pdf]
-    list_filter = ['paid', 'created', 'updated']
+    list_display = [ 'full_name', 
+                    'arrival_date_time','departure_date_time', 'paid','total_cost',
+                   email,whatsapp ]
+    list_filter = ['arrival_date_time','departure_date_time','paid', 'created', 'updated']
+    date_hierarchy = 'arrival_date_time'
+    readonly_fields = ['first_name','last_name','arrival_date_time','departure_date_time','paid','email','total','discount','agree_term','coupon','braintree_id']
+    list_per_page = 10
     inlines = [OrderItemInline]
     actions = [export_to_csv]
+
+    def total_cost(self, obj):
+        return obj.total
+
+    def get_queryset(self, request):
+        queryset = super().get_queryset(request)
+        queryset = queryset.annotate(total_cost=Count("total"))
+        return queryset

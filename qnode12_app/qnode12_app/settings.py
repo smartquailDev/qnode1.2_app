@@ -105,8 +105,13 @@ INSTALLED_APPS = [
     'wagtail_localize.locales',
     'localflavor',
     'parler',
+    'jquery',
     'phone_field',
     'phonenumber_field',
+    'bootstrap5',
+    "bootstrap4",
+    'bootstrap_datepicker_plus',
+
     'baton.autodiscover', 
       
 ]
