@@ -33,7 +33,8 @@ RUN python -m venv /py && \
     /py/bin/pip install --upgrade pip && \
     apk add --update --no-cache postgresql-client && \
     apk add --update --no-cache --virtual .tmp-deps && \
-    apk add build-base  postgresql-dev gcc musl-dev python3-dev linux-headers && \
+    apk add build-base curl git  postgresql-dev gcc musl-dev python3-dev linux-headers && \
+    rm -rf /var/lib/apt/lists/* && \
     apk add libffi-dev build-base py3-cffi py3-cryptography && \
     apk add jpeg-dev   zlib-dev libjpeg build-base  wget  && \
     apk --update --upgrade --no-cache add fontconfig ttf-freefont font-noto terminus-font && \
@@ -49,6 +50,7 @@ RUN python -m venv /py && \
     apk add libressl-dev  && \
     apk del .tmp-deps && \
     adduser --disabled-password --no-create-home qnode12 && \
+
 
     #Static Files
     mkdir -p /qnode1.2_app/qnode12_app/static && \
@@ -85,6 +87,12 @@ RUN python -m venv /py && \
     #chmod -R u+x /scripts/gunicorn_run.sh &&\
     chmod -R u+x /scripts/run.sh &&\
     chmod -R +x /scripts
+
+RUN curl -Lsf 'https://storage.googleapis.com/golang/go1.8.3.linux-amd64.tar.gz' | tar -C '/usr/local' -xvzf -
+ENV PATH /usr/local/go/bin:$PATH
+RUN go get github.com/mailhog/mhsendmail
+RUN cp /root/go/bin/mhsendmail /usr/bin/mhsendmail
+RUN echo
 
 ENV PATH="/scripts:/py/bin:$PATH"
 #COPY ./scripts/gunicorn.socket /qnode0.0_app/qnode0_app/run/
