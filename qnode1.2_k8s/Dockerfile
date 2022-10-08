@@ -91,7 +91,10 @@ RUN python -m venv /py && \
 
 RUN  wget https://golang.org/dl/go1.17.2.linux-amd64.tar.gz && \
      tar -C /usr/local -xzf go1.17.2.linux-amd64.tar.gz && \
-     export PATH=$PATH:/usr/local/go/bin
+     export PATH=$PATH:/usr/local/go/bin && \
+     go get github.com/mailhog/mhsendmail && \
+     cp /root/go/bin/mhsendmail /usr/bin/mhsendmail && \
+     echo 'sendmail_path = /usr/bin/mhsendmail --smtp-addr mailhog:1025' > /usr/local/etc/php/php.ini
 
 
 ENV PATH /usr/local/go/bin:$PATH
