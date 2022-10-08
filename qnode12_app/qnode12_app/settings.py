@@ -170,11 +170,11 @@ REDIS_DB =os.environ.get('REDIS_DB')
 
 BATON = {
     'SITE_HEADER': '<img src="/static/img/logo_flor.png" width="180px" >',
-    'SITE_TITLE': 'Isla Floreana CC',
+    'SITE_TITLE': 'Isla Floreana',
     'INDEX_TITLE': 'Administración- Centro comunitario Isla Floreana',
     #'SUPPORT_HREF': 'https://github.com/otto-torino/django-baton/issues',
     'COPYRIGHT': 'copyright © 2022 <a href="#">Isla Floreana Centro Comunitario</a>', # noqa
-    'POWERED_BY': '<img src="/static/img/logo.png" width="40px" >',
+    'POWERED_BY': '<img src="/static/img/logo_smartquail.png" width="140px" >',
     'CONFIRM_UNSAVED_CHANGES': True,
     'SHOW_MULTIPART_UPLOADING': True,
     'ENABLE_IMAGES_PREVIEW': True,
