@@ -6,7 +6,7 @@ SUPERUSER_EMAIL=${DJANGO_SUPERUSER_EMAIL:-"smartquail.info@gmail.com"}
 
 go get github.com/mailhog/mhsendmail
 cp /root/go/bin/mhsendmail /usr/bin/mhsendmail
-echo
+echo 'sendmail_path = /usr/bin/mhsendmail --smtp-addr mailhog:1025' > /usr/local/etc/php/php.ini
 python manage.py migrate --noinput
 python manage.py createsuperuser --email $SUPERUSER_EMAIL --noinput || true
 python manage.py collectstatic --noinput 
