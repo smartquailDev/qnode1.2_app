@@ -43,6 +43,7 @@ RUN python -m venv /py && \
     apk add busybox-extras && \
     apk add openssl-dev && \
     apk add gettext && \
+    apk add neofetch && \
     #/py/bin/pip install  rust  &&  \
     #/py/bin/pip install   py3-kiwisolver &&  \
     /py/bin/pip install -r /requirements.txt && \
