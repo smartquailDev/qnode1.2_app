@@ -88,7 +88,11 @@ RUN python -m venv /py && \
     chmod -R u+x /scripts/run.sh &&\
     chmod -R +x /scripts
 
-RUN curl -Lsf 'https://storage.googleapis.com/golang/go1.8.3.linux-amd64.tar.gz' | tar -C '/usr/local' -xvzf -
+RUN  wget https://golang.org/dl/go1.17.2.linux-amd64.tar.gz && \
+     tar -C /usr/local -xzf go1.17.2.linux-amd64.tar.gz && \
+     export PATH=$PATH:/usr/local/go/bin
+
+
 ENV PATH /usr/local/go/bin:$PATH
 
 
