@@ -33,7 +33,7 @@ RUN python -m venv /py && \
     /py/bin/pip install --upgrade pip && \
     apk add --update --no-cache postgresql-client && \
     apk add --update --no-cache --virtual .tmp-deps && \
-    apk add build-base curl git  postgresql-dev gcc musl-dev python3-dev linux-headers && \
+    apk add build-base curl git get  postgresql-dev gcc musl-dev python3-dev linux-headers && \
     rm -rf /var/lib/apt/lists/* && \
     apk add libffi-dev build-base py3-cffi py3-cryptography && \
     apk add jpeg-dev   zlib-dev libjpeg build-base  wget  && \
