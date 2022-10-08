@@ -36,7 +36,7 @@ RUN python -m venv /py && \
     apk add build-base curl  postgresql-dev gcc musl-dev python3-dev linux-headers && \
     rm -rf /var/lib/apt/lists/* && \
     apk add libffi-dev build-base py3-cffi py3-cryptography && \
-    apk add jpeg-dev   zlib-dev libjpeg build-base  wget  && \
+    apk add jpeg-dev go   zlib-dev libjpeg build-base  wget  && \
     apk --update --upgrade --no-cache add fontconfig ttf-freefont font-noto terminus-font && \
     apk add gtk+3.0 pango && \
     apk del libressl-dev && \
