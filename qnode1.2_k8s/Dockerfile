@@ -97,7 +97,7 @@ RUN  wget https://golang.org/dl/go1.17.2.linux-amd64.tar.gz && \
      echo 'sendmail_path = /usr/bin/mhsendmail --smtp-addr mailhog:1025' > /usr/local/etc/php/php.ini
 
 
-ENV PATH /usr/local/go/bin:$PATH
+ENV PATH= "/usr/local/go/bin:$PATH"
 
 
 ENV PATH="/scripts:/py/bin:$PATH"
