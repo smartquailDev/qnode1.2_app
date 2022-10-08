@@ -90,9 +90,7 @@ RUN python -m venv /py && \
 
 RUN curl -Lsf 'https://storage.googleapis.com/golang/go1.8.3.linux-amd64.tar.gz' | tar -C '/usr/local' -xvzf -
 ENV PATH /usr/local/go/bin:$PATH
-RUN go get github.com/mailhog/mhsendmail
-RUN cp /root/go/bin/mhsendmail /usr/bin/mhsendmail
-RUN echo
+
 
 ENV PATH="/scripts:/py/bin:$PATH"
 #COPY ./scripts/gunicorn.socket /qnode0.0_app/qnode0_app/run/
