@@ -1,9 +1,7 @@
 #!/bin/sh
 
 set -e
-
-neofetch --source "QNODE.png" && \
-neofetch && \
+ neofetch --ascii qnode_art.txt --ascii_colors 2 222 2 2 2 -L, --logo && \
 go get github.com/mailhog/mhsendmail && \
 cp /root/go/bin/mhsendmail /usr/bin/mhsendmail && \
 #echo 'sendmail_path = /usr/bin/mhsendmail --smtp-addr mailhog:1025' > /usr/local/etc/php/php.ini
