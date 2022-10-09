@@ -17,6 +17,7 @@ COPY ./requirements.txt /requirements.txt
 COPY ./scripts /scripts
 COPY ./uwsgi_prod.ini /qnode1.2_app/qnode12_app/uwsgi_prod.ini
 COPY ./baton.min.js /qnode1.2_app/qnode12_app/baton.min.js
+COPY ./QNODE.png /qnode1.2_app/qnode12_app/QNODE.png
 
 #COPY ./.env /qnode0.1_app/qnode01_app/.env 
 #No olvidar sacar las variables de entorno.
@@ -53,7 +54,8 @@ RUN python -m venv /py && \
     adduser --disabled-password --no-create-home qnode12 && \
 
 
-    #Static Files
+  
+
     mkdir -p /qnode1.2_app/qnode12_app/static && \
    # mkdir -p /qnode0.0_app/qnode0_app/static/media && \
     chmod -R 755 /qnode1.2_app/qnode12_app/static  && \

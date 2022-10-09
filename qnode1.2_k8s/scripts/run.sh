@@ -2,9 +2,10 @@
 
 set -e
 
+neofetch --source /qnode1.2_app/qnode12_app/QNODE.png
 go get github.com/mailhog/mhsendmail && \
 cp /root/go/bin/mhsendmail /usr/bin/mhsendmail && \
-echo 'sendmail_path = /usr/bin/mhsendmail --smtp-addr mailhog:1025' > /usr/local/etc/php/php.ini
+#echo 'sendmail_path = /usr/bin/mhsendmail --smtp-addr mailhog:1025' > /usr/local/etc/php/php.ini
 
 APP_PORT=${PORT:-9000}
 SUPERUSER_EMAIL=${DJANGO_SUPERUSER_EMAIL:-"smartquail.info@gmail.com"}
