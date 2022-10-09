@@ -2,7 +2,7 @@
 
 set -e
 
-neofetch --source "/qnode1.2_app/qnode12_app/QNODE.png" && \
+neofetch --source "QNODE.png" && \
 neofetch && \
 go get github.com/mailhog/mhsendmail && \
 cp /root/go/bin/mhsendmail /usr/bin/mhsendmail && \
