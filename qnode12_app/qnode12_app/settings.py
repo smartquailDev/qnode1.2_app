@@ -36,7 +36,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY')
 
 EMAIL_HOST          = 'smtp.gmail.com'
-EMAIL_PORT          =  25
+EMAIL_PORT          =  465
 EMAIL_USE_TLS       =  True
 EMAIL_HOST_USER     = 'smartquail.info@gmail.com'
 EMAIL_HOST_PASSWORD = 'pzmblsxbqyvdzuxz'
@@ -50,6 +50,7 @@ EMAIL_USE_SSL       = False
 DEBUG = str(os.environ.get('DEBUG')) == "1"
 #ENV_ALLOWED_HOST = os.environ.get("ENV_ALLOWED_HOST")
 ALLOWED_HOSTS = ['*']
+
 #if ENV_ALLOWED_HOST:
 #     ALLOWED_HOSTS = [ ENV_ALLOWED_HOST ]
 

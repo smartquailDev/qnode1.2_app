@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-08-22 18:58-0500\n"
+"POT-Creation-Date: 2022-10-11 22:14-0500\n"
 "PO-Revision-Date: 2022-08-23 00:43+0000\n"
 "Last-Translator:   <fghdf@kjhjk.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -19,193 +19,225 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Translated-Using: django-rosetta 0.9.8\n"
 
-#: templates/webapp_v10/charms_header.html:40
-#: templates/webapp_v10/contacts_header.html:40
-#: templates/webapp_v10/environs_header.html:40
-#: templates/webapp_v10/home_header.html:19
-#: templates/webapp_v10/host_header.html:20
-#: templates/webapp_v10/hosts_header.html:20
-#: templates/webapp_v10/worlds_header.html:20
+#: webapp_v10/templates/webapp_v10/charms_header.html:40
+#: webapp_v10/templates/webapp_v10/contacts_header.html:40
+#: webapp_v10/templates/webapp_v10/environs_header.html:40
+#: webapp_v10/templates/webapp_v10/home_header.html:19
+#: webapp_v10/templates/webapp_v10/host_header.html:20
+#: webapp_v10/templates/webapp_v10/hosts_header.html:20
+#: webapp_v10/templates/webapp_v10/worlds_header.html:20
 msgid "Share"
 msgstr ""
 
-#: templates/webapp_v10/charms_header.html:52
-#: templates/webapp_v10/contacts_header.html:52
-#: templates/webapp_v10/environs_header.html:52
-#: templates/webapp_v10/home_header.html:31
-#: templates/webapp_v10/host_header.html:32
-#: templates/webapp_v10/hosts_header.html:32
-#: templates/webapp_v10/story_header.html:52
-#: templates/webapp_v10/worlds_header.html:32
+#: webapp_v10/templates/webapp_v10/charms_header.html:52
+#: webapp_v10/templates/webapp_v10/contacts_header.html:52
+#: webapp_v10/templates/webapp_v10/environs_header.html:52
+#: webapp_v10/templates/webapp_v10/home_header.html:31
+#: webapp_v10/templates/webapp_v10/host_header.html:32
+#: webapp_v10/templates/webapp_v10/hosts_header.html:32
+#: webapp_v10/templates/webapp_v10/story_header.html:52
+#: webapp_v10/templates/webapp_v10/worlds_header.html:32
 msgid "The Island"
 msgstr "The Island"
 
-#: templates/webapp_v10/charms_header.html:55
-#: templates/webapp_v10/contacts_header.html:55
-#: templates/webapp_v10/environs_header.html:55
-#: templates/webapp_v10/home_header.html:34
-#: templates/webapp_v10/host_header.html:35
-#: templates/webapp_v10/hosts_header.html:35
-#: templates/webapp_v10/story_header.html:55
-#: templates/webapp_v10/worlds_header.html:35
+#: webapp_v10/templates/webapp_v10/charms_header.html:55
+#: webapp_v10/templates/webapp_v10/contacts_header.html:55
+#: webapp_v10/templates/webapp_v10/environs_header.html:55
+#: webapp_v10/templates/webapp_v10/home_header.html:34
+#: webapp_v10/templates/webapp_v10/host_header.html:35
+#: webapp_v10/templates/webapp_v10/hosts_header.html:35
+#: webapp_v10/templates/webapp_v10/story_header.html:55
+#: webapp_v10/templates/webapp_v10/worlds_header.html:35
 msgid "Charms"
 msgstr ""
 
-#: templates/webapp_v10/charms_header.html:58
-#: templates/webapp_v10/contacts_header.html:58
-#: templates/webapp_v10/environs_header.html:58
-#: templates/webapp_v10/home_header.html:37
-#: templates/webapp_v10/host_header.html:38
-#: templates/webapp_v10/hosts_header.html:38
-#: templates/webapp_v10/story_header.html:58
-#: templates/webapp_v10/worlds_header.html:38
+#: webapp_v10/templates/webapp_v10/charms_header.html:58
+#: webapp_v10/templates/webapp_v10/contacts_header.html:58
+#: webapp_v10/templates/webapp_v10/environs_header.html:58
+#: webapp_v10/templates/webapp_v10/home_header.html:37
+#: webapp_v10/templates/webapp_v10/host_header.html:38
+#: webapp_v10/templates/webapp_v10/hosts_header.html:38
+#: webapp_v10/templates/webapp_v10/story_header.html:58
+#: webapp_v10/templates/webapp_v10/worlds_header.html:38
 msgid "Worlds"
 msgstr ""
 
-#: templates/webapp_v10/charms_header.html:60
-#: templates/webapp_v10/contacts_header.html:60
-#: templates/webapp_v10/environs_header.html:60
-#: templates/webapp_v10/home_header.html:39
-#: templates/webapp_v10/host_header.html:40
-#: templates/webapp_v10/hosts_header.html:40
-#: templates/webapp_v10/story_header.html:60
-#: templates/webapp_v10/worlds_header.html:40
-msgid "Natural Environ"
+#: webapp_v10/templates/webapp_v10/charms_header.html:60
+#: webapp_v10/templates/webapp_v10/contacts_header.html:60
+#: webapp_v10/templates/webapp_v10/environs_header.html:60
+#: webapp_v10/templates/webapp_v10/home_header.html:39
+#: webapp_v10/templates/webapp_v10/host_header.html:40
+#: webapp_v10/templates/webapp_v10/hosts_header.html:40
+#: webapp_v10/templates/webapp_v10/story_header.html:60
+#: webapp_v10/templates/webapp_v10/worlds_header.html:40
+msgid "Natural Environment"
 msgstr ""
 
-#: templates/webapp_v10/charms_header.html:61
-#: templates/webapp_v10/contacts_header.html:61
-#: templates/webapp_v10/environs_header.html:61
-#: templates/webapp_v10/home_header.html:40
-#: templates/webapp_v10/host_header.html:41
-#: templates/webapp_v10/hosts_header.html:41
-#: templates/webapp_v10/story_header.html:61
-#: templates/webapp_v10/worlds_header.html:41
-msgid "Geological Environ"
+#: webapp_v10/templates/webapp_v10/charms_header.html:61
+#: webapp_v10/templates/webapp_v10/contacts_header.html:61
+#: webapp_v10/templates/webapp_v10/environs_header.html:61
+#: webapp_v10/templates/webapp_v10/home_header.html:40
+#: webapp_v10/templates/webapp_v10/host_header.html:41
+#: webapp_v10/templates/webapp_v10/hosts_header.html:41
+#: webapp_v10/templates/webapp_v10/story_header.html:61
+#: webapp_v10/templates/webapp_v10/worlds_header.html:41
+msgid "Geological Environment"
 msgstr ""
 
-#: templates/webapp_v10/charms_header.html:62
-#: templates/webapp_v10/contacts_header.html:62
-#: templates/webapp_v10/environs_header.html:62
-#: templates/webapp_v10/home_header.html:41
-#: templates/webapp_v10/host_header.html:42
-#: templates/webapp_v10/hosts_header.html:42
-#: templates/webapp_v10/story_header.html:62
-#: templates/webapp_v10/worlds_header.html:42
-msgid "Marine Environ"
+#: webapp_v10/templates/webapp_v10/charms_header.html:62
+#: webapp_v10/templates/webapp_v10/contacts_header.html:62
+#: webapp_v10/templates/webapp_v10/environs_header.html:62
+#: webapp_v10/templates/webapp_v10/home_header.html:41
+#: webapp_v10/templates/webapp_v10/host_header.html:42
+#: webapp_v10/templates/webapp_v10/hosts_header.html:42
+#: webapp_v10/templates/webapp_v10/story_header.html:62
+#: webapp_v10/templates/webapp_v10/worlds_header.html:42
+msgid "Marine Environment"
 msgstr ""
 
-#: templates/webapp_v10/charms_header.html:63
-#: templates/webapp_v10/contacts_header.html:63
-#: templates/webapp_v10/environs_header.html:63
-#: templates/webapp_v10/home_header.html:42
-#: templates/webapp_v10/host_header.html:43
-#: templates/webapp_v10/hosts_header.html:43
-#: templates/webapp_v10/story_header.html:63
-#: templates/webapp_v10/worlds_header.html:43
-msgid "Community Environ"
+#: webapp_v10/templates/webapp_v10/charms_header.html:63
+#: webapp_v10/templates/webapp_v10/contacts_header.html:63
+#: webapp_v10/templates/webapp_v10/environs_header.html:63
+#: webapp_v10/templates/webapp_v10/home_header.html:42
+#: webapp_v10/templates/webapp_v10/host_header.html:43
+#: webapp_v10/templates/webapp_v10/hosts_header.html:43
+#: webapp_v10/templates/webapp_v10/story_header.html:63
+#: webapp_v10/templates/webapp_v10/worlds_header.html:43
+msgid "Community Environment"
 msgstr ""
 
-#: templates/webapp_v10/charms_header.html:68
-#: templates/webapp_v10/contacts_header.html:68
-#: templates/webapp_v10/environs_header.html:68
-#: templates/webapp_v10/home_header.html:47
-#: templates/webapp_v10/host_header.html:48
-#: templates/webapp_v10/hosts_header.html:48
-#: templates/webapp_v10/story_header.html:68
-#: templates/webapp_v10/worlds_header.html:48
+#: webapp_v10/templates/webapp_v10/charms_header.html:68
+#: webapp_v10/templates/webapp_v10/contacts_header.html:68
+#: webapp_v10/templates/webapp_v10/environs_header.html:68
+#: webapp_v10/templates/webapp_v10/home_header.html:47
+#: webapp_v10/templates/webapp_v10/host_header.html:48
+#: webapp_v10/templates/webapp_v10/hosts_header.html:48
+#: webapp_v10/templates/webapp_v10/story_header.html:68
+#: webapp_v10/templates/webapp_v10/worlds_header.html:48
 msgid "Hosts"
 msgstr ""
 
-#: templates/webapp_v10/charms_header.html:71
-#: templates/webapp_v10/contacts_header.html:71
-#: templates/webapp_v10/environs_header.html:71
-#: templates/webapp_v10/home_header.html:50
-#: templates/webapp_v10/host_header.html:51
-#: templates/webapp_v10/hosts_header.html:51
-#: templates/webapp_v10/story_header.html:71
-#: templates/webapp_v10/worlds_header.html:51
+#: webapp_v10/templates/webapp_v10/charms_header.html:71
+#: webapp_v10/templates/webapp_v10/contacts_header.html:71
+#: webapp_v10/templates/webapp_v10/environs_header.html:71
+#: webapp_v10/templates/webapp_v10/home_header.html:50
+#: webapp_v10/templates/webapp_v10/host_header.html:51
+#: webapp_v10/templates/webapp_v10/hosts_header.html:51
+#: webapp_v10/templates/webapp_v10/story_header.html:71
+#: webapp_v10/templates/webapp_v10/worlds_header.html:51
 msgid "Expeditions"
 msgstr ""
 
-#: templates/webapp_v10/charms_header.html:74
-#: templates/webapp_v10/contacts_header.html:74
-#: templates/webapp_v10/environs_header.html:74
-#: templates/webapp_v10/home_header.html:53
-#: templates/webapp_v10/host_header.html:54
-#: templates/webapp_v10/hosts_header.html:54
-#: templates/webapp_v10/story_header.html:74
-#: templates/webapp_v10/worlds_header.html:54
+#: webapp_v10/templates/webapp_v10/charms_header.html:74
+#: webapp_v10/templates/webapp_v10/contacts_header.html:74
+#: webapp_v10/templates/webapp_v10/environs_header.html:74
+#: webapp_v10/templates/webapp_v10/home_header.html:53
+#: webapp_v10/templates/webapp_v10/host_header.html:54
+#: webapp_v10/templates/webapp_v10/hosts_header.html:54
+#: webapp_v10/templates/webapp_v10/story_header.html:74
+#: webapp_v10/templates/webapp_v10/worlds_header.html:54
 msgid "Contacts"
 msgstr ""
 
-#: templates/webapp_v10/charms_header.html:77
-#: templates/webapp_v10/contacts_header.html:77
-#: templates/webapp_v10/environs_header.html:77
-#: templates/webapp_v10/home_header.html:56
-#: templates/webapp_v10/host_header.html:57
-#: templates/webapp_v10/hosts_header.html:57
-#: templates/webapp_v10/story_header.html:77
-#: templates/webapp_v10/worlds_header.html:57
+#: webapp_v10/templates/webapp_v10/charms_header.html:77
+#: webapp_v10/templates/webapp_v10/contacts_header.html:77
+#: webapp_v10/templates/webapp_v10/environs_header.html:77
+#: webapp_v10/templates/webapp_v10/home_header.html:56
+#: webapp_v10/templates/webapp_v10/host_header.html:57
+#: webapp_v10/templates/webapp_v10/hosts_header.html:57
+#: webapp_v10/templates/webapp_v10/story_header.html:77
+#: webapp_v10/templates/webapp_v10/worlds_header.html:57
 msgid "Lenguage"
 msgstr ""
 
-#: templates/webapp_v10/contacts.html:40
-msgid "Details"
+#: webapp_v10/templates/webapp_v10/contacts.html:41
+msgid "About Us"
 msgstr ""
 
-#: templates/webapp_v10/contacts.html:41 templates/webapp_v10/contacts.html:73
-msgid "Location"
+#: webapp_v10/templates/webapp_v10/contacts.html:42
+msgid "Information"
 msgstr ""
 
-#: templates/webapp_v10/contacts.html:42
+#: webapp_v10/templates/webapp_v10/contacts.html:43
 msgid "Commments"
 msgstr ""
 
-#: templates/webapp_v10/contacts.html:51
+#: webapp_v10/templates/webapp_v10/contacts.html:78
+msgid "About us"
+msgstr ""
+
+#: webapp_v10/templates/webapp_v10/contacts.html:90
+msgid "ACCOMODATIONS"
+msgstr ""
+
+#: webapp_v10/templates/webapp_v10/contacts.html:102
+msgid "Restaurants"
+msgstr ""
+
+#: webapp_v10/templates/webapp_v10/contacts.html:120
 msgid "Contact Information"
 msgstr ""
 
-#: templates/webapp_v10/contacts.html:57
+#: webapp_v10/templates/webapp_v10/contacts.html:126
 msgid "Mail"
 msgstr ""
 
-#: templates/webapp_v10/contacts.html:58
+#: webapp_v10/templates/webapp_v10/contacts.html:127
 msgid "Adress"
 msgstr ""
 
-#: templates/webapp_v10/contacts.html:59
+#: webapp_v10/templates/webapp_v10/contacts.html:128
 msgid "Phone"
 msgstr ""
 
-#: templates/webapp_v10/contacts.html:62
+#: webapp_v10/templates/webapp_v10/contacts.html:131
 msgid " Make your comments "
 msgstr ""
 
-#: templates/webapp_v10/contacts.html:91
+#: webapp_v10/templates/webapp_v10/contacts.html:144
 msgid "Make your comments"
 msgstr ""
 
-#: templates/webapp_v10/home.html:21
-msgid "Follow"
+#: webapp_v10/templates/webapp_v10/history.html:38
+#, fuzzy
+#| msgid "The Island"
+msgid "The Island "
+msgstr "The Island"
+
+#: webapp_v10/templates/webapp_v10/history.html:74
+msgid "Our Story"
 msgstr ""
 
-#: templates/webapp_v10/home.html:69 templates/webapp_v10/home.html:84
-#: templates/webapp_v10/home.html:99 templates/webapp_v10/home.html:114
-#: templates/webapp_v10/home.html:129 templates/webapp_v10/home.html:144
+#: webapp_v10/templates/webapp_v10/home.html:21
+msgid "Contact us"
+msgstr ""
+
+#: webapp_v10/templates/webapp_v10/home.html:77
+#: webapp_v10/templates/webapp_v10/home.html:92
+#: webapp_v10/templates/webapp_v10/home.html:107
+#: webapp_v10/templates/webapp_v10/home.html:122
+#: webapp_v10/templates/webapp_v10/home.html:137
+#: webapp_v10/templates/webapp_v10/home.html:152
 msgid "Explore "
 msgstr ""
 
-#: templates/webapp_v10/host.html:45
+#: webapp_v10/templates/webapp_v10/host.html:45
 msgid "My Little Story"
 msgstr ""
 
-#: templates/webapp_v10/hosts.html:38 templates/webapp_v10/hosts.html:53
-#: templates/webapp_v10/hosts.html:68 templates/webapp_v10/hosts.html:83
-msgid "Conoce mi historia "
+#: webapp_v10/templates/webapp_v10/hosts.html:38
+msgid "Meet my story"
 msgstr ""
 
-#: templates/webapp_v10/worlds.html:38 templates/webapp_v10/worlds.html:53
-#: templates/webapp_v10/worlds.html:68 templates/webapp_v10/worlds.html:83
-msgid "Descubrir"
+#: webapp_v10/templates/webapp_v10/hosts.html:53
+#: webapp_v10/templates/webapp_v10/hosts.html:68
+#: webapp_v10/templates/webapp_v10/hosts.html:83
+msgid "Meet my story "
+msgstr ""
+
+#: webapp_v10/templates/webapp_v10/worlds.html:38
+#: webapp_v10/templates/webapp_v10/worlds.html:53
+#: webapp_v10/templates/webapp_v10/worlds.html:68
+#: webapp_v10/templates/webapp_v10/worlds.html:83
+msgid "Discover"
 msgstr ""

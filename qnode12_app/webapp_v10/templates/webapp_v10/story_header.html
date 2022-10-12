@@ -18,9 +18,9 @@
     <!--=============== css  ===============-->	
     <link type="text/css" rel="stylesheet" href="{% static 'css/reset_2.css' %}">
     <link type="text/css" rel="stylesheet" href="{% static 'css/plugins.css' %}">
-    <link type="text/css" rel="stylesheet" href="{% static 'css/style_2.css' %}">
+    <link type="text/css" rel="stylesheet" href="{% static 'css/style_4.css' %}">
     <!--=============== favicons ===============-->
-    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="shortcut icon" href="{% static 'img/favicon.ico' %}">
 </head>
 
 
@@ -38,7 +38,7 @@
     
    
     <div class="share-btn showshare"><i class="fal fa-share"></i><span>Share</span></div>
-    <div class="share-btn"><a href="{% url 'shop:product_list' %}"><i class="fal fa-shopping-cart"></i></a><span>Cart</span></div>
+    <div class="share-btn"><a href="{% url 'shop:cart_list' %}"><i class="fal fa-shopping-cart"></i></a><span>Cart</span></div>
     <!-- mobile nav -->
     <div class="nav-button-wrap">
         <div class="nav-button"><span></span><span></span><span></span></div>
