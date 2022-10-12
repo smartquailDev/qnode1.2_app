@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-10-11 22:14-0500\n"
-"PO-Revision-Date: 2022-10-11 22:16-0519\n"
+"POT-Creation-Date: 2022-10-11 22:20-0500\n"
+"PO-Revision-Date: 2022-10-11 22:24-0519\n"
 "Last-Translator: Mau Silva <smartquail.dev@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
@@ -335,6 +335,10 @@ msgstr "Número de personas en el tour"
 #: shop/templates/shop/product/detail.html:136
 msgid "Add a cart"
 msgstr "Agregar al carro de reservas"
+
+#: shop/templates/shop/product/list.html:32
+msgid "GET THE MOST OUT OF FLOREANA"
+msgstr "Aprovecha Floreana al máximo"
 
 #: shop/templates/shop/product/list.html:73
 msgid "Description"
