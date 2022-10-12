@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-10-11 22:20-0500\n"
+"POT-Creation-Date: 2022-10-11 22:58-0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -197,15 +197,6 @@ msgstr ""
 #: orders/templates/orders/order/created.html:5
 #: orders/templates/orders/order/created.html:9
 msgid "Thank you"
-msgstr ""
-
-#: orders/templates/orders/order/created.html:10
-#, python-format
-msgid ""
-"\n"
-"    <p>Your order has been successfully completed. Your order number is "
-"<strong>%(order_id)s</strong>.</p>\n"
-"  "
 msgstr ""
 
 #: orders/templates/orders/order/term.html:80

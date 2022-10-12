@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-10-11 22:20-0500\n"
+"POT-Creation-Date: 2022-10-11 22:58-0500\n"
 "PO-Revision-Date: 2022-08-23 00:43+0000\n"
 "Last-Translator:   <fghdf@kjhjk.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -166,35 +166,39 @@ msgstr ""
 msgid "About us"
 msgstr ""
 
-#: webapp_v10/templates/webapp_v10/contacts.html:90
+#: webapp_v10/templates/webapp_v10/contacts.html:87
+msgid "About the location"
+msgstr ""
+
+#: webapp_v10/templates/webapp_v10/contacts.html:99
 msgid "ACCOMODATIONS"
 msgstr ""
 
-#: webapp_v10/templates/webapp_v10/contacts.html:102
+#: webapp_v10/templates/webapp_v10/contacts.html:111
 msgid "Restaurants"
 msgstr ""
 
-#: webapp_v10/templates/webapp_v10/contacts.html:120
+#: webapp_v10/templates/webapp_v10/contacts.html:129
 msgid "Contact Information"
 msgstr ""
 
-#: webapp_v10/templates/webapp_v10/contacts.html:126
+#: webapp_v10/templates/webapp_v10/contacts.html:135
 msgid "Mail"
 msgstr ""
 
-#: webapp_v10/templates/webapp_v10/contacts.html:127
+#: webapp_v10/templates/webapp_v10/contacts.html:136
 msgid "Adress"
 msgstr ""
 
-#: webapp_v10/templates/webapp_v10/contacts.html:128
+#: webapp_v10/templates/webapp_v10/contacts.html:137
 msgid "Phone"
 msgstr ""
 
-#: webapp_v10/templates/webapp_v10/contacts.html:131
+#: webapp_v10/templates/webapp_v10/contacts.html:140
 msgid " Make your comments "
 msgstr ""
 
-#: webapp_v10/templates/webapp_v10/contacts.html:144
+#: webapp_v10/templates/webapp_v10/contacts.html:153
 msgid "Make your comments"
 msgstr ""
 
