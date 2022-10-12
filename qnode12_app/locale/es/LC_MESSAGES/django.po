@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-10-11 22:20-0500\n"
-"PO-Revision-Date: 2022-10-11 22:24-0519\n"
+"PO-Revision-Date: 2022-10-11 22:26-0519\n"
 "Last-Translator: Mau Silva <smartquail.dev@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
@@ -300,7 +300,7 @@ msgstr ""
 #: shop/templates/shop/product/cart_list.html:55
 #: shop/templates/shop/product/cart_list.html:66
 msgid "Your"
-msgstr "Tus"
+msgstr "Tu"
 
 #: shop/templates/shop/product/cart_list.html:55
 msgid "reservation shopping"
