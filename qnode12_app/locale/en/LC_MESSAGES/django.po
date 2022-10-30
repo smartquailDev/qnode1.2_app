@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-10-11 22:58-0500\n"
+"POT-Creation-Date: 2022-10-30 17:22-0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -107,7 +107,7 @@ msgstr ""
 
 #: cart/templates/cart/detail_header.html:81
 #: shop/templates/shop/list_header.html:80
-msgid "Lenguage"
+msgid "Languages"
 msgstr ""
 
 #: coupons/forms.py:6
@@ -323,5 +323,5 @@ msgid "GET THE MOST OUT OF FLOREANA"
 msgstr ""
 
 #: shop/templates/shop/product/list.html:73
-msgid "Description"
+msgid "Download here the description"
 msgstr ""

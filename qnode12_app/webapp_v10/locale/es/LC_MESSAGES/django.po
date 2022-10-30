@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-10-11 22:58-0500\n"
+"POT-Creation-Date: 2022-10-30 17:22-0500\n"
 "PO-Revision-Date: 2022-10-11 22:21-0519\n"
 "Last-Translator: Mau Silva <smartquail.dev@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -147,7 +147,9 @@ msgstr "Contactos"
 #: webapp_v10/templates/webapp_v10/hosts_header.html:57
 #: webapp_v10/templates/webapp_v10/story_header.html:77
 #: webapp_v10/templates/webapp_v10/worlds_header.html:57
-msgid "Lenguage"
+#, fuzzy
+#| msgid "Lenguage"
+msgid "Languages"
 msgstr "Idioma"
 
 #: webapp_v10/templates/webapp_v10/contacts.html:41
@@ -162,43 +164,45 @@ msgstr "Información de Contacto"
 msgid "Commments"
 msgstr "Comentarios"
 
-#: webapp_v10/templates/webapp_v10/contacts.html:78
+#: webapp_v10/templates/webapp_v10/contacts.html:90
 msgid "About us"
 msgstr "Nosotros"
 
-#: webapp_v10/templates/webapp_v10/contacts.html:87
+#: webapp_v10/templates/webapp_v10/contacts.html:99
 msgid "About the location"
 msgstr ""
 
-#: webapp_v10/templates/webapp_v10/contacts.html:99
+#: webapp_v10/templates/webapp_v10/contacts.html:111
 msgid "ACCOMODATIONS"
 msgstr "Acomodaciones"
 
-#: webapp_v10/templates/webapp_v10/contacts.html:111
+#: webapp_v10/templates/webapp_v10/contacts.html:123
 msgid "Restaurants"
 msgstr "Restaurantes"
 
-#: webapp_v10/templates/webapp_v10/contacts.html:129
+#: webapp_v10/templates/webapp_v10/contacts.html:141
 msgid "Contact Information"
 msgstr "Información de Contacto"
 
-#: webapp_v10/templates/webapp_v10/contacts.html:135
+#: webapp_v10/templates/webapp_v10/contacts.html:147
 msgid "Mail"
 msgstr "Correo Electronico"
 
-#: webapp_v10/templates/webapp_v10/contacts.html:136
-msgid "Adress"
+#: webapp_v10/templates/webapp_v10/contacts.html:148
+#, fuzzy
+#| msgid "Adress"
+msgid "Address"
 msgstr "Dirección"
 
-#: webapp_v10/templates/webapp_v10/contacts.html:137
+#: webapp_v10/templates/webapp_v10/contacts.html:149
 msgid "Phone"
 msgstr "Teléfono"
 
-#: webapp_v10/templates/webapp_v10/contacts.html:140
+#: webapp_v10/templates/webapp_v10/contacts.html:152
 msgid " Make your comments "
 msgstr "Realizar comenarios"
 
-#: webapp_v10/templates/webapp_v10/contacts.html:153
+#: webapp_v10/templates/webapp_v10/contacts.html:165
 msgid "Make your comments"
 msgstr "Realiza tus comentarios"
 
