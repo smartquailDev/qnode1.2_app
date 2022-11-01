@@ -51,17 +51,8 @@
                   {% for c in categories %}
                       {% if category.slug == c.slug %}{% endif %}
                       {% for product in products %}
-                  <div class="post fl-wrap fw-post">
-                      
-                    
+                  <div class="post fl-wrap fw-post">             
                     <a href="{{ c.get_absolute_url }}"><h2><span>{{ c.name }}</span></h2></a>
-                    
-                      <ul class="blog-title-opt">
-                          <li><a href="#">Salidas:{{c.salidas}}</a></li>
-                          <li> - </li>
-                          <li><a href="#">Desdes:{{c.desde}} </a></li>
-                         
-                      </ul>
                       <!-- blog media -->
                       <div class="blog-media fl-wrap">
                         <img src="{% if c.image %}{{ c.image.url }}{% else %}{% static "img/no_image.png" %}{% endif %}" width="400px">
@@ -69,9 +60,9 @@
                       
                       <!-- blog media end -->
                       <div class="blog-text fl-wrap">
-                          <div class="pr-tags fl-wrap">
-                            <a href="{{ c.detail.url }}" >  <span>{% trans "Download here the description" %}    <i class="fal fa-solid fa-file"></i></span></a>
+                          <div class="pr-tags fl-wrap"> 
                             <p>{{c.description}}</p>
+                            <a href="{{ c.detail.url }}" >  <span>{% trans "Download here the description" %}    <i class="fal fa-solid fa-file"></i></span></a>
                           </div>
                           <h2>
                            
