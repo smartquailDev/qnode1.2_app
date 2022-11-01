@@ -51,8 +51,12 @@
                   {% for c in categories %}
                       {% if category.slug == c.slug %}{% endif %}
                       {% for product in products %}
-                  <div class="post fl-wrap fw-post">             
+                  <div class="post fl-wrap fw-post">   
+                            
                     <a href="{{ c.get_absolute_url }}"><h2><span>{{ c.name }}</span></h2></a>
+                    <h2>
+                      {{ c.desde }}  
+                 </h2> 
                       <!-- blog media -->
                       <div class="blog-media fl-wrap">
                         <img src="{% if c.image %}{{ c.image.url }}{% else %}{% static "img/no_image.png" %}{% endif %}" width="400px">
@@ -64,9 +68,7 @@
                             <p>{{c.description}}</p>
                             <a href="{{ c.detail.url }}" >  <span>{% trans "Download here the description" %}    <i class="fal fa-solid fa-file"></i></span></a>
                           </div>
-                          <h2>
-                           
-                          </h2>
+                         
                          
                           <a href="{{ product.get_absolute_url }}" class="btn float-btn flat-btn">Read more </a>
                           
