@@ -838,6 +838,7 @@ class GaleriadeImagenes_5(Orderable):
     logo_4 = models.ForeignKey('wagtailimages.Image',null=True,blank=True,on_delete=models.SET_NULL,related_name='+',verbose_name='Logo 2')
     logo_5 = models.ForeignKey('wagtailimages.Image',null=True,blank=True,on_delete=models.SET_NULL,related_name='+',verbose_name='Logo 3')
     logo_6 = models.ForeignKey('wagtailimages.Image',null=True,blank=True,on_delete=models.SET_NULL,related_name='+',verbose_name='Logo 4')
+    logo_7 = models.ForeignKey('wagtailimages.Image',null=True,blank=True,on_delete=models.SET_NULL,related_name='+',verbose_name='Logo 5')
 
     panels = [
         ImageChooserPanel('logo'),
@@ -848,6 +849,7 @@ class GaleriadeImagenes_5(Orderable):
         ImageChooserPanel('logo_4'),
         ImageChooserPanel('logo_5'),
         ImageChooserPanel('logo_6'),
+        ImageChooserPanel('logo_7'),
     ]
 
 

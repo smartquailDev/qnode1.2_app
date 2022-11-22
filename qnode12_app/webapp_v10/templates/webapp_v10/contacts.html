@@ -58,7 +58,7 @@
 
                 {% for item in page.galleria_5.all %}
                 {% image item.logo_3 width-1200 as l3 %}
-                    <img src="{{l3.url}}" width="100px">
+                    <img src="{{l3.url}}" width="150px">
                 {% endfor %}
                 &nbsp;
                 &nbsp;
@@ -66,7 +66,7 @@
 
                 {% for item in page.galleria_5.all %}
                 {% image item.logo_4 width-1200 as l4 %}
-                    <img src="{{l4.url}}" width="100px">
+                    <img src="{{l4.url}}" width="150px">
                 {% endfor %}
                 &nbsp;
                 &nbsp;
@@ -74,11 +74,20 @@
 
                 {% for item in page.galleria_5.all %}
                 {% image item.logo_5 width-1200 as l5 %}
-                    <img src="{{l5.url}}" width="100px">
+                    <img src="{{l5.url}}" width="150px">
                 {% endfor %}
                 &nbsp;
                 &nbsp;
                 &nbsp;
+
+                {% for item in page.galleria_5.all %}
+                {% image item.logo_6 width-1200 as l6 %}
+                    <img src="{{l6.url}}" width="150px">
+                {% endfor %}
+                &nbsp;
+                &nbsp;
+                &nbsp;
+
             </div>
             
             <section id="sec1">
