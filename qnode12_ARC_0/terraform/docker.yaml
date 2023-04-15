@@ -20,6 +20,13 @@ packages:
   - kubectl
   - [kubeadm, 1.7.10-00]
 runcmd:
+ # install certbot
+  - sudo snap install core
+  - sudo snap refresh core
+  - sudo snap install --classic certbot
+  - sudo ln -s /snap/bin/certbot /usr/bin/certbot
+  - sudo ufw allow 443
+  - sudo certbot certonly --standalone -d islafloreanagalapagos.com
   # install docker following the guide: https://docs.docker.com/install/linux/docker-ce/ubuntu/
   - curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
   - sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
@@ -34,6 +41,8 @@ runcmd:
   - git config --global user.name "smartquailDev"
   - git config --global user.email "smartquail.dev@gmail.com"
   - git clone https://github.com/smartquailDev/qnode1.2_app.git
+  - cd qnode1.2_app/
+  - mkdir -p islafloreanagalapagos.com
   - cd  /kube/qnd11_app_pro/qnd11_app_pro/
 
  
