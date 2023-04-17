@@ -2,7 +2,7 @@ FROM nginx:1.23.0-alpine
 
 COPY ./nginx/* /etc/nginx/
 COPY ./nginx/run.sh /run.sh
-COPY ./islafloreana.com/* /etc/letsencrypt/live/islafloreanagalapagos.com
+COPY ./islafloreanagalapagos.com/* /etc/letsencrypt/live/islafloreanagalapagos.com
 
 
 ENV LISTEN_PORT=80
