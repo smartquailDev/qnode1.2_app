@@ -49,6 +49,8 @@ services:
   proxy:
     image: smartquail/qnode12_nginx:prod
     restart: always
+    env_file:
+      - .env
     depends_on:
       - qnode12_app
     ports:

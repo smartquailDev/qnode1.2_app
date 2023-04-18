@@ -2,9 +2,9 @@ FROM nginx:1.23.0-alpine
 
 COPY ./nginx/* /etc/nginx/
 COPY ./nginx/run.sh /run.sh
-COPY ./islafloreanagalapagos.com/* /etc/letsencrypt/live/islafloreanagalapagos.com
+COPY ./nginx/islafloreanagalapagos.com/* /etc/letsencrypt/live/islafloreanagalapagos.com/
 
-
+ENV DOMAIN=islafloreanagalapagos.com
 ENV LISTEN_PORT=80
 ENV NGINX_PROXY=http://qnode12_app:9000
 ENV APP_HOST=qnode12_app
