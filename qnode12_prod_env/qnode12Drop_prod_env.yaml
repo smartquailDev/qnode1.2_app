@@ -1,11 +1,11 @@
-version: "3.3"
+version: "3.8"
 
 services:
   qnode12_app:
     image: smartquail/qnode12_app:latest
     environment:
       - PORT=9000
-    restart: always
+    restart: unless-stopped
     env_file:
       - .env
     depends_on:
@@ -41,6 +41,8 @@ services:
   proxy:
     image: smartquail/qnode12_nginx:prod
     restart: unless-stopped
+    expose:
+      - 80
     env_file:
       - .env
     environment:
@@ -48,7 +50,7 @@ services:
     depends_on:
       - qnode12_app
     ports:
-      - "80:80"
+      - "9000:80"
       - "443:443"  
     volumes:
       - static-data-qnode12:/qnode1.2_app/qnode12_app/staticfiles

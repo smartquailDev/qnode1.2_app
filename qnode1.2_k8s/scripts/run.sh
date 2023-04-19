@@ -17,7 +17,7 @@ django-admin makemessages --all
 django-admin compilemessages 
 
 
-uwsgi  --http-socket :9000 --workers 4 --master --enable-threads --module qnode12_app.wsgi --ini uwsgi_prod.ini
+uwsgi  --http :9000 --workers 4 --master --enable-threads --module qnode12_app.wsgi --ini uwsgi_prod.ini
 
 #python manage.py listen_port25 --noinput
 
