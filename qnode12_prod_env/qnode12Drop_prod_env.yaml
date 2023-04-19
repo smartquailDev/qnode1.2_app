@@ -53,7 +53,7 @@ services:
       - static-data-qnode12:/qnode1.2_app/qnode12_app/media
       - certbot-web_2:/vol/www
       - proxy-dhparams_2:/vol/proxy
-      - letsencrypt_certs:/etc/letsencrypt
+      - letsencrypt_certs:/etc/letsencrypt/live
     networks: 
       - lansmartquail
 
