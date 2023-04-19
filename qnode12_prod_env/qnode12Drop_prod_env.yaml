@@ -11,8 +11,6 @@ services:
     depends_on:
       - smartquaildb
     #  - redis
-    #links:
-    #  - "smartquaildb"
     #  - "worker"
     expose:
       - 9000
@@ -41,8 +39,6 @@ services:
   proxy:
     image: smartquail/qnode12_nginx:prod
     restart: unless-stopped
-    expose:
-      - 80
     env_file:
       - .env
     environment:
@@ -50,7 +46,7 @@ services:
     depends_on:
       - qnode12_app
     ports:
-      - "9000:80"
+      - "80:80"
       - "443:443"  
     volumes:
       - static-data-qnode12:/qnode1.2_app/qnode12_app/staticfiles
