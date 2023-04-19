@@ -1,6 +1,6 @@
 server {
     listen 80;
-    server_name ${DOMAIN} www.${DOMAIN} 143.110.227.217 127.0.0.1;
+    server_name ${DOMAIN} www.${DOMAIN} 143.110.227.217 ;
 
     location /.well-known/acme-challenge/ {
         root /vol/www/;
