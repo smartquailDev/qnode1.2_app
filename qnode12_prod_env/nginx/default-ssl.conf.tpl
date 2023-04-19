@@ -1,6 +1,6 @@
 server {
     listen      443 ssl;
-    server_name ${DOMAIN} www.${DOMAIN} 24.199.100.174;
+    server_name ${DOMAIN} www.${DOMAIN} 24.199.100.174 127.0.0.1;
 
     ssl_certificate     /etc/letsencrypt/live/${DOMAIN}/fullchain.pem;
     ssl_certificate_key /etc/letsencrypt/live/${DOMAIN}/privkey.pem;

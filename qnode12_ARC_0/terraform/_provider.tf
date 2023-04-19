@@ -2,7 +2,7 @@
 
 variable "digitalocean_token" {
   description = "Digital Ocean Token:qnd12"
-  default     = "dop_v1_10561322c25b04cf5e287c5bacb075ddd943d37ca817173f68c99644e69a80d4"
+  default     = "dop_v1_e37bbb7eb892fdf4ebe966810db11cd4cf452c38d2ce7827ba1dd577a05bdb34"
 }
 
 variable "spaces_access_id" {

@@ -15,15 +15,7 @@ services:
     #  - "smartquaildb"
     #  - "worker"
     expose:
-      - 443
       - 9000
-      - 587
-      - 25
-    ports:
-      - "9000:9000"
-      - "587:587"
-      - "25:25"
-      - "443"
     volumes:
       - static-data-qnode12:/qnode1.2_app/qnode12_app/staticfiles/
       - static-data-qnode12:/qnode1.2_app/qnode12_app/media/
@@ -48,18 +40,22 @@ services:
 
   proxy:
     image: smartquail/qnode12_nginx:prod
-    restart: always
+    restart: unless-stopped
     env_file:
       - .env
+    environment:
+      - PORT=80
     depends_on:
       - qnode12_app
     ports:
-      - 80:80
-      - 443:443  
+      - "80:80"
+      - "443:443"  
     volumes:
+      - static-data-qnode12:/qnode1.2_app/qnode12_app/staticfiles
+      - static-data-qnode12:/qnode1.2_app/qnode12_app/media
       - certbot-web_2:/vol/www
       - proxy-dhparams_2:/vol/proxy
-      - certbot-certs_2:/etc/letsencrypt
+      - letsencrypt_certs:/etc/letsencrypt
     networks: 
       - lansmartquail
 
@@ -100,7 +96,7 @@ services:
 volumes:
   certbot-web_2:
   proxy-dhparams_2:
-  certbot-certs_2:
+  letsencrypt_certs:
   static-data-qnode12:
   smartquaildb_data-qnode12:
   rabbitmq-data-qnode12:
