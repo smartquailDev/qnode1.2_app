@@ -3,8 +3,6 @@ version: "3.3"
 services:
   qnode12_app:
     image: smartquail/qnode12_app:latest
-    environment:
-      - PORT=9000
     restart: unless-stopped
     env_file:
       - .env
@@ -12,8 +10,8 @@ services:
       - smartquaildb
     #  - redis
     #  - "worker"
-    expose:
-      - 9000
+    ports:
+      - "9000:9000"
     volumes:
       - static-data-qnode12:/qnode1.2_app/qnode12_app/staticfiles/
       - static-data-qnode12:/qnode1.2_app/qnode12_app/media/
@@ -46,7 +44,7 @@ services:
     depends_on:
       - qnode12_app
     ports:
-      - "80:80'"
+      - 80:80
       - "443:443"  
     expose:
       - 80
