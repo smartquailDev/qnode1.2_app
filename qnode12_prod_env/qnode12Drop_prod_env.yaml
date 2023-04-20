@@ -4,6 +4,8 @@ services:
   qnode12_app:
     image: smartquail/qnode12_app:latest
     restart: unless-stopped
+    environment:
+      - PORT=9000
     env_file:
       - .env
     depends_on:
@@ -36,7 +38,7 @@ services:
     networks: 
       - lansmartquail
 
-  proxy:
+  nginx:
     image: smartquail/qnode12_nginx:prod
     restart: unless-stopped
     env_file:
@@ -46,14 +48,14 @@ services:
     depends_on:
       - qnode12_app
     ports:
-      - "80:80"
-      - "443:443"  
+      - 80:80
+      - 443:443  
     volumes:
       - static-data-qnode12:/qnode1.2_app/qnode12_app/staticfiles
       - static-data-qnode12:/qnode1.2_app/qnode12_app/media
       - certbot-web_2:/vol/www
       - proxy-dhparams_2:/vol/proxy
-      - letsencrypt_certs:/etc/letsencrypt/live
+      - letsencrypt_certs:/etc/letsencrypt/
     networks: 
       - lansmartquail
 
